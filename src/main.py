@@ -6,6 +6,7 @@ from intro_screen import play_intro
 from game import play_game
 from score import score_screen
 import inspect
+from voting import voting_round
 # import signal
 
 # Importing constants and logging
@@ -60,7 +61,8 @@ async def main():
         ScreenState.INTRO: play_intro,
         ScreenState.SETUP: collect_player_data,
         ScreenState.CHAT: play_game,
-        ScreenState.SCORE: score_screen
+        ScreenState.SCORE: score_screen,
+        ScreenState.VOTE: voting_round
     }
 
     # Initialize the starting screen state and blank game/player states.

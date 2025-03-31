@@ -36,10 +36,11 @@ def format_gm_message(msg: str) -> str:
     # top = print_color("*" * 50, "YELLOW", print_or_return="return")
     # mid = print_color(f"GAME MASTER: {msg}", "YELLOW", print_or_return="return")
     # bot = print_color("*" * 50, "YELLOW", print_or_return="return")
+    
     top = "*" * 50
     mid = f"GAME MASTER: {msg}"
     bot = "*" * 50
-    return f"{top}\n{mid}\n{bot}"
+    return f"\n\n{top}\n{mid}\n{bot}"
 
 # def get_color_for_code_name(code_name: str, gs: GameState) -> str:
 #     for player in gs.players:

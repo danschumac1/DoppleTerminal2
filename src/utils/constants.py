@@ -1,6 +1,6 @@
 from utils.states import GameState, PlayerState
 
-ROUND_DURATION = 60  # seconds
+ROUND_DURATION = 6  # seconds
 
 # COLOR_DICT = {
 #     "RED": "\x1b[31m",
@@ -27,6 +27,7 @@ BLANK_PS = PlayerState(
     favorite_animal="",
     hobby="",
     extra_info="",
+    is_human=True,  
     # color_name="",
     # color_asci=""
 )

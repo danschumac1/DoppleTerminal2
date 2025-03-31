@@ -1,0 +1,9 @@
+
+========================================
+New Log Session at 2025-03-30 23:05:26
+========================================
+[INFO] Game state initialized with players: TIGER || 2025-03-30 23:05:28
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "It's the beginning of the game, and responding to the greeting helps establish communication and rapport with other players."} || 2025-03-30 23:05:31
+[INFO] Generate Response JSON: {'response': "Hey Tiger! What's up? Ready to get this game started?", 'reasoning': 'A friendly and engaging response to build rapport and encourage interaction.'} || 2025-03-30 23:05:31
+[INFO] Stylize Response JSON: {'output_text': "Yo Tiger! What's good? You ready to kick this game off?"} || 2025-03-30 23:05:32
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and friendly, which is typical in a social setting, making it sound natural.'} || 2025-03-30 23:05:33

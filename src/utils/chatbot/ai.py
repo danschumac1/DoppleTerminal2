@@ -174,6 +174,7 @@ class AIPlayer:
             extra_info=player_state_to_steal.extra_info,
             written_to_file=True,
             lobby_id=player_state_to_steal.lobby_id,
+            is_human=False,  # This player is not human
         )
     def _init_logger(self):
         logger = StandAloneLogger(

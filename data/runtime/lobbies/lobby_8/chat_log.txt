@@ -1,0 +1,5 @@
+DEER: a
+DOG: Ayo DEER, that was kinda random! What’s up with you?
+KANGAROO: a
+ZEBRA: yo DEER, that was kinda random! what’s up with you?
+DOG: Haha, for real! Just trying to keep it lit! What about you, fam?

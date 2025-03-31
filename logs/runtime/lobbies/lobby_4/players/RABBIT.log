@@ -1,0 +1,13 @@
+
+========================================
+New Log Session at 2025-03-30 22:45:52
+========================================
+[INFO] Game state initialized with players: PANDA || 2025-03-30 22:45:54
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "PANDA has initiated a conversation, and it's important to engage with them to build rapport and gather information."} || 2025-03-30 22:45:57
+[INFO] Generate Response JSON: {'response': "Hey Panda! How's it going? Ready to figure out who's who in this game?", 'reasoning': 'Responding warmly to engage with Panda and show enthusiasm for the game, which helps build trust.'} || 2025-03-30 22:45:58
+[INFO] Stylize Response JSON: {'output_text': "Yo Panda! What's good? You ready to suss out who's who in this game?"} || 2025-03-30 22:45:59
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and friendly, fitting the social context of the game and encouraging engagement.'} || 2025-03-30 22:46:00
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "The conversation is just starting, and it's a good opportunity to engage with the players and establish my presence in the game."} || 2025-03-30 22:46:07
+[INFO] Generate Response JSON: {'response': "Hey Panda! I'm definitely ready. Let's figure this out together! What do you think is the best way to start?", 'reasoning': 'Engaging with Panda and Rabbit to build rapport and show enthusiasm for the game, while also inviting discussion to gather more information.'} || 2025-03-30 22:46:08
+[INFO] Stylize Response JSON: {'output_text': "yo Panda! I'm totally down. let's tackle this together! how do you wanna kick things off?"} || 2025-03-30 22:46:08
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is enthusiastic and engages with the other person, sounding natural and friendly.'} || 2025-03-30 22:46:09

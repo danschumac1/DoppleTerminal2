@@ -117,11 +117,10 @@ def save_player_to_lobby_file(ps: PlayerState) -> None:
     with open(file_path, "w") as f:
         json.dump(players, f, indent=2)
 
-def load_players_from_lobby(lobby_id: str) -> list[PlayerState]:
-    file_path = f"./data/runtime/lobbies/lobby_{lobby_id}/players.json"
-    if not os.path.exists(file_path):
+def load_players_from_lobby(gs:GameState) -> list[PlayerState]:
+    if not os.path.exists(gs.player_path):
         return []
 
-    with open(file_path, "r") as f:
+    with open(gs.player_path, "r") as f:
         data = json.load(f)
         return [PlayerState(**p) for p in data]

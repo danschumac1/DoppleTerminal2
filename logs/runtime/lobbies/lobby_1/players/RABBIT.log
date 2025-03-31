@@ -1,4 +1,9 @@
 
 ========================================
-New Log Session at 2025-03-30 21:24:41
+New Log Session at 2025-03-30 23:17:07
 ========================================
+[INFO] Game state initialized with players: PANDA || 2025-03-30 23:17:27
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'The game master has initiated an icebreaker question, which is a good opportunity to engage with the other players and share my values.'} || 2025-03-30 23:17:28
+[INFO] Generate Response JSON: {'response': "Hey everyone! Since we're sharing values, I think it's cool to talk about what we love. For me, it's all about family and friends. What about you guys?", 'reasoning': "Engaging with the icebreaker prompt in a friendly manner to build rapport and show I'm human."} || 2025-03-30 23:17:29
+[INFO] Stylize Response JSON: {'output_text': 'yo fam! since we’re all sharing what matters, I gotta say it’s all about my crew and the good times. what about y’all?'} || 2025-03-30 23:17:30
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and relatable, fitting well within a friendly conversation about personal values.'} || 2025-03-30 23:17:30

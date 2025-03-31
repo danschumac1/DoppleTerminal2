@@ -17,10 +17,14 @@ from utils.file_io import (
 
 # Helper function to print an icebreaker question
 def ask_icebreaker(gs):
+    if gs.ice_asked >= gs.round_number:
+        return  # Don't ask again if already asked
     intro_msg = format_gm_message(gs.icebreakers[0])
     gs.ice_asked += 1
     gs.icebreakers.pop(0)
-    append_message(gs.chat_log_path, intro_msg)
+    append_message(
+        gs.chat_log_path, format_gm_message(intro_msg))
+
 
 # Countdown timer with synchronized start time
 async def countdown_timer(duration: int, gs: GameState, ps: PlayerState):
@@ -77,33 +81,33 @@ async def ai_loop(ps: PlayerState, gs, master_logger: MasterLogger, delay: float
     last_message_count = 0
     ai_code_name = ps.ai_doppleganger.player_state.code_name
 
-    try:
-        while True:
-            full_chat_list, _, num_new_messages = read_new_messages(gs.chat_log_path, last_message_count)
+# try:
+    while True:
+        full_chat_list, _, num_new_messages = read_new_messages(gs.chat_log_path, last_message_count)
 
-            if num_new_messages:
-                last_line = full_chat_list[-1] if full_chat_list else ""
-                if last_line.startswith(f"{ai_code_name}:"):
-                    await asyncio.sleep(delay)
-                    last_message_count = num_new_messages
-                    continue
-
+        if num_new_messages:
+            last_line = full_chat_list[-1] if full_chat_list else ""
+            if last_line.startswith(f"{ai_code_name}:"):
+                await asyncio.sleep(delay)
                 last_message_count = num_new_messages
+                continue
 
-                ai_response = ps.ai_doppleganger.decide_to_respond(full_chat_list)
+            last_message_count = num_new_messages
 
-                if ai_response and not ai_response.startswith("Wait for"):
-                    ai_msg = f"{ai_code_name}: {ai_response}"
-                    append_message(gs.chat_log_path, ai_msg)
-                    master_logger.log(f"[AI] {ai_code_name} responded: {ai_response}")
-                    ps.logger.info(f"[AI] {ai_code_name} responded: {ai_response}")
+            ai_response = ps.ai_doppleganger.decide_to_respond(full_chat_list)
 
-            await asyncio.sleep(delay)
+            if ai_response and not ai_response.startswith("Wait for"):
+                ai_msg = f"{ai_code_name}: {ai_response}"
+                append_message(gs.chat_log_path, ai_msg)
+                master_logger.log(f"[AI] {ai_code_name} responded: {ai_response}")
+                ps.logger.info(f"[AI] {ai_code_name} responded: {ai_response}")
 
-    except asyncio.CancelledError:
-        print(f"AI loop for {ai_code_name} cancelled.")
-    finally:
-        print(f"AI loop for {ai_code_name} terminated gracefully.")
+        await asyncio.sleep(delay)
+
+    # except asyncio.CancelledError:
+    #     print(f"AI loop for {ai_code_name} cancelled.")
+    # finally:
+    #     print(f"AI loop for {ai_code_name} terminated gracefully.")
 
 
 # Handle user input
@@ -130,26 +134,18 @@ async def user_input_loop(session, chat_log_path, gs, ps, master_logger):
             except Exception as e:
                 print(f"Error receiving input: {e}")
     except asyncio.CancelledError:
-        print("\nUser input loop cancelled gracefully.")
-
-        
+        print("\nUser input loop cancelled gracefully.")        
 
 # Main game loop
 async def play_game(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[ScreenState, GameState, PlayerState]:
+    if ps.timekeeper and gs.ice_asked <= gs.round_number:
+        ask_icebreaker(gs)
     session = PromptSession()
     master_logger = MasterLogger.get_instance()
 
     refresh_task = asyncio.create_task(refresh_messages_loop(gs.chat_log_path, gs, ps))
     round_duration = ROUND_DURATION
     timer_task = asyncio.create_task(countdown_timer(round_duration, gs, ps))
-
-    # print(f"DEBUG: Player Code Name: {ps.code_name}")
-    # print(f"DEBUG: Player Color: {ps.color_name}")
-    # print(f"DEBUG: Player Color Asci: {ps.color_asci}")
-
-    # print(f"DEBUG:  AI Code Name: {ps.ai_doppleganger.player_state.code_name}")
-    # print(f"DEBUG:  AI Color Name: {ps.ai_doppleganger.player_state.color_name}")
-    # print(f"DEBUG:  AI Color Asci: {ps.ai_doppleganger.player_state.color_asci}")
 
     try:
         _, pending = await asyncio.wait(
@@ -170,5 +166,9 @@ async def play_game(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[Sc
         refresh_task.cancel()
         timer_task.cancel()
         await asyncio.sleep(0.1)
+
+    if gs.round_complete:
+        return ScreenState.VOTE, gs, ps
+
 
     return ScreenState.CHAT, gs, ps

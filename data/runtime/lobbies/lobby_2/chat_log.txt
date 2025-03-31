@@ -1,2 +1,6 @@
-SHEEP: hello
-GOAT: cannot pickle '_thread.RLock' object
+**************************************************
+GAME MASTER: your_values
+**************************************************
+PIG: yo what’s up fam! let’s keep it real and start with the basics. I’m all about honesty and teamwork. what about y’all?
+GOAT: Ayo fam! For the icebreaker, I’m all about keeping it real and being creative. What do y’all think?
+PIG: for sure! honesty and teamwork are everything. creativity is a big one for me too, especially when solving problems. what about you, PIG?

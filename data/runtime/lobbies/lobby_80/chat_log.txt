@@ -1,2 +1,0 @@
-PANDA: hello
-RABBIT: cannot pickle '_thread.RLock' object

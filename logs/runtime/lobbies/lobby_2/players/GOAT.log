@@ -1,6 +1,9 @@
 
 ========================================
-New Log Session at 2025-03-30 21:40:28
+New Log Session at 2025-03-30 23:19:45
 ========================================
-[INFO] Game state initialized with players: SHEEP || 2025-03-30 21:40:29
-[ERROR] decide_to_respond – Error: cannot pickle '_thread.RLock' object || 2025-03-30 21:40:32
+[INFO] Game state initialized with players: SHEEP || 2025-03-30 23:19:55
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'The game is prompting for icebreaker questions, which is a good opportunity to engage and share personal values.'} || 2025-03-30 23:19:56
+[INFO] Generate Response JSON: {'response': 'Hey everyone! For the icebreaker, I value honesty and creativity. What about you guys?', 'reasoning': 'Sharing personal values in a friendly manner to engage others and build rapport.'} || 2025-03-30 23:19:57
+[INFO] Stylize Response JSON: {'output_text': 'Ayo fam! For the icebreaker, I’m all about keeping it real and being creative. What do y’all think?'} || 2025-03-30 23:19:57
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and engaging, fitting well within a social setting and encouraging interaction.'} || 2025-03-30 23:19:58

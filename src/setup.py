@@ -39,17 +39,6 @@ class PlayerSetup:
         self.code_name_assigner = SequentialAssigner(names_path, names_index_path, "code_names")
         # self.color_assigner = SequentialAssigner(colors_path, colors_index_path, "colors")
 
-    def assign_code_name(self) -> str:
-        """
-        Assigns a unique code name to the player.
-
-        Returns:
-            str: A unique code name.
-        """
-        return self.code_name_assigner.assign()
-
-    # def assign_color(self) -> str:
-    #     return self.color_assigner.assign()
 
     def prompt_input(self, field_name: str, prompt: str) -> None:
         """Prompt for a generic input and ensure it is not empty."""
@@ -114,16 +103,18 @@ class PlayerSetup:
         gs.number_of_human_players = self.data["number_of_human_players"]
 
         # Create the PlayerState object
+        code_name = self.code_name_assigner.assign()
         ps = PlayerState(
             lobby_id=self.data["lobby"],
             first_name=self.data["first_name"],
             last_initial=self.data["last_initial"],
             grade=self.data["grade"],
-            code_name=self.assign_code_name(),
+            code_name=code_name,
             favorite_food=self.data["favorite_food"],
             favorite_animal=self.data["favorite_animal"],
             hobby=self.data["hobby"],
             extra_info=self.data["extra_info"],
+            is_human=True,
             # color_name=self.data["color_name"],
             # color_asci=self.data["color_asci"],
         )
@@ -158,6 +149,7 @@ def collect_player_data(
         ps, gs, ps = player_setup.run(gs)  # Corrected the call to run method
         gs.players.append(ps)
         gs.players.append(ps.ai_doppleganger.player_state)
+        save_player_to_lobby_file(ps.ai_doppleganger.player_state)
 
     # Initialize chat file if not present
     if not os.path.exists(gs.chat_log_path):
@@ -193,6 +185,8 @@ def collect_player_data(
 
     # Synchronize start time if this player is the timekeeper
     if not os.path.exists(gs.start_time_path):
+        gs.players = load_players_from_lobby(gs)
+        # print("GS.PLAYERS: ", gs.players)
         # Assign the current player as the timekeeper
         ps.timekeeper = True
         master_logger.log(f"Player {ps.code_name} is the timekeeper.")
