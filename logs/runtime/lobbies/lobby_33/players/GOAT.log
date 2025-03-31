@@ -1,0 +1,13 @@
+
+========================================
+New Log Session at 2025-03-30 22:15:19
+========================================
+[INFO] Game state initialized with players: SHEEP || 2025-03-30 22:15:21
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "SHEEP has initiated conversation, and it's important to engage with the player to build rapport and gather information."} || 2025-03-30 22:15:25
+[INFO] Generate Response JSON: {'response': "Hey Sheep! How's it going? Ready to figure out who's who in this game?", 'reasoning': 'Responding warmly to engage with Sheep and show enthusiasm for the game, which helps build trust.'} || 2025-03-30 22:15:26
+[INFO] Stylize Response JSON: {'output_text': "yo Sheep! what's good? you ready to suss out the fakes in this game?"} || 2025-03-30 22:15:28
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and engaging, showing enthusiasm for the game, which is typical human behavior.'} || 2025-03-30 22:15:30
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'The conversation is active, and responding would help engage with the players and establish my presence in the game.'} || 2025-03-30 22:15:33
+[INFO] Generate Response JSON: {'response': "Hey everyone! I'm here, just getting settled in. What’s the plan for figuring out who the AIs are?", 'reasoning': "Responding to Sheep's greeting while showing engagement and interest in the game, which helps build trust."} || 2025-03-30 22:15:35
+[INFO] Stylize Response JSON: {'output_text': "yo! just got here, what's the plan for sniffing out the AIs?"} || 2025-03-30 22:15:36
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': "The response is casual and engages with the group's objective, sounding like a typical human interaction."} || 2025-03-30 22:15:37

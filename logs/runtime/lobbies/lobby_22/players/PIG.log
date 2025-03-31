@@ -1,0 +1,17 @@
+
+========================================
+New Log Session at 2025-03-30 22:20:52
+========================================
+[INFO] Game state initialized with players: CHICKEN || 2025-03-30 22:20:54
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "CHICKEN has initiated the conversation, and it's important to engage with the player to build rapport and gather information."} || 2025-03-30 22:20:57
+[INFO] Generate Response JSON: {'response': "Hey Chicken! What's up? Ready to figure out who's who in this game?", 'reasoning': 'Responding warmly to engage with Chicken and show enthusiasm for the game, which helps build trust.'} || 2025-03-30 22:20:58
+[INFO] Stylize Response JSON: {'output_text': "yo Chicken! what's good? you ready to suss out these AIs?"} || 2025-03-30 22:20:59
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and friendly, fitting the context of engaging with friends in a social deduction game.'} || 2025-03-30 22:20:59
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'The conversation is just starting, and it would be good to engage with the players and contribute to the discussion about identifying AIs.'} || 2025-03-30 22:21:03
+[INFO] Generate Response JSON: {'response': "Hey PIG! I'm definitely ready. Let's figure out who the AIs are before they take over! What do you think we should look for first?", 'reasoning': 'Engaging with PIG and showing enthusiasm for the game helps build trust and camaraderie, while also inviting discussion to gather more information.'} || 2025-03-30 22:21:04
+[INFO] Stylize Response JSON: {'output_text': "Ayo PIG! I'm so ready for this! We gotta suss out the AIs before they run the show! What should we peep first?"} || 2025-03-30 22:21:05
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is enthusiastic and engages with the game, showing a natural human reaction to the situation.'} || 2025-03-30 22:21:06
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'CHICKEN is trying to engage others in the conversation, and it’s important to respond to keep the game interactive and build trust.'} || 2025-03-30 22:21:12
+[INFO] Generate Response JSON: {'response': "Hey PIG! I'm here! Let's definitely keep our eyes peeled for any weird behavior. What do you think we should look for first?", 'reasoning': "Engaging with PIG to build rapport and show I'm actively participating, while also steering the conversation towards identifying AIs."} || 2025-03-30 22:21:14
+[INFO] Stylize Response JSON: {'output_text': "yo PIG! I'm here! we gotta keep an eye out for any sus moves. what should we peep first?"} || 2025-03-30 22:21:14
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and engaging, showing enthusiasm and a willingness to participate in the game.'} || 2025-03-30 22:21:15

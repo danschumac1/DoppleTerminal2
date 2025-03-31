@@ -1,0 +1,4 @@
+SNAKE: hello this is d
+COW: cannot pickle '_thread.RLock' object
+SNAKE: is anyone there?
+COW: cannot pickle '_thread.RLock' object

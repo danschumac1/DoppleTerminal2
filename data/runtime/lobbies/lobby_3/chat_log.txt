@@ -1,0 +1,2 @@
+CHICKEN: d
+PIG: cannot pickle '_thread.RLock' object

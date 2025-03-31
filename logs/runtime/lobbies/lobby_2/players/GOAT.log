@@ -1,0 +1,6 @@
+
+========================================
+New Log Session at 2025-03-30 21:40:28
+========================================
+[INFO] Game state initialized with players: SHEEP || 2025-03-30 21:40:29
+[ERROR] decide_to_respond – Error: cannot pickle '_thread.RLock' object || 2025-03-30 21:40:32

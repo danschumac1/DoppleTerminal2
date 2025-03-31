@@ -1,0 +1,17 @@
+[
+  {
+    "lobby_id": 80,
+    "first_name": "Dan",
+    "last_initial": "S",
+    "code_name": "PANDA",
+    "grade": 6,
+    "favorite_food": "beans",
+    "favorite_animal": "s",
+    "hobby": "s",
+    "extra_info": "s",
+    "starttime": "",
+    "ai_doppleganger": null,
+    "written_to_file": false,
+    "timekeeper": false
+  }
+]

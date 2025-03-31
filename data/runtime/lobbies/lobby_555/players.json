@@ -1,0 +1,17 @@
+[
+  {
+    "lobby_id": 555,
+    "first_name": "Dan",
+    "last_initial": "S",
+    "code_name": "TIGER",
+    "grade": 6,
+    "favorite_food": "s",
+    "favorite_animal": "s",
+    "hobby": "s",
+    "extra_info": "s",
+    "starttime": "",
+    "ai_doppleganger": null,
+    "written_to_file": false,
+    "timekeeper": false
+  }
+]

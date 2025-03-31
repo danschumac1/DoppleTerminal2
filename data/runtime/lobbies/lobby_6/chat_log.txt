@@ -1,0 +1,2 @@
+ELEPHANT: a
+LION: cannot pickle '_thread.RLock' object

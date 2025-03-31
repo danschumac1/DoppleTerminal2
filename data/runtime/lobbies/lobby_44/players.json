@@ -1,0 +1,17 @@
+[
+  {
+    "lobby_id": 44,
+    "first_name": "Dan",
+    "last_initial": "S",
+    "code_name": "HORSE",
+    "grade": 8,
+    "favorite_food": "as",
+    "favorite_animal": "s",
+    "hobby": "s",
+    "extra_info": "s",
+    "starttime": "",
+    "ai_doppleganger": null,
+    "written_to_file": false,
+    "timekeeper": false
+  }
+]

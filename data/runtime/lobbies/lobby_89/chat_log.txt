@@ -1,0 +1,2 @@
+KANGAROO: hello
+DOG: cannot pickle '_thread.RLock' object

@@ -1,0 +1,6 @@
+
+========================================
+New Log Session at 2025-03-30 21:32:45
+========================================
+[INFO] Game state initialized with players: KANGAROO || 2025-03-30 21:32:47
+[ERROR] decide_to_respond – Error: cannot pickle '_thread.RLock' object || 2025-03-30 21:32:49

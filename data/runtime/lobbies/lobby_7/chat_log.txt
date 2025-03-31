@@ -1,0 +1,4 @@
+DEER: h
+ZEBRA: cannot pickle '_thread.RLock' object
+DEER: sd
+ZEBRA: cannot pickle '_thread.RLock' object

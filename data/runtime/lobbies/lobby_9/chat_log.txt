@@ -1,0 +1,4 @@
+TIGER: 
+BEAR: cannot pickle '_thread.RLock' object
+TIGER: a
+BEAR: cannot pickle '_thread.RLock' object

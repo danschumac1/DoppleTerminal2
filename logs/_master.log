@@ -1,0 +1,741 @@
+
+========================================
+Master Log Session at 2025-03-28 16:52:06
+========================================
+[INFO] Starting Setup screen... || 2025-03-28 16:52:06
+[INFO] Player Anger saved to lobby file. || 2025-03-28 16:52:21
+
+========================================
+Master Log Session at 2025-03-28 16:52:56
+========================================
+[INFO] Starting Setup screen... || 2025-03-28 16:52:56
+[INFO] Player Lilo saved to lobby file. || 2025-03-28 16:53:03
+
+========================================
+Master Log Session at 2025-03-28 16:53:43
+========================================
+[INFO] Starting Setup screen... || 2025-03-28 16:53:43
+[INFO] Player Mater saved to lobby file. || 2025-03-28 16:53:51
+
+========================================
+Master Log Session at 2025-03-28 16:54:46
+========================================
+[INFO] Starting Setup screen... || 2025-03-28 16:54:46
+[INFO] Player Mr. Incredible saved to lobby file. || 2025-03-28 16:54:53
+[INFO] AI player Link created and added to the game. || 2025-03-28 16:54:54
+[INFO] New players detected: Adding  to active players. || 2025-03-28 16:54:54
+[INFO] Initialized chat log and added intro message. || 2025-03-28 16:54:54
+
+========================================
+Master Log Session at 2025-03-28 16:58:10
+========================================
+[INFO] Starting Setup screen... || 2025-03-28 16:58:10
+[INFO] Player Pegasus saved to lobby file. || 2025-03-28 16:58:17
+[INFO] AI player Samus created and added to the game. || 2025-03-28 16:58:18
+[INFO] New players detected: Adding  to active players. || 2025-03-28 16:58:18
+[INFO] [AI] Samus responded: Yo what’s up everyone, I’m Pegasus! Can’t wait to dive into this game and see who’s got the brains to outsmart the rest. Let’s make it a blast! || 2025-03-28 16:58:21
+[INFO] [User] Pegasus sent: This is Dan What is up Samus.. I think you are a bit confused no?  || 2025-03-28 16:58:43
+[INFO] [AI] Samus responded: Yo, what's up everyone! I'm Skywalker! Can't wait to see how this goes down. Let's watch each other's backs and have a blast! || 2025-03-28 16:58:46
+[INFO] [User] Pegasus sent: what is happening... || 2025-03-28 16:58:53
+[INFO] [AI] Samus responded: Yo, what's up everyone! I'm Han Solo! Can't wait to see how this goes down. Let's keep it chill and figure out who's who! || 2025-03-28 16:58:58
+
+========================================
+Master Log Session at 2025-03-30 19:53:38
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 19:53:38
+
+========================================
+Master Log Session at 2025-03-30 19:58:04
+========================================
+[INFO] Starting intro screen... || 2025-03-30 19:58:04
+[INFO] Starting Setup screen... || 2025-03-30 19:58:09
+
+========================================
+Master Log Session at 2025-03-30 20:00:16
+========================================
+[INFO] Starting intro screen... || 2025-03-30 20:00:16
+
+========================================
+Master Log Session at 2025-03-30 20:00:24
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:00:24
+
+========================================
+Master Log Session at 2025-03-30 20:01:33
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:01:33
+
+========================================
+Master Log Session at 2025-03-30 20:01:57
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:01:57
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_3\chat_log.txt || 2025-03-30 20:02:07
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_3\voting.json || 2025-03-30 20:02:07
+[INFO] Color selected for AI Player Little Mac: MAGENTA || 2025-03-30 20:02:08
+[INFO] Created AI doppelganger for Luigi || 2025-03-30 20:02:08
+[INFO] Player Luigi is the timekeeper. || 2025-03-30 20:02:09
+[INFO] Initialized start time at data\runtime\lobbies\lobby_3\starttime.txt || 2025-03-30 20:02:09
+
+========================================
+Master Log Session at 2025-03-30 20:17:26
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:17:26
+
+========================================
+Master Log Session at 2025-03-30 20:17:49
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:17:49
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_5\chat_log.txt || 2025-03-30 20:17:58
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_5\voting.json || 2025-03-30 20:17:58
+
+========================================
+Master Log Session at 2025-03-30 20:18:09
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:18:09
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_6\chat_log.txt || 2025-03-30 20:18:18
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_6\voting.json || 2025-03-30 20:18:18
+[INFO] Color selected for AI Player Mufasa: MAGENTA || 2025-03-30 20:18:18
+[INFO] Created AI doppelganger for Mario || 2025-03-30 20:18:18
+[INFO] Player Mario is the timekeeper. || 2025-03-30 20:18:19
+[INFO] Initialized start time at data\runtime\lobbies\lobby_6\starttime.txt || 2025-03-30 20:18:19
+
+========================================
+Master Log Session at 2025-03-30 20:18:37
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:18:37
+
+========================================
+Master Log Session at 2025-03-30 20:18:43
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:18:43
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_7\chat_log.txt || 2025-03-30 20:18:51
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_7\voting.json || 2025-03-30 20:18:51
+[INFO] Color selected for AI Player Frozone: YELLOW || 2025-03-30 20:18:52
+[INFO] Created AI doppelganger for Kirby || 2025-03-30 20:18:52
+[INFO] Player Kirby is the timekeeper. || 2025-03-30 20:18:53
+[INFO] Initialized start time at data\runtime\lobbies\lobby_7\starttime.txt || 2025-03-30 20:18:53
+
+========================================
+Master Log Session at 2025-03-30 20:19:33
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:19:33
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_8\chat_log.txt || 2025-03-30 20:19:41
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_8\voting.json || 2025-03-30 20:19:41
+[INFO] Color selected for AI Player Donkey Kong: CYAN || 2025-03-30 20:19:42
+[INFO] Created AI doppelganger for Buzz || 2025-03-30 20:19:42
+[INFO] Player Buzz is the timekeeper. || 2025-03-30 20:19:43
+[INFO] Initialized start time at data\runtime\lobbies\lobby_8\starttime.txt || 2025-03-30 20:19:43
+
+========================================
+Master Log Session at 2025-03-30 20:20:13
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:20:13
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_9\chat_log.txt || 2025-03-30 20:20:22
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_9\voting.json || 2025-03-30 20:20:22
+[INFO] Color selected for AI Player Sadness: YELLOW || 2025-03-30 20:20:23
+[INFO] Created AI doppelganger for Captain Falcon || 2025-03-30 20:20:23
+[INFO] Player Captain Falcon is the timekeeper. || 2025-03-30 20:20:23
+[INFO] Initialized start time at data\runtime\lobbies\lobby_9\starttime.txt || 2025-03-30 20:20:23
+
+========================================
+Master Log Session at 2025-03-30 20:22:38
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:22:38
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_10\chat_log.txt || 2025-03-30 20:22:46
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_10\voting.json || 2025-03-30 20:22:46
+[INFO] Color selected for AI Player Wario: CYAN || 2025-03-30 20:22:47
+[INFO] Created AI doppelganger for Incineroar || 2025-03-30 20:22:47
+[INFO] Player Incineroar is the timekeeper. || 2025-03-30 20:22:49
+[INFO] Initialized start time at data\runtime\lobbies\lobby_10\starttime.txt || 2025-03-30 20:22:49
+
+========================================
+Master Log Session at 2025-03-30 20:23:55
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:23:55
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_11\chat_log.txt || 2025-03-30 20:24:02
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_11\voting.json || 2025-03-30 20:24:02
+[INFO] Color selected for AI Player Simba: YELLOW || 2025-03-30 20:24:03
+[INFO] Created AI doppelganger for Fear || 2025-03-30 20:24:03
+[INFO] Player Fear is the timekeeper. || 2025-03-30 20:24:04
+[INFO] Initialized start time at data\runtime\lobbies\lobby_11\starttime.txt || 2025-03-30 20:24:04
+
+========================================
+Master Log Session at 2025-03-30 20:27:05
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:27:05
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_12\chat_log.txt || 2025-03-30 20:27:16
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_12\voting.json || 2025-03-30 20:27:16
+[INFO] Color selected for AI Player Zelda: CYAN || 2025-03-30 20:27:17
+[INFO] Created AI doppelganger for Groot || 2025-03-30 20:27:17
+[INFO] Player Groot is the timekeeper. || 2025-03-30 20:27:17
+[INFO] Initialized start time at data\runtime\lobbies\lobby_12\starttime.txt || 2025-03-30 20:27:17
+
+========================================
+Master Log Session at 2025-03-30 20:30:43
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:30:43
+
+========================================
+Master Log Session at 2025-03-30 20:31:14
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:31:14
+
+========================================
+Master Log Session at 2025-03-30 20:32:26
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:32:26
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_13\chat_log.txt || 2025-03-30 20:32:35
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_13\voting.json || 2025-03-30 20:32:35
+[INFO] Color selected for AI Player ELEPHANT: YELLOW || 2025-03-30 20:32:36
+[INFO] Created AI doppelganger for CAT || 2025-03-30 20:32:36
+[INFO] Player CAT is the timekeeper. || 2025-03-30 20:32:37
+[INFO] Initialized start time at data\runtime\lobbies\lobby_13\starttime.txt || 2025-03-30 20:32:37
+
+========================================
+Master Log Session at 2025-03-30 20:34:45
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:34:45
+
+========================================
+Master Log Session at 2025-03-30 20:35:35
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:35:35
+
+========================================
+Master Log Session at 2025-03-30 20:36:42
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:36:42
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_15\chat_log.txt || 2025-03-30 20:36:58
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_15\voting.json || 2025-03-30 20:36:58
+[INFO] Color selected for AI Player PANDA: RED || 2025-03-30 20:36:59
+[INFO] Created AI doppelganger for HORSE || 2025-03-30 20:36:59
+[INFO] Player HORSE is the timekeeper. || 2025-03-30 20:37:15
+[INFO] Initialized start time at data\runtime\lobbies\lobby_15\starttime.txt || 2025-03-30 20:37:15
+
+========================================
+Master Log Session at 2025-03-30 20:38:20
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:38:20
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_16\chat_log.txt || 2025-03-30 20:38:28
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_16\voting.json || 2025-03-30 20:38:28
+[INFO] Color selected for AI Player SHEEP: BLUE || 2025-03-30 20:38:28
+[INFO] Created AI doppelganger for SNAKE || 2025-03-30 20:38:28
+[INFO] Player SNAKE is the timekeeper. || 2025-03-30 20:38:31
+[INFO] Initialized start time at data\runtime\lobbies\lobby_16\starttime.txt || 2025-03-30 20:38:31
+
+========================================
+Master Log Session at 2025-03-30 20:39:42
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:39:42
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_18\chat_log.txt || 2025-03-30 20:39:50
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_18\voting.json || 2025-03-30 20:39:50
+[INFO] Color selected for AI Player DEER: RED || 2025-03-30 20:39:51
+[INFO] Created AI doppelganger for CHICKEN || 2025-03-30 20:39:51
+[INFO] Player CHICKEN is the timekeeper. || 2025-03-30 20:39:54
+[INFO] Initialized start time at data\runtime\lobbies\lobby_18\starttime.txt || 2025-03-30 20:39:54
+
+========================================
+Master Log Session at 2025-03-30 20:42:50
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:42:50
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_17\chat_log.txt || 2025-03-30 20:42:59
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_17\voting.json || 2025-03-30 20:42:59
+[INFO] Color selected for AI Player CAT: BLUE || 2025-03-30 20:43:00
+[INFO] Created AI doppelganger for KANGAROO || 2025-03-30 20:43:00
+[INFO] Player KANGAROO is the timekeeper. || 2025-03-30 20:43:01
+[INFO] Initialized start time at data\runtime\lobbies\lobby_17\starttime.txt || 2025-03-30 20:43:01
+
+========================================
+Master Log Session at 2025-03-30 20:44:41
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:44:41
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_19\chat_log.txt || 2025-03-30 20:44:51
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_19\voting.json || 2025-03-30 20:44:51
+[INFO] Color selected for AI Player LION: RED || 2025-03-30 20:44:52
+[INFO] Created AI doppelganger for FISH || 2025-03-30 20:44:52
+[INFO] Player FISH is the timekeeper. || 2025-03-30 20:44:54
+[INFO] Initialized start time at data\runtime\lobbies\lobby_19\starttime.txt || 2025-03-30 20:44:54
+
+========================================
+Master Log Session at 2025-03-30 20:45:35
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:45:35
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_20\chat_log.txt || 2025-03-30 20:45:44
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_20\voting.json || 2025-03-30 20:45:44
+[INFO] Color selected for AI Player HORSE: BLUE || 2025-03-30 20:45:45
+[INFO] Created AI doppelganger for TIGER || 2025-03-30 20:45:45
+[INFO] Player TIGER is the timekeeper. || 2025-03-30 20:45:46
+[INFO] Initialized start time at data\runtime\lobbies\lobby_20\starttime.txt || 2025-03-30 20:45:46
+
+========================================
+Master Log Session at 2025-03-30 20:48:03
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:48:03
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_21\chat_log.txt || 2025-03-30 20:48:11
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_21\voting.json || 2025-03-30 20:48:11
+[INFO] Color selected for AI Player RABBIT: RED || 2025-03-30 20:48:12
+[INFO] Created AI doppelganger for MONKEY || 2025-03-30 20:48:12
+[INFO] Player MONKEY is the timekeeper. || 2025-03-30 20:48:14
+[INFO] Initialized start time at data\runtime\lobbies\lobby_21\starttime.txt || 2025-03-30 20:48:14
+
+========================================
+Master Log Session at 2025-03-30 20:49:11
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:49:11
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_22\chat_log.txt || 2025-03-30 20:49:18
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_22\voting.json || 2025-03-30 20:49:18
+[INFO] Color selected for AI Player SHEEP: BLUE || 2025-03-30 20:49:19
+[INFO] Created AI doppelganger for SNAKE || 2025-03-30 20:49:19
+[INFO] Player SNAKE is the timekeeper. || 2025-03-30 20:49:20
+[INFO] Initialized start time at data\runtime\lobbies\lobby_22\starttime.txt || 2025-03-30 20:49:20
+
+========================================
+Master Log Session at 2025-03-30 20:54:02
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:54:02
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_23\chat_log.txt || 2025-03-30 20:54:12
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_23\voting.json || 2025-03-30 20:54:12
+[INFO] Color selected for AI Player PIG: RED || 2025-03-30 20:54:12
+[INFO] Created AI doppelganger for GOAT || 2025-03-30 20:54:12
+[INFO] Player GOAT is the timekeeper. || 2025-03-30 20:54:13
+[INFO] Initialized start time at data\runtime\lobbies\lobby_23\starttime.txt || 2025-03-30 20:54:13
+
+========================================
+Master Log Session at 2025-03-30 20:54:29
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:54:29
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_24\chat_log.txt || 2025-03-30 20:54:38
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_24\voting.json || 2025-03-30 20:54:38
+[INFO] Color selected for AI Player KANGAROO: BLUE || 2025-03-30 20:54:38
+[INFO] Created AI doppelganger for DEER || 2025-03-30 20:54:38
+[INFO] Player DEER is the timekeeper. || 2025-03-30 20:54:38
+[INFO] Initialized start time at data\runtime\lobbies\lobby_24\starttime.txt || 2025-03-30 20:54:38
+
+========================================
+Master Log Session at 2025-03-30 20:54:51
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:54:51
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_25\chat_log.txt || 2025-03-30 20:54:57
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_25\voting.json || 2025-03-30 20:54:57
+[INFO] Color selected for AI Player FISH: RED || 2025-03-30 20:54:58
+[INFO] Created AI doppelganger for DOG || 2025-03-30 20:54:58
+[INFO] Player DOG is the timekeeper. || 2025-03-30 20:54:59
+[INFO] Initialized start time at data\runtime\lobbies\lobby_25\starttime.txt || 2025-03-30 20:54:59
+
+========================================
+Master Log Session at 2025-03-30 20:58:47
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 20:58:47
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_26\chat_log.txt || 2025-03-30 20:58:55
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_26\voting.json || 2025-03-30 20:58:55
+[INFO] Color selected for AI Player TIGER: BLUE || 2025-03-30 20:58:56
+[INFO] Created AI doppelganger for ELEPHANT || 2025-03-30 20:58:56
+[INFO] Player ELEPHANT is the timekeeper. || 2025-03-30 20:58:56
+[INFO] Initialized start time at data\runtime\lobbies\lobby_26\starttime.txt || 2025-03-30 20:58:56
+
+========================================
+Master Log Session at 2025-03-30 21:00:39
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:00:39
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_27\chat_log.txt || 2025-03-30 21:00:46
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_27\voting.json || 2025-03-30 21:00:46
+[INFO] Color selected for AI Player MONKEY: RED || 2025-03-30 21:00:47
+[INFO] Created AI doppelganger for BEAR || 2025-03-30 21:00:47
+[INFO] Player BEAR is the timekeeper. || 2025-03-30 21:00:48
+[INFO] Initialized start time at data\runtime\lobbies\lobby_27\starttime.txt || 2025-03-30 21:00:48
+
+========================================
+Master Log Session at 2025-03-30 21:24:13
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:24:13
+
+========================================
+Master Log Session at 2025-03-30 21:24:32
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:24:32
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_1\voting.json || 2025-03-30 21:24:42
+[INFO] Created AI doppelganger for d D || 2025-03-30 21:24:43
+[INFO] Player PANDA is the timekeeper. || 2025-03-30 21:24:45
+[INFO] Initialized start time at data\runtime\lobbies\lobby_1\starttime.txt || 2025-03-30 21:24:45
+[INFO] [AI] SNAKE responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:24:45
+[INFO] [User] PANDA sent: hello || 2025-03-30 21:24:48
+[INFO] [AI] SNAKE responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:24:48
+
+========================================
+Master Log Session at 2025-03-30 21:27:52
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:27:52
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_2\chat_log.txt || 2025-03-30 21:27:59
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_2\voting.json || 2025-03-30 21:27:59
+[INFO] Created AI doppelganger for d D || 2025-03-30 21:28:00
+
+========================================
+Master Log Session at 2025-03-30 21:30:20
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:30:20
+
+========================================
+Master Log Session at 2025-03-30 21:31:08
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:31:08
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_4\chat_log.txt || 2025-03-30 21:31:15
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_4\voting.json || 2025-03-30 21:31:15
+[INFO] Created AI doppelganger for d D || 2025-03-30 21:31:16
+
+========================================
+Master Log Session at 2025-03-30 21:32:36
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:32:36
+[INFO] Created AI doppelganger for d D || 2025-03-30 21:32:46
+[INFO] Player KANGAROO is the timekeeper. || 2025-03-30 21:32:47
+[INFO] Initialized start time at data\runtime\lobbies\lobby_5\starttime.txt || 2025-03-30 21:32:47
+[INFO] [User] KANGAROO sent: hello || 2025-03-30 21:32:49
+[INFO] [AI] DOG responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:32:49
+
+========================================
+Master Log Session at 2025-03-30 21:34:35
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:34:35
+[INFO] Created AI doppelganger for a A || 2025-03-30 21:34:42
+[INFO] Loaded existing start time: 2025-03-30 20:18:53 || 2025-03-30 21:34:43
+
+========================================
+Master Log Session at 2025-03-30 21:34:59
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:34:59
+[INFO] Created AI doppelganger for a A || 2025-03-30 21:35:06
+[INFO] Loaded existing start time: 2025-03-30 20:20:23 || 2025-03-30 21:35:07
+
+========================================
+Master Log Session at 2025-03-30 21:36:42
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:36:42
+[INFO] Created AI doppelganger for a A || 2025-03-30 21:36:47
+[INFO] Loaded existing start time: 2025-03-30 20:22:49 || 2025-03-30 21:36:48
+
+========================================
+Master Log Session at 2025-03-30 21:37:14
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:37:14
+[INFO] Created AI doppelganger for Dan S || 2025-03-30 21:37:23
+[INFO] Loaded existing start time: 2025-03-30 20:27:17 || 2025-03-30 21:37:23
+
+========================================
+Master Log Session at 2025-03-30 21:38:00
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:38:00
+[INFO] Created AI doppelganger for 1 D || 2025-03-30 21:38:08
+[INFO] Loaded existing start time: 2025-03-30 20:32:37 || 2025-03-30 21:38:09
+
+========================================
+Master Log Session at 2025-03-30 21:38:50
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:38:50
+
+========================================
+Master Log Session at 2025-03-30 21:39:03
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:39:03
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_1\chat_log.txt || 2025-03-30 21:39:09
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_1\voting.json || 2025-03-30 21:39:09
+[INFO] Created AI doppelganger for d D || 2025-03-30 21:39:09
+[INFO] Player SNAKE is the timekeeper. || 2025-03-30 21:39:10
+[INFO] Initialized start time at data\runtime\lobbies\lobby_1\starttime.txt || 2025-03-30 21:39:10
+[INFO] [User] SNAKE sent: Hello this is Dan || 2025-03-30 21:39:13
+[INFO] [AI] COW responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:39:14
+
+========================================
+Master Log Session at 2025-03-30 21:40:21
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:40:21
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_2\chat_log.txt || 2025-03-30 21:40:28
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_2\voting.json || 2025-03-30 21:40:28
+[INFO] Created AI doppelganger for a A || 2025-03-30 21:40:29
+[INFO] Player SHEEP is the timekeeper. || 2025-03-30 21:40:29
+[INFO] Initialized start time at data\runtime\lobbies\lobby_2\starttime.txt || 2025-03-30 21:40:29
+[INFO] [User] SHEEP sent: hello || 2025-03-30 21:40:32
+[INFO] [AI] GOAT responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:40:32
+
+========================================
+Master Log Session at 2025-03-30 21:40:50
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:40:50
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_3\chat_log.txt || 2025-03-30 21:40:56
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_3\voting.json || 2025-03-30 21:40:56
+[INFO] Created AI doppelganger for a A || 2025-03-30 21:40:56
+[INFO] Player CHICKEN is the timekeeper. || 2025-03-30 21:40:57
+[INFO] Initialized start time at data\runtime\lobbies\lobby_3\starttime.txt || 2025-03-30 21:40:57
+[INFO] [User] CHICKEN sent: d || 2025-03-30 21:40:58
+[INFO] [AI] PIG responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:40:58
+
+========================================
+Master Log Session at 2025-03-30 21:42:42
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:42:42
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_7\chat_log.txt || 2025-03-30 21:42:49
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_7\voting.json || 2025-03-30 21:42:49
+[INFO] Created AI doppelganger for a A || 2025-03-30 21:42:49
+[INFO] Player DEER is the timekeeper. || 2025-03-30 21:42:50
+[INFO] Initialized start time at data\runtime\lobbies\lobby_7\starttime.txt || 2025-03-30 21:42:50
+[INFO] [User] DEER sent: h || 2025-03-30 21:42:51
+[INFO] [AI] ZEBRA responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:42:51
+[INFO] [User] DEER sent: sd || 2025-03-30 21:42:57
+[INFO] [AI] ZEBRA responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:42:57
+
+========================================
+Master Log Session at 2025-03-30 21:44:06
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:44:06
+
+========================================
+Master Log Session at 2025-03-30 21:47:16
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:47:16
+
+========================================
+Master Log Session at 2025-03-30 21:47:41
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:47:41
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_89\chat_log.txt || 2025-03-30 21:47:54
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_89\voting.json || 2025-03-30 21:47:54
+[INFO] Created AI doppelganger for Dan S || 2025-03-30 21:47:54
+[INFO] Player KANGAROO is the timekeeper. || 2025-03-30 21:47:55
+[INFO] Initialized start time at data\runtime\lobbies\lobby_89\starttime.txt || 2025-03-30 21:47:55
+[INFO] [User] KANGAROO sent: hello || 2025-03-30 21:47:57
+[INFO] [AI] DOG responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:47:57
+
+========================================
+Master Log Session at 2025-03-30 21:48:47
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:48:47
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_5\chat_log.txt || 2025-03-30 21:48:56
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_5\voting.json || 2025-03-30 21:48:56
+[INFO] Created AI doppelganger for da A || 2025-03-30 21:48:56
+[INFO] Player CAT is the timekeeper. || 2025-03-30 21:48:57
+[INFO] Initialized start time at data\runtime\lobbies\lobby_5\starttime.txt || 2025-03-30 21:48:57
+[INFO] [User] CAT sent: d || 2025-03-30 21:48:58
+[INFO] [AI] FISH responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:48:58
+
+========================================
+Master Log Session at 2025-03-30 21:50:33
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:50:33
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_6\chat_log.txt || 2025-03-30 21:50:40
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_6\voting.json || 2025-03-30 21:50:40
+[INFO] Created AI doppelganger for a A || 2025-03-30 21:50:40
+[INFO] Player ELEPHANT is the timekeeper. || 2025-03-30 21:50:41
+[INFO] Initialized start time at data\runtime\lobbies\lobby_6\starttime.txt || 2025-03-30 21:50:41
+[INFO] [User] ELEPHANT sent: a || 2025-03-30 21:50:46
+[INFO] [AI] LION responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:50:46
+
+========================================
+Master Log Session at 2025-03-30 21:52:07
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:52:07
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_9\chat_log.txt || 2025-03-30 21:52:19
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_9\voting.json || 2025-03-30 21:52:19
+[INFO] Created AI doppelganger for Dan S || 2025-03-30 21:52:19
+[INFO] Player TIGER is the timekeeper. || 2025-03-30 21:52:19
+[INFO] Initialized start time at data\runtime\lobbies\lobby_9\starttime.txt || 2025-03-30 21:52:19
+[INFO] [User] TIGER sent:  || 2025-03-30 21:52:20
+[INFO] [AI] BEAR responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:52:20
+[INFO] [User] TIGER sent: a || 2025-03-30 21:52:26
+[INFO] [AI] BEAR responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:52:26
+
+========================================
+Master Log Session at 2025-03-30 21:53:27
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:53:27
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_90\chat_log.txt || 2025-03-30 21:53:38
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_90\voting.json || 2025-03-30 21:53:38
+[INFO] Created AI doppelganger for d D || 2025-03-30 21:53:38
+[INFO] Player HORSE is the timekeeper. || 2025-03-30 21:53:39
+[INFO] Initialized start time at data\runtime\lobbies\lobby_90\starttime.txt || 2025-03-30 21:53:39
+[INFO] [User] HORSE sent: d || 2025-03-30 21:53:40
+[INFO] [AI] MONKEY responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:53:40
+
+========================================
+Master Log Session at 2025-03-30 21:54:48
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:54:48
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_80\chat_log.txt || 2025-03-30 21:54:59
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_80\voting.json || 2025-03-30 21:54:59
+[INFO] Created AI doppelganger for Dan S || 2025-03-30 21:54:59
+[INFO] Player PANDA is the timekeeper. || 2025-03-30 21:55:00
+[INFO] Initialized start time at data\runtime\lobbies\lobby_80\starttime.txt || 2025-03-30 21:55:00
+[INFO] [User] PANDA sent: hello || 2025-03-30 21:55:01
+[INFO] [AI] RABBIT responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:55:02
+
+========================================
+Master Log Session at 2025-03-30 21:57:17
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:57:17
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_78\chat_log.txt || 2025-03-30 21:57:28
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_78\voting.json || 2025-03-30 21:57:28
+[INFO] Created AI doppelganger for a A || 2025-03-30 21:57:28
+[INFO] Player SNAKE is the timekeeper. || 2025-03-30 21:57:28
+[INFO] Initialized start time at data\runtime\lobbies\lobby_78\starttime.txt || 2025-03-30 21:57:28
+[INFO] [User] SNAKE sent: hello this is d || 2025-03-30 21:57:32
+[INFO] [AI] COW responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:57:33
+[INFO] [User] SNAKE sent: is anyone there? || 2025-03-30 21:57:40
+[INFO] [AI] COW responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:57:40
+
+========================================
+Master Log Session at 2025-03-30 21:59:06
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 21:59:06
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_14\chat_log.txt || 2025-03-30 21:59:17
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_14\voting.json || 2025-03-30 21:59:17
+[INFO] Created AI doppelganger for d D || 2025-03-30 21:59:17
+[INFO] Player SHEEP is the timekeeper. || 2025-03-30 21:59:18
+[INFO] Initialized start time at data\runtime\lobbies\lobby_14\starttime.txt || 2025-03-30 21:59:18
+[INFO] [User] SHEEP sent: hello || 2025-03-30 21:59:20
+
+========================================
+Master Log Session at 2025-03-30 22:01:07
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 22:01:07
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_15\chat_log.txt || 2025-03-30 22:01:16
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_15\voting.json || 2025-03-30 22:01:16
+[INFO] Created AI doppelganger for a A || 2025-03-30 22:01:16
+[INFO] Player CHICKEN is the timekeeper. || 2025-03-30 22:01:17
+[INFO] Initialized start time at data\runtime\lobbies\lobby_15\starttime.txt || 2025-03-30 22:01:17
+[INFO] [User] CHICKEN sent: hello || 2025-03-30 22:01:19
+
+========================================
+Master Log Session at 2025-03-30 22:04:47
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 22:04:47
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_16\chat_log.txt || 2025-03-30 22:04:57
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_16\voting.json || 2025-03-30 22:04:57
+[INFO] Created AI doppelganger for Dan S || 2025-03-30 22:04:57
+[INFO] Player DEER is the timekeeper. || 2025-03-30 22:04:58
+[INFO] Initialized start time at data\runtime\lobbies\lobby_16\starttime.txt || 2025-03-30 22:04:58
+[INFO] [User] DEER sent: hello || 2025-03-30 22:04:59
+
+========================================
+Master Log Session at 2025-03-30 22:05:51
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 22:05:51
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_87\chat_log.txt || 2025-03-30 22:06:01
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_87\voting.json || 2025-03-30 22:06:01
+[INFO] Created AI doppelganger for d D || 2025-03-30 22:06:01
+[INFO] Player KANGAROO is the timekeeper. || 2025-03-30 22:06:01
+[INFO] Initialized start time at data\runtime\lobbies\lobby_87\starttime.txt || 2025-03-30 22:06:01
+[INFO] [User] KANGAROO sent: hello || 2025-03-30 22:06:03
+
+========================================
+Master Log Session at 2025-03-30 22:06:38
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 22:06:38
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_76\chat_log.txt || 2025-03-30 22:06:46
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_76\voting.json || 2025-03-30 22:06:46
+[INFO] Created AI doppelganger for d D || 2025-03-30 22:06:46
+[INFO] Player CAT is the timekeeper. || 2025-03-30 22:06:48
+[INFO] Initialized start time at data\runtime\lobbies\lobby_76\starttime.txt || 2025-03-30 22:06:48
+[INFO] [User] CAT sent: hello || 2025-03-30 22:06:49
+
+========================================
+Master Log Session at 2025-03-30 22:07:56
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 22:07:56
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_65\chat_log.txt || 2025-03-30 22:08:05
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_65\voting.json || 2025-03-30 22:08:05
+[INFO] Created AI doppelganger for d D || 2025-03-30 22:08:05
+[INFO] Player ELEPHANT is the timekeeper. || 2025-03-30 22:08:06
+[INFO] Initialized start time at data\runtime\lobbies\lobby_65\starttime.txt || 2025-03-30 22:08:06
+[INFO] [User] ELEPHANT sent: h || 2025-03-30 22:08:07
+
+========================================
+Master Log Session at 2025-03-30 22:10:30
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 22:10:30
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_555\chat_log.txt || 2025-03-30 22:10:40
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_555\voting.json || 2025-03-30 22:10:40
+[INFO] Created AI doppelganger for Dan S || 2025-03-30 22:10:40
+[INFO] Player TIGER is the timekeeper. || 2025-03-30 22:10:40
+[INFO] Initialized start time at data\runtime\lobbies\lobby_555\starttime.txt || 2025-03-30 22:10:40
+[INFO] [User] TIGER sent:  || 2025-03-30 22:10:41
+
+========================================
+Master Log Session at 2025-03-30 22:11:23
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 22:11:23
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_44\chat_log.txt || 2025-03-30 22:11:32
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_44\voting.json || 2025-03-30 22:11:32
+[INFO] Created AI doppelganger for Dan S || 2025-03-30 22:11:32
+[INFO] Player HORSE is the timekeeper. || 2025-03-30 22:11:33
+[INFO] Initialized start time at data\runtime\lobbies\lobby_44\starttime.txt || 2025-03-30 22:11:33
+[INFO] [User] HORSE sent: hello || 2025-03-30 22:11:35
+
+========================================
+Master Log Session at 2025-03-30 22:12:17
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 22:12:17
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_17\chat_log.txt || 2025-03-30 22:12:34
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_17\voting.json || 2025-03-30 22:12:34
+[INFO] Created AI doppelganger for d D || 2025-03-30 22:12:34
+[INFO] Player PANDA is the timekeeper. || 2025-03-30 22:12:35
+[INFO] Initialized start time at data\runtime\lobbies\lobby_17\starttime.txt || 2025-03-30 22:12:35
+[INFO] [User] PANDA sent: hello || 2025-03-30 22:12:37
+
+========================================
+Master Log Session at 2025-03-30 22:13:01
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 22:13:01
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_18\chat_log.txt || 2025-03-30 22:13:10
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_18\voting.json || 2025-03-30 22:13:10
+[INFO] Created AI doppelganger for d D || 2025-03-30 22:13:10
+[INFO] Player SNAKE is the timekeeper. || 2025-03-30 22:13:11
+[INFO] Initialized start time at data\runtime\lobbies\lobby_18\starttime.txt || 2025-03-30 22:13:11
+[INFO] [User] SNAKE sent: h || 2025-03-30 22:13:12
+
+========================================
+Master Log Session at 2025-03-30 22:15:12
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 22:15:12
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_33\chat_log.txt || 2025-03-30 22:15:20
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_33\voting.json || 2025-03-30 22:15:20
+[INFO] Created AI doppelganger for Dan S || 2025-03-30 22:15:20
+[INFO] Player SHEEP is the timekeeper. || 2025-03-30 22:15:21
+[INFO] Initialized start time at data\runtime\lobbies\lobby_33\starttime.txt || 2025-03-30 22:15:21
+[INFO] [User] SHEEP sent: hello || 2025-03-30 22:15:23
+[INFO] [AI] GOAT responded: yo Sheep! what's good? you ready to suss out the fakes in this game? || 2025-03-30 22:15:30
+[INFO] [User] SHEEP sent: is anyone there? || 2025-03-30 22:15:32
+[INFO] [AI] GOAT responded: yo! just got here, what's the plan for sniffing out the AIs? || 2025-03-30 22:15:37
+
+========================================
+Master Log Session at 2025-03-30 22:20:43
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 22:20:43
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_22\chat_log.txt || 2025-03-30 22:20:53
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_22\voting.json || 2025-03-30 22:20:53
+[INFO] Created AI doppelganger for d D || 2025-03-30 22:20:53
+[INFO] Player CHICKEN is the timekeeper. || 2025-03-30 22:20:54
+[INFO] Initialized start time at data\runtime\lobbies\lobby_22\starttime.txt || 2025-03-30 22:20:54
+[INFO] [User] CHICKEN sent: hello || 2025-03-30 22:20:56
+[INFO] [AI] PIG responded: yo Chicken! what's good? you ready to suss out these AIs? || 2025-03-30 22:20:59
+[INFO] [User] CHICKEN sent:  || 2025-03-30 22:21:02
+[INFO] [AI] PIG responded: Ayo PIG! I'm so ready for this! We gotta suss out the AIs before they run the show! What should we peep first? || 2025-03-30 22:21:06
+[INFO] [User] CHICKEN sent: is anyone there? || 2025-03-30 22:21:11
+[INFO] [AI] PIG responded: yo PIG! I'm here! we gotta keep an eye out for any sus moves. what should we peep first? || 2025-03-30 22:21:15
+
+========================================
+Master Log Session at 2025-03-30 22:22:49
+========================================
+[INFO] Starting Setup screen... || 2025-03-30 22:22:49
+[INFO] Initialized chat log at data\runtime\lobbies\lobby_23\chat_log.txt || 2025-03-30 22:22:57
+[INFO] Initialized voting file at data\runtime\lobbies\lobby_23\voting.json || 2025-03-30 22:22:57
+[INFO] Created AI doppelganger for a A || 2025-03-30 22:22:57
+[INFO] Player DEER is the timekeeper. || 2025-03-30 22:22:58
+[INFO] Initialized start time at data\runtime\lobbies\lobby_23\starttime.txt || 2025-03-30 22:22:58
+[INFO] [User] DEER sent: hello || 2025-03-30 22:23:00
+[INFO] [AI] ZEBRA responded: yo DEER! what's good? you ready to kick this game off? || 2025-03-30 22:23:03
+[INFO] [User] DEER sent: hell ya I am how about you? || 2025-03-30 22:23:12
+[INFO] [AI] ZEBRA responded: yo DEER, I'm hyped too! can't wait to see how this goes down. what’s your take on the strategy? || 2025-03-30 22:23:15
+
+========================================
+Master Log Session at 2025-03-30 22:30:03
+========================================
+[INFO] Game started - Initializing master logger || 2025-03-30 22:30:03
+[INFO] Starting Setup screen... || 2025-03-30 22:30:03

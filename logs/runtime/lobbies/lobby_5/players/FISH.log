@@ -1,0 +1,6 @@
+
+========================================
+New Log Session at 2025-03-30 21:48:55
+========================================
+[INFO] Game state initialized with players: CAT || 2025-03-30 21:48:57
+[ERROR] decide_to_respond – Error: cannot pickle '_thread.RLock' object || 2025-03-30 21:48:58

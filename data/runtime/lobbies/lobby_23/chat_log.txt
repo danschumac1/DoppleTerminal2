@@ -1,0 +1,4 @@
+DEER: hello
+ZEBRA: yo DEER! what's good? you ready to kick this game off?
+DEER: hell ya I am how about you?
+ZEBRA: yo DEER, I'm hyped too! can't wait to see how this goes down. what’s your take on the strategy?

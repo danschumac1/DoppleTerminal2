@@ -1,0 +1,17 @@
+[
+  {
+    "lobby_id": 16,
+    "first_name": "Dan",
+    "last_initial": "S",
+    "code_name": "DEER",
+    "grade": 7,
+    "favorite_food": "d",
+    "favorite_animal": "d",
+    "hobby": "d",
+    "extra_info": "d",
+    "starttime": "",
+    "ai_doppleganger": null,
+    "written_to_file": false,
+    "timekeeper": false
+  }
+]

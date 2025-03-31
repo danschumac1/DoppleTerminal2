@@ -1,0 +1,7 @@
+
+========================================
+New Log Session at 2025-03-30 21:52:18
+========================================
+[INFO] Game state initialized with players: TIGER || 2025-03-30 21:52:19
+[ERROR] decide_to_respond – Error: cannot pickle '_thread.RLock' object || 2025-03-30 21:52:20
+[ERROR] decide_to_respond – Error: cannot pickle '_thread.RLock' object || 2025-03-30 21:52:26

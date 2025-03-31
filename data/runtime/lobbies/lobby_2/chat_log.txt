@@ -1,0 +1,2 @@
+SHEEP: hello
+GOAT: cannot pickle '_thread.RLock' object

@@ -1,0 +1,6 @@
+CHICKEN: hello
+PIG: yo Chicken! what's good? you ready to suss out these AIs?
+CHICKEN: 
+PIG: Ayo PIG! I'm so ready for this! We gotta suss out the AIs before they run the show! What should we peep first?
+CHICKEN: is anyone there?
+PIG: yo PIG! I'm here! we gotta keep an eye out for any sus moves. what should we peep first?

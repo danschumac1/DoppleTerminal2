@@ -1,0 +1,6 @@
+
+========================================
+New Log Session at 2025-03-30 21:54:58
+========================================
+[INFO] [User] PANDA sent: hello || 2025-03-30 21:55:01
+[INFO] [AI] RABBIT responded: cannot pickle '_thread.RLock' object || 2025-03-30 21:55:02

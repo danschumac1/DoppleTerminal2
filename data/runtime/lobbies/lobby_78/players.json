@@ -1,0 +1,17 @@
+[
+  {
+    "lobby_id": 78,
+    "first_name": "a",
+    "last_initial": "A",
+    "code_name": "SNAKE",
+    "grade": 7,
+    "favorite_food": "a",
+    "favorite_animal": "a",
+    "hobby": "a",
+    "extra_info": "a",
+    "starttime": "",
+    "ai_doppleganger": null,
+    "written_to_file": false,
+    "timekeeper": false
+  }
+]

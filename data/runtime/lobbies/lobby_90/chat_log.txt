@@ -1,0 +1,2 @@
+HORSE: d
+MONKEY: cannot pickle '_thread.RLock' object

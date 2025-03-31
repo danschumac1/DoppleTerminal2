@@ -1,0 +1,17 @@
+[
+  {
+    "lobby_id": 6,
+    "first_name": "a",
+    "last_initial": "A",
+    "code_name": "ELEPHANT",
+    "grade": 7,
+    "favorite_food": "a",
+    "favorite_animal": "a",
+    "hobby": "a",
+    "extra_info": "a",
+    "starttime": "",
+    "ai_doppleganger": null,
+    "written_to_file": false,
+    "timekeeper": false
+  }
+]
