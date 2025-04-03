@@ -82,8 +82,11 @@ def process_voting_result(gs: GameState, max_votes: int, voted_out_players: list
 
 # Main voting round function
 def voting_round(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[ScreenState, GameState, PlayerState]:
-    print('Waiting for players to be ready to vote...')
+    print(format_gm_message('Waiting for players to be ready to vote...'))
     print_str = ''
+    retry_count = 0
+    max_retries = 30
+
     while len(gs.players) < gs.number_of_human_players:
         sleep(1)
         gs.players = load_players_from_lobby(gs)
@@ -92,32 +95,34 @@ def voting_round(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[Scree
         if print_str != new_str:
             print(new_str)
             print_str = new_str
+        retry_count += 1
+        if retry_count >= max_retries:
+            print(format_gm_message("Timeout: Not all players are ready. Proceeding with available players."))
+            break
 
     input('Press Enter to start voting...')
     clear_screen()
     print(format_gm_message("It's time to vote! Choose the player you believe is an AI."))
 
-    # Get the latest voting data
     vote_dict = get_voting_data(gs.voting_path, gs.round_number)
 
-    # Collect and record the vote
     if not ps.voted:
         voted_code_name = collect_vote(gs, ps)
-
-        # Reload the voting data to ensure it contains the latest votes
-        vote_dict = get_voting_data(gs.voting_path, gs.round_number)
-
-        # Append the vote to the current round
         vote_dict.setdefault(f'votes_r{gs.round_number}', []).append(voted_code_name)
         ps.voted = True
         save_voting_data(gs.voting_path, vote_dict)
 
     human_players = [p for p in gs.players if p.is_human]
+    retry_count = 0
+
     while len(vote_dict[f'votes_r{gs.round_number}']) < len(human_players):
         print('Waiting for all players to vote...')
         sleep(1)
-        # Continuously read the latest votes to prevent overwriting
         vote_dict = get_voting_data(gs.voting_path, gs.round_number)
+        retry_count += 1
+        if retry_count >= max_retries:
+            print(format_gm_message("Timeout: Proceeding with available votes."))
+            break
 
     max_votes, voted_out_players = count_votes(vote_dict, gs)
     process_voting_result(gs, max_votes, voted_out_players)

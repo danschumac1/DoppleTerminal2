@@ -4,7 +4,8 @@ import random
 from utils.states import ScreenState
 from setup import collect_player_data
 from intro_screen import play_intro
-from game_MVP import play_game
+# from game_MVP import play_game
+from fake_chat import play_game
 from score import score_screen
 import inspect
 from voting import voting_round
