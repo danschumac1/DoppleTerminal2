@@ -26,10 +26,9 @@ class PlayerState:
     hobby: str
     extra_info: str
     is_human: bool 
+    color_name: str     
     starttime: str = "" # Start time of the game
     voted: bool = False # Flag to indicate if the player has voted
-    # color_name: str     
-    # color_asci: str          
     ai_doppleganger: Optional[AIPlayer] = None # type: ignore
     written_to_file: bool = False # Flag to indicate if the player has been written to a file
     timekeeper: bool = False # Flag to indicate if the player is a timekeeper
@@ -45,7 +44,7 @@ class PlayerState:
             "favorite_animal": self.favorite_animal,
             "hobby": self.hobby,
             "extra_info": self.extra_info,
-            # "color_name": self.color_name,
+            "color_name": self.color_name,
             # "color_asci": self.color_asci,
             "starttime": self.starttime.isoformat() if isinstance(self.starttime, datetime) else self.starttime,
             # "ai_doppleganger": self.ai_doppleganger if self.ai_doppleganger else None

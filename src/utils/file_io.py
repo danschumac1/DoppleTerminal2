@@ -28,7 +28,7 @@ def read_new_messages(path: str, last_line: int) -> Tuple[List[str], List[str], 
 
 class SequentialAssigner:
     def __init__(self, list_path: str, index_path: str, key: str):
-        print(f"Loading items from {list_path}...")
+        # print(f"Loading items from {list_path}...")
         self.list_path = list_path
         self.index_path = index_path
         self.key = key
@@ -82,12 +82,13 @@ class SequentialAssigner:
         next_idx = (idx + 1) % len(self.items)
         self._write_index(next_idx)
 
-        # Get the caller's file name and line number
-        caller_frame = inspect.currentframe().f_back
-        file_name = caller_frame.f_code.co_filename
-        line_number = caller_frame.f_lineno
+        # Get the caller's file name and line number\
+        # FOR DEBUGGING UNCOMMENT BELOW
+        # caller_frame = inspect.currentframe().f_back
+        # file_name = caller_frame.f_code.co_filename
+        # line_number = caller_frame.f_lineno
 
-        print(f"Assigned {self.key[-1]}: {selected_item} (called from {file_name}, line {line_number})")
+        # print(f"Assigned {self.key[-1]}: {selected_item} (called from {file_name}, line {line_number})")
         return selected_item
 
 

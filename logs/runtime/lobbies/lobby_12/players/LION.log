@@ -1,9 +1,0 @@
-
-========================================
-New Log Session at 2025-03-30 23:02:04
-========================================
-[INFO] Game state initialized with players: ELEPHANT || 2025-03-30 23:02:06
-[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "The player 'ELEPHANT' has initiated a conversation by saying hello, which is a good opportunity to engage and establish communication."} || 2025-03-30 23:02:09
-[INFO] Generate Response JSON: {'response': "Hey Elephant! How's it going? What are you excited about for this game?", 'reasoning': 'Responding warmly to engage with the player and encourage conversation, which is a natural human behavior.'} || 2025-03-30 23:02:10
-[INFO] Stylize Response JSON: {'output_text': "Yo Elephant! What's good? What you hyped for in this game?"} || 2025-03-30 23:02:11
-[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and friendly, which is typical of human interaction, and it engages another player in the game.'} || 2025-03-30 23:02:12

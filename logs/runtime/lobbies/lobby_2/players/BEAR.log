@@ -1,9 +1,0 @@
-
-========================================
-New Log Session at 2025-03-30 22:44:01
-========================================
-[INFO] Game state initialized with players: TIGER || 2025-03-30 22:44:02
-[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'The conversation has started with a greeting, and it would be appropriate to respond to keep the interaction going.'} || 2025-03-30 22:44:03
-[INFO] Generate Response JSON: {'response': "Hey Sheep! What's up? That error message sounds weird, did you try restarting the game?", 'reasoning': 'Engaging with Sheep to build rapport and showing concern about the error, which feels human and relatable.'} || 2025-03-30 22:44:04
-[INFO] Stylize Response JSON: {'output_text': "Yo Sheep! What's good? That error message is kinda sus, did you try restarting the game or what?"} || 2025-03-30 22:44:05
-[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and friendly, showing engagement with the conversation and suggesting a solution, which is typical human behavior.'} || 2025-03-30 22:44:05

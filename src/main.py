@@ -66,7 +66,7 @@ async def main():
     }
 
     # Initialize the starting screen state and blank game/player states.
-    ss = ScreenState.SETUP  # Can also start with ScreenState.INTRO
+    ss = ScreenState.INTRO  # Can also start with ScreenState.INTRO
     gs = BLANK_GS
     ps = BLANK_PS
 

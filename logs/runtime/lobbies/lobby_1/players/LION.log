@@ -1,9 +1,0 @@
-
-========================================
-New Log Session at 2025-03-30 22:42:18
-========================================
-[INFO] Game state initialized with players: ELEPHANT || 2025-03-30 22:42:19
-[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "Dan has introduced himself, and it's important to engage with new players to build rapport and gather information."} || 2025-03-30 22:42:20
-[INFO] Generate Response JSON: {'response': "Hey Dan! What's up? That error message sounds weird. Are you trying to run some code or something?", 'reasoning': 'Engaging with Dan to build rapport and show interest in the conversation, while also addressing the technical issue to sound relatable.'} || 2025-03-30 22:42:21
-[INFO] Stylize Response JSON: {'output_text': "yo Dan! what's good? that error message is kinda sus. you coding or what?"} || 2025-03-30 22:42:22
-[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and friendly, fitting the tone of a conversation among peers.'} || 2025-03-30 22:42:23

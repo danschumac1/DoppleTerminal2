@@ -1,9 +1,0 @@
-
-========================================
-New Log Session at 2025-03-30 23:40:59
-========================================
-[INFO] Game state initialized with players: DEER || 2025-03-30 23:41:08
-[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'The message from DEER is unclear and seems like a mistake or an incomplete thought. Responding could help clarify the situation.'} || 2025-03-30 23:41:10
-[INFO] Generate Response JSON: {'response': "Hey DEER, that was a bit random! What's on your mind?", 'reasoning': "Responding to the unexpected message in a friendly way to encourage more conversation and gauge DEER's behavior."} || 2025-03-30 23:41:11
-[INFO] Stylize Response JSON: {'output_text': 'yo DEER, that was kinda random! what’s up with you?'} || 2025-03-30 23:41:11
-[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and conversational, which is typical in a social setting among friends.'} || 2025-03-30 23:41:12

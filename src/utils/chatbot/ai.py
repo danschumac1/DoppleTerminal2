@@ -17,7 +17,7 @@ from utils.states import PlayerState, GameState
 from utils.file_io import SequentialAssigner
 from utils.constants import (
     NAMES_PATH, NAMES_INDEX_PATH, 
-    # COLORS_PATH, COLORS_INDEX_PATH, COLOR_DICT
+    COLORS_PATH, COLORS_INDEX_PATH
     )
 from utils.logging_utils import StandAloneLogger
 
@@ -56,7 +56,7 @@ class AIPlayer:
         # self.color_name = SequentialAssigner(
         #     COLORS_PATH, COLORS_INDEX_PATH, "colors").assign()  # Assign a new color name
         self.code_name_assigner = SequentialAssigner(NAMES_PATH, NAMES_INDEX_PATH, "code_names")
-
+        self.color_assigner = SequentialAssigner(COLORS_PATH, COLORS_INDEX_PATH, "colors")
         self.player_state = self._steal_player_state(player_to_steal)
         self.system_prompt = system_prompt
 
@@ -66,7 +66,6 @@ class AIPlayer:
         self.game_state = None
         self.logger = self._init_logger()
         
-
         # Prompter Dictionary
         # Updated Prompter Dictionary with prompt_headers
         self.prompter_dict = {
@@ -165,8 +164,7 @@ class AIPlayer:
             first_name=player_state_to_steal.first_name,
             last_initial=player_state_to_steal.last_initial,
             code_name=self.code_name_assigner.assign(),  # Assign a new code name
-            # color_name=self.color_name,  # Assign a new color name
-            # color_asci=COLOR_DICT.get(self.color_name, "\x1b[0m"),  # Get the corresponding color code
+            color_name=self.color_assigner.assign(),  # Assign a new color name
             grade=player_state_to_steal.grade,
             favorite_food=player_state_to_steal.favorite_food,
             favorite_animal=player_state_to_steal.favorite_animal,

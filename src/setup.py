@@ -1,12 +1,14 @@
 from datetime import datetime
 import os
 from typing import Tuple
+
+from colorama import Fore, Style
 from utils.chatbot.ai import AIPlayer
 from utils.logging_utils import MasterLogger, StandAloneLogger
 from utils.states import GameState, ScreenState, PlayerState
 from utils.file_io import SequentialAssigner, init_game_file, load_players_from_lobby, save_player_to_lobby_file
 from utils.constants import (
-    NAMES_PATH, NAMES_INDEX_PATH, 
+    COLORS_INDEX_PATH, COLORS_PATH, NAMES_PATH, NAMES_INDEX_PATH, 
     # COLORS_PATH, COLORS_INDEX_PATH, COLOR_DICT
 )
 from utils.asthetics import clear_screen # ,print_color
@@ -23,8 +25,8 @@ class PlayerSetup:
         self,
         names_path=NAMES_PATH,
         names_index_path=NAMES_INDEX_PATH,
-        # colors_path=COLORS_PATH,
-        # colors_index_path=COLORS_INDEX_PATH
+        colors_path=COLORS_PATH,
+        colors_index_path=COLORS_INDEX_PATH
     ):
         """
         Initializes the PlayerSetup object with necessary paths for name and color assignment.
@@ -37,42 +39,37 @@ class PlayerSetup:
         """
         self.data = {}
         self.code_name_assigner = SequentialAssigner(names_path, names_index_path, "code_names")
-        # self.color_assigner = SequentialAssigner(colors_path, colors_index_path, "colors")
+        self.color_assigner = SequentialAssigner(colors_path, colors_index_path, "colors")
 
 
     def prompt_input(self, field_name: str, prompt: str) -> None:
         """Prompt for a generic input and ensure it is not empty."""
         while True:
-            value = input(prompt).strip()
+            value = input(Fore.CYAN + prompt + " " + Style.RESET_ALL).strip()
             if value:
                 self.data[field_name] = value
                 return
             # print_color(f"{field_name} cannot be empty.", "RED")
-            print(f"{field_name} cannot be empty.", "RED")
+            print(Fore.RED + f"{field_name} cannot be empty." + Style.RESET_ALL)
 
     def prompt_number(self, lower: int, upper: int, prompt: str, field_name: str) -> None:
-        """Prompt for a number within a specified range."""
         while True:
             try:
-                value = int(input(f"{prompt} ({lower} - {upper}): "))
+                value = int(input(Fore.CYAN + f"{prompt} ({lower} - {upper}): " + Style.RESET_ALL))
                 if lower <= value <= upper:
                     self.data[field_name] = value
                     return
-                # print_color(f"Please enter a number between {lower} and {upper}.", "RED")
-                print(f"Please enter a number between {lower} and {upper}.", "RED")
+                print(Fore.RED + f"Please enter a number between {lower} and {upper}." + Style.RESET_ALL)
             except ValueError:
-                # print_color("Invalid input. Please enter a valid number.", "RED")
-                print("Invalid input. Please enter a valid number.", "RED")
+                print(Fore.RED + "Invalid input. Please enter a valid number." + Style.RESET_ALL)
 
     def prompt_initial(self) -> None:
-        """Prompt for a single uppercase letter."""
         while True:
-            value = input("Enter your last initial (A–Z): ").strip().upper()
+            value = input(Fore.CYAN + "Enter your last initial (A–Z): " + Style.RESET_ALL).strip().upper()
             if len(value) == 1 and value.isalpha():
                 self.data["last_initial"] = value
                 return
-            # print_color("Invalid input. Please enter a single letter (A–Z).", "RED")
-            print("Invalid input. Please enter a single letter (A–Z).", "RED")
+            print(Fore.RED + "Invalid input. Please enter a single letter (A–Z)." + Style.RESET_ALL)
 
     def run(self, gs:GameState) -> Tuple[ScreenState, GameState, PlayerState]:
         """Run the player setup process."""
@@ -81,7 +78,7 @@ class PlayerSetup:
         # self.data["color_asci"] = COLOR_DICT[picked_color_name]
         
         # print_color("=== Player Setup ===", "CYAN")
-        print("=== Player Setup ===", "CYAN")
+        print(Fore.YELLOW + "\n=== Player Setup ===" + Style.RESET_ALL)
         self.prompt_number(1, 10000, "Enter your lobby number", "lobby")
         self.prompt_number(1, 5, "How many people are you playing with?", "number_of_human_players") # TODO change back to 3,5
         self.prompt_number(6, 8, "What grade are you in?", "grade")
@@ -91,6 +88,8 @@ class PlayerSetup:
         self.prompt_input("favorite_animal", "Favorite animal: ")
         self.prompt_input("hobby", "What's your hobby? ")
         self.prompt_input("extra_info", "Tell us one more thing about you: ")
+
+        print(Fore.GREEN + "✅ Player setup complete." + Style.RESET_ALL)
 
         lobby_path = os.path.join(
             "data", "runtime", "lobbies",
@@ -104,6 +103,7 @@ class PlayerSetup:
 
         # Create the PlayerState object
         code_name = self.code_name_assigner.assign()
+        color_name = self.color_assigner.assign()
         ps = PlayerState(
             lobby_id=self.data["lobby"],
             first_name=self.data["first_name"],
@@ -115,8 +115,7 @@ class PlayerSetup:
             hobby=self.data["hobby"],
             extra_info=self.data["extra_info"],
             is_human=True,
-            # color_name=self.data["color_name"],
-            # color_asci=self.data["color_asci"],
+            color_name=color_name,
         )
         save_player_to_lobby_file(ps)
         ps.logger = StandAloneLogger(
@@ -180,7 +179,7 @@ def collect_player_data(
             print_str = new_str
 
     # All players are ready, continue to the next step
-    input("Press Enter to continue...")
+    input(Fore.MAGENTA + "Press Enter to continue..." + Style.RESET_ALL)
     # clear_screen() # TODO uncomment this line to clear the screen
 
     # Synchronize start time if this player is the timekeeper

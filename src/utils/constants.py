@@ -1,21 +1,22 @@
+from colorama import Fore, init
+
 from utils.states import GameState, PlayerState
 
 ROUND_DURATION = 6  # seconds
 
-# COLOR_DICT = {
-#     "RED": "\x1b[31m",
-#     "GREEN": "\x1b[32m",
-#     "YELLOW": "\x1b[33m",
-#     "BLUE": "\x1b[34m",
-#     "MAGENTA": "\x1b[35m",
-#     "CYAN": "\x1b[36m",
-#     "WHITE": "\x1b[0m"
-# }
+COLOR_DICT = {
+    "RED": Fore.RED,
+    "GREEN": Fore.GREEN,
+    "YELLOW": Fore.YELLOW,
+    "BLUE": Fore.BLUE,
+    "MAGENTA": Fore.MAGENTA,
+    "CYAN": Fore.CYAN,
+}
 
 NAMES_PATH="./data/runtime/possible_code_names.json"
 NAMES_INDEX_PATH="./data/runtime/code_names_index.txt"
-# COLORS_PATH="./data/runtime/possible_colors.json"
-# COLORS_INDEX_PATH="./data/runtime/colors_index.txt"
+COLORS_PATH="./data/runtime/possible_colors.json"
+COLORS_INDEX_PATH="./data/runtime/colors_index.txt"
 
 BLANK_PS = PlayerState(
     lobby_id="",
@@ -28,7 +29,7 @@ BLANK_PS = PlayerState(
     hobby="",
     extra_info="",
     is_human=True,  
-    # color_name="",
+    color_name="",
     # color_asci=""
 )
 

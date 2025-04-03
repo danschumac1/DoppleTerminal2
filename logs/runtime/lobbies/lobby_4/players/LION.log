@@ -1,8 +1,0 @@
-
-========================================
-New Log Session at 2025-03-30 23:27:40
-========================================
-[INFO] Game state initialized with players: ELEPHANT || 2025-03-30 23:27:42
-[INFO] DTR JSON: {'respond_bool': False, 'reasoning': "The message from CAT is unclear and seems like a typo or incomplete thought, which doesn't warrant a response."} || 2025-03-30 23:27:46
-[INFO] DTR JSON: {'respond_bool': False, 'reasoning': 'The other players have indicated that no response is needed, so it would be best to remain silent.'} || 2025-03-30 23:27:47
-[INFO] DTR JSON: {'respond_bool': False, 'reasoning': 'The players have indicated that no response is needed, and the conversation seems to be at a standstill.'} || 2025-03-30 23:27:48
