@@ -1,10 +1,44 @@
 import asyncio
+from datetime import datetime
+import os
 from prompt_toolkit.shortcuts import PromptSession
 from colorama import Fore, Style
 from utils.asthetics import format_gm_message
 from utils.file_io import load_players_from_lobby
 from utils.states import GameState, PlayerState, ScreenState
-from utils.constants import COLOR_DICT
+from utils.constants import COLOR_DICT, ROUND_DURATION
+
+def ask_icebreaker(gs, chat_log):
+    intro_msg = format_gm_message(gs.icebreakers[0])
+    gs.ice_asked += 1
+    gs.icebreakers.pop(0)
+    with open(chat_log, "a", encoding="utf-8") as f:
+        f.write(intro_msg)
+        f.flush()
+
+async def countdown_timer(
+        duration: int, gs: GameState, ps: PlayerState, chat_log: str) -> ScreenState:
+    elapsed = (datetime.now() - ps.starttime).total_seconds()
+    remaining = max(0, duration - int(elapsed))
+
+    if remaining > 0:
+        await asyncio.sleep(remaining)
+
+    # Safeguard against double marking the round as complete
+    if not gs.round_complete:
+        gs.round_complete = True
+
+        if ps.timekeeper:
+            with open(chat_log, "a", encoding="utf-8") as f:
+                f.write(format_gm_message("Time's up! Moving to the next round.\n"))
+                f.flush()
+
+        # Return the next screen state after the timer ends
+        return ScreenState.VOTE
+
+    # In case the timer finishes but the round is already complete
+    return ScreenState.CHAT
+
 
 async def refresh_messages(chat_log, gs: GameState, ps: PlayerState, delay=0.5):
     """Prints only new messages from the chat log."""
@@ -101,7 +135,6 @@ async def ai_response(chat_log, ps: PlayerState, delay=1.0):
         except IOError as e:
             print(f"Error in AI response loop: {e}")
 
-
 async def user_input(chat_log, ps: PlayerState):
     """Captures user input and writes it to the chat log."""
     session = PromptSession()
@@ -116,20 +149,36 @@ async def user_input(chat_log, ps: PlayerState):
         except Exception as e:
             print(f"Error getting user input: {e}")
 
-
 async def play_game(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[ScreenState, GameState, PlayerState]:
     chat_log = gs.chat_log_path
+    # Check if the file already exists
+    if not os.path.isfile(chat_log):
+        # Ensure the directory exists
+        os.makedirs(os.path.dirname(chat_log), exist_ok=True)
+        # Create the file
+        with open(chat_log, "w") as f:
+            f.write("")
+    # Ask the icebreaker if you are the timekeeper (to avoid duplicate prints)
+    if ps.timekeeper and gs.ice_asked <= gs.round_number:
+        ask_icebreaker(gs, chat_log)
 
-    with open(chat_log, "w", encoding="utf-8") as f:
-        f.write("")
-
-    print("Chat room started. Type your message below.")
     try:
+        # Run the countdown timer separately to capture its returned state
+        timer_task = asyncio.create_task(countdown_timer(ROUND_DURATION, gs, ps, chat_log))
+
+        # Run the other tasks in parallel
         await asyncio.gather(
             refresh_messages(chat_log, gs, ps),
             ai_response(chat_log, ps),
-            user_input(chat_log, ps)
+            user_input(chat_log, ps),
         )
+
+        # Wait for the timer task to complete and get the result
+        new_screen_state = await timer_task
+
+        print(f"Timer ended, changing screen state to: {new_screen_state}")
+        return new_screen_state, gs, ps
+
     except asyncio.CancelledError:
         print("\nChat room closed gracefully.")
     except Exception as e:

@@ -1,5 +1,6 @@
 import asyncio
 import inspect
+import random
 from utils.states import ScreenState
 from setup import collect_player_data
 from intro_screen import play_intro
@@ -10,7 +11,7 @@ from voting import voting_round
 # import signal
 
 # Importing constants and logging
-from utils.constants import BLANK_GS, BLANK_PS
+from utils.constants import BLANK_GS, BLANK_PS, ICEBREAKERS
 from utils.logging_utils import MasterLogger
 
 async def main():
@@ -34,8 +35,13 @@ async def main():
     }
 
     # Initialize the starting screen state and blank game/player states.
-    ss = ScreenState.INTRO  # Can also start with ScreenState.INTRO
+    ss = ScreenState.SETUP  # Can also start with ScreenState.INTRO
     gs = BLANK_GS
+    icebreakers = ICEBREAKERS[1:]
+    first_breaker = ICEBREAKERS[0]
+    random.shuffle(icebreakers)
+    icebreakers.insert(0, first_breaker)
+    gs.icebreakers = ICEBREAKERS
     ps = BLANK_PS
 
     # Main game loop

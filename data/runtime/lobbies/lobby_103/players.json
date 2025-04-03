@@ -1,0 +1,38 @@
+[
+  {
+    "lobby_id": 103,
+    "first_name": "Dan",
+    "last_initial": "S",
+    "code_name": "HORSE",
+    "grade": 6,
+    "favorite_food": "asdf",
+    "favorite_animal": "adsf",
+    "hobby": "df",
+    "extra_info": "df",
+    "is_human": true,
+    "color_name": "RED",
+    "starttime": "",
+    "voted": false,
+    "ai_doppleganger": null,
+    "written_to_file": false,
+    "timekeeper": false
+  },
+  {
+    "lobby_id": 103,
+    "first_name": "Dan",
+    "last_initial": "S",
+    "code_name": "MONKEY",
+    "grade": 6,
+    "favorite_food": "asdf",
+    "favorite_animal": "adsf",
+    "hobby": "df",
+    "extra_info": "df",
+    "is_human": false,
+    "color_name": "GREEN",
+    "starttime": "",
+    "voted": false,
+    "ai_doppleganger": null,
+    "written_to_file": true,
+    "timekeeper": false
+  }
+]

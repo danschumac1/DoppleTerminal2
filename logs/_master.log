@@ -1740,3 +1740,226 @@ Master Log Session at 2025-04-03 15:06:57
 [INFO] Initialized start time at data\runtime\lobbies\lobby_22\starttime.txt || 2025-04-03 15:07:08
 [INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 15:07:08
 [INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 15:08:12
+
+========================================
+Master Log Session at 2025-04-03 16:12:47
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 16:12:47
+[INFO] Starting intro screen... || 2025-04-03 16:12:47
+[INFO] Transitioned to state: ScreenState.SETUP || 2025-04-03 16:12:51
+[INFO] Starting Setup screen... || 2025-04-03 16:12:51
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_100/chat_log.txt || 2025-04-03 16:13:07
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_100/voting.json || 2025-04-03 16:13:07
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 16:13:07
+[INFO] Player CAT is the timekeeper. || 2025-04-03 16:13:08
+[INFO] Initialized start time at data/runtime/lobbies/lobby_100/starttime.txt || 2025-04-03 16:13:08
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 16:13:08
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 16:13:55
+
+========================================
+Master Log Session at 2025-04-03 16:28:24
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 16:28:24
+[INFO] Starting intro screen... || 2025-04-03 16:28:24
+[INFO] Transitioned to state: ScreenState.SETUP || 2025-04-03 16:28:27
+[INFO] Starting Setup screen... || 2025-04-03 16:28:27
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_101/chat_log.txt || 2025-04-03 16:28:51
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_101/voting.json || 2025-04-03 16:28:51
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 16:28:51
+[INFO] Player ELEPHANT is the timekeeper. || 2025-04-03 16:28:52
+[INFO] Initialized start time at data/runtime/lobbies/lobby_101/starttime.txt || 2025-04-03 16:28:52
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 16:28:52
+
+========================================
+Master Log Session at 2025-04-03 16:31:22
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 16:31:22
+[INFO] Starting intro screen... || 2025-04-03 16:31:22
+[INFO] Transitioned to state: ScreenState.SETUP || 2025-04-03 16:31:24
+[INFO] Starting Setup screen... || 2025-04-03 16:31:24
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_102/chat_log.txt || 2025-04-03 16:31:36
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_102/voting.json || 2025-04-03 16:31:36
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 16:31:36
+[INFO] Player TIGER is the timekeeper. || 2025-04-03 16:31:36
+[INFO] Initialized start time at data/runtime/lobbies/lobby_102/starttime.txt || 2025-04-03 16:31:36
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 16:31:36
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 16:31:36
+
+========================================
+Master Log Session at 2025-04-03 16:32:03
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 16:32:03
+[INFO] Starting intro screen... || 2025-04-03 16:32:03
+[INFO] Transitioned to state: ScreenState.SETUP || 2025-04-03 16:32:10
+[INFO] Starting Setup screen... || 2025-04-03 16:32:10
+
+========================================
+Master Log Session at 2025-04-03 16:32:39
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 16:32:39
+[INFO] Starting intro screen... || 2025-04-03 16:32:39
+[INFO] Transitioned to state: ScreenState.SETUP || 2025-04-03 16:32:43
+[INFO] Starting Setup screen... || 2025-04-03 16:32:43
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_103/chat_log.txt || 2025-04-03 16:32:50
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_103/voting.json || 2025-04-03 16:32:50
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 16:32:50
+[INFO] Player HORSE is the timekeeper. || 2025-04-03 16:32:51
+[INFO] Initialized start time at data/runtime/lobbies/lobby_103/starttime.txt || 2025-04-03 16:32:51
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 16:32:51
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 16:33:01
+
+========================================
+Master Log Session at 2025-04-03 16:40:06
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 16:40:06
+[INFO] Starting intro screen... || 2025-04-03 16:40:06
+[INFO] Transitioned to state: ScreenState.SETUP || 2025-04-03 16:40:15
+[INFO] Starting Setup screen... || 2025-04-03 16:40:15
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_104/chat_log.txt || 2025-04-03 16:40:30
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_104/voting.json || 2025-04-03 16:40:30
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 16:40:30
+[INFO] Player PANDA is the timekeeper. || 2025-04-03 16:40:36
+[INFO] Initialized start time at data/runtime/lobbies/lobby_104/starttime.txt || 2025-04-03 16:40:36
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 16:40:36
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 16:41:57
+
+========================================
+Master Log Session at 2025-04-03 16:50:26
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 16:50:26
+[INFO] Starting intro screen... || 2025-04-03 16:50:26
+[INFO] Transitioned to state: ScreenState.SETUP || 2025-04-03 16:50:28
+[INFO] Starting Setup screen... || 2025-04-03 16:50:28
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_105/chat_log.txt || 2025-04-03 16:50:36
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_105/voting.json || 2025-04-03 16:50:36
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 16:50:36
+[INFO] Player SNAKE is the timekeeper. || 2025-04-03 16:50:37
+[INFO] Initialized start time at data/runtime/lobbies/lobby_105/starttime.txt || 2025-04-03 16:50:37
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 16:50:37
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 17:18:07
+
+========================================
+Master Log Session at 2025-04-03 17:21:32
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 17:21:32
+[INFO] Starting intro screen... || 2025-04-03 17:21:32
+
+========================================
+Master Log Session at 2025-04-03 17:21:36
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 17:21:36
+[INFO] Starting intro screen... || 2025-04-03 17:21:36
+[INFO] Transitioned to state: ScreenState.SETUP || 2025-04-03 17:21:41
+[INFO] Starting Setup screen... || 2025-04-03 17:21:41
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_106/chat_log.txt || 2025-04-03 17:24:02
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_106/voting.json || 2025-04-03 17:24:02
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 17:24:02
+[INFO] Player SHEEP is the timekeeper. || 2025-04-03 17:24:03
+[INFO] Initialized start time at data/runtime/lobbies/lobby_106/starttime.txt || 2025-04-03 17:24:03
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 17:24:03
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 17:24:22
+
+========================================
+Master Log Session at 2025-04-03 17:24:41
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 17:24:41
+[INFO] Starting intro screen... || 2025-04-03 17:24:41
+[INFO] Transitioned to state: ScreenState.SETUP || 2025-04-03 17:24:44
+[INFO] Starting Setup screen... || 2025-04-03 17:24:44
+
+========================================
+Master Log Session at 2025-04-03 17:24:49
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 17:24:49
+[INFO] Starting intro screen... || 2025-04-03 17:24:49
+
+========================================
+Master Log Session at 2025-04-03 17:25:20
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 17:25:20
+[INFO] Starting Setup screen... || 2025-04-03 17:25:20
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_204/chat_log.txt || 2025-04-03 17:25:34
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_204/voting.json || 2025-04-03 17:25:34
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 17:25:34
+[INFO] Player CHICKEN is the timekeeper. || 2025-04-03 17:25:34
+[INFO] Initialized start time at data/runtime/lobbies/lobby_204/starttime.txt || 2025-04-03 17:25:34
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 17:25:34
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 17:25:56
+
+========================================
+Master Log Session at 2025-04-03 17:26:43
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 17:26:43
+[INFO] Starting Setup screen... || 2025-04-03 17:26:43
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_206/chat_log.txt || 2025-04-03 17:26:51
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_206/voting.json || 2025-04-03 17:26:51
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 17:26:51
+[INFO] Player DEER is the timekeeper. || 2025-04-03 17:26:52
+[INFO] Initialized start time at data/runtime/lobbies/lobby_206/starttime.txt || 2025-04-03 17:26:52
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 17:26:52
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 17:27:36
+
+========================================
+Master Log Session at 2025-04-03 17:27:37
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 17:27:37
+[INFO] Starting Setup screen... || 2025-04-03 17:27:37
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_800/chat_log.txt || 2025-04-03 17:27:46
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_800/voting.json || 2025-04-03 17:27:46
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 17:27:46
+[INFO] Player KANGAROO is the timekeeper. || 2025-04-03 17:27:47
+[INFO] Initialized start time at data/runtime/lobbies/lobby_800/starttime.txt || 2025-04-03 17:27:47
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 17:27:47
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 17:27:51
+
+========================================
+Master Log Session at 2025-04-03 17:29:03
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 17:29:03
+[INFO] Starting Setup screen... || 2025-04-03 17:29:03
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_80/chat_log.txt || 2025-04-03 17:29:12
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_80/voting.json || 2025-04-03 17:29:12
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 17:29:12
+[INFO] Player CAT is the timekeeper. || 2025-04-03 17:29:13
+[INFO] Initialized start time at data/runtime/lobbies/lobby_80/starttime.txt || 2025-04-03 17:29:13
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 17:29:13
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 17:29:20
+
+========================================
+Master Log Session at 2025-04-03 17:31:47
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 17:31:47
+[INFO] Starting Setup screen... || 2025-04-03 17:31:47
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_81/chat_log.txt || 2025-04-03 17:31:59
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_81/voting.json || 2025-04-03 17:31:59
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 17:31:59
+[INFO] Player ELEPHANT is the timekeeper. || 2025-04-03 17:31:59
+[INFO] Initialized start time at data/runtime/lobbies/lobby_81/starttime.txt || 2025-04-03 17:31:59
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 17:31:59
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 17:32:08
+
+========================================
+Master Log Session at 2025-04-03 17:33:28
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 17:33:28
+[INFO] Starting Setup screen... || 2025-04-03 17:33:28
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_802/chat_log.txt || 2025-04-03 17:33:43
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_802/voting.json || 2025-04-03 17:33:43
+[INFO] Created AI doppelganger for asdf A || 2025-04-03 17:33:43
+[INFO] Player TIGER is the timekeeper. || 2025-04-03 17:33:44
+[INFO] Initialized start time at data/runtime/lobbies/lobby_802/starttime.txt || 2025-04-03 17:33:44
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 17:33:44
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 17:33:49
+
+========================================
+Master Log Session at 2025-04-03 17:34:03
+========================================
+[INFO] Game started - Initializing master logger || 2025-04-03 17:34:03
+[INFO] Starting Setup screen... || 2025-04-03 17:34:03
+[INFO] Initialized chat log at data/runtime/lobbies/lobby_803/chat_log.txt || 2025-04-03 17:34:26
+[INFO] Initialized voting file at data/runtime/lobbies/lobby_803/voting.json || 2025-04-03 17:34:26
+[INFO] Created AI doppelganger for Dan S || 2025-04-03 17:34:26
+[INFO] Player HORSE is the timekeeper. || 2025-04-03 17:34:27
+[INFO] Initialized start time at data/runtime/lobbies/lobby_803/starttime.txt || 2025-04-03 17:34:27
+[INFO] Transitioned to state: ScreenState.CHAT || 2025-04-03 17:34:27
+[INFO] Transitioned to state: ScreenState.SCORE || 2025-04-03 17:34:29

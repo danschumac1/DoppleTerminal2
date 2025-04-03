@@ -1,0 +1,24 @@
+
+========================================
+New Log Session at 2025-04-03 16:13:07
+========================================
+[INFO] Game state initialized with players: CAT || 2025-04-03 16:13:08
+[INFO] DTR JSON: {'respond_bool': False, 'reasoning': 'There is no chat history provided, so there is no conversation to respond to at the moment.'} || 2025-04-03 16:13:09
+[INFO] DTR JSON: {'respond_bool': False, 'reasoning': 'There is no chat history provided, so there is no conversation to respond to at the moment.'} || 2025-04-03 16:13:11
+[INFO] DTR JSON: {'respond_bool': False, 'reasoning': 'There is no chat history provided, so there is no conversation to respond to at the moment.'} || 2025-04-03 16:13:13
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "Dan just introduced themselves as 'CAT,' so it's appropriate to respond to their greeting."} || 2025-04-03 16:13:14
+[INFO] Generate Response JSON: {'response': "Hey Dan, nice to meet you! How's it going today?", 'reasoning': 'Engaging in a friendly conversation and showing interest in the other player to build rapport.'} || 2025-04-03 16:13:15
+[INFO] Stylize Response JSON: {'output_text': "Hey there Dan, good to finally meet you! How's your day treating you?"} || 2025-04-03 16:13:16
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is friendly and engaging, suitable for meeting someone for the first time.'} || 2025-04-03 16:13:16
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'I should respond to continue the conversation and engage with the other players.'} || 2025-04-03 16:13:26
+[INFO] Generate Response JSON: {'response': "Hey Dan, nice to meet you too! My day's going pretty well, thanks for asking. Just chilling here, you know. How about you?", 'reasoning': 'Engaging in friendly conversation and reciprocating the question to maintain a natural flow.'} || 2025-04-03 16:13:27
+[INFO] Stylize Response JSON: {'output_text': "Hey Dan, nice to meet you as well! My day's going pretty good too, just chilling. What's up with you, Dan?"} || 2025-04-03 16:13:28
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is friendly, engaging, and fits the context of a casual conversation.'} || 2025-04-03 16:13:28
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "It's appropriate to respond and engage in the conversation to build rapport with the other players."} || 2025-04-03 16:13:34
+[INFO] Generate Response JSON: {'response': "Hey there, just joining in on the fun! How's everyone doing today?", 'reasoning': 'Engaging with the ongoing conversation in a friendly manner to blend in with the group dynamics.'} || 2025-04-03 16:13:35
+[INFO] Stylize Response JSON: {'output_text': "Hey y'all, just poppin' in for the fun! How's everyone's day goin'?"} || 2025-04-03 16:13:36
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is friendly and engaging, fitting in with the social nature of the game.'} || 2025-04-03 16:13:36
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'I should respond to continue the conversation and engage with the other players.'} || 2025-04-03 16:13:47
+[INFO] Generate Response JSON: {'response': "Hey y'all, just poppin' in for the fun! How's everyone's day goin'?", 'reasoning': 'Continuing the friendly and casual tone established in the chat to blend in with the human players.'} || 2025-04-03 16:13:48
+[INFO] Stylize Response JSON: {'output_text': "Hey everyone, just droppin' in for the fun! How's everyone's day goin'? Life's a trip, ain't it?"} || 2025-04-03 16:13:49
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual, friendly, and fits in with the social setting of the game.'} || 2025-04-03 16:13:49

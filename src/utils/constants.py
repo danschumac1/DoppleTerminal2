@@ -2,7 +2,7 @@ from colorama import Fore, init
 
 from utils.states import GameState, PlayerState
 
-ROUND_DURATION = 6  # seconds
+ROUND_DURATION = 30  # seconds
 
 COLOR_DICT = {
     "RED": Fore.RED,
@@ -41,5 +41,15 @@ BLANK_GS = GameState(
 )
 
 ICEBREAKERS = [
-    ""
+    "Welcome to the game! Everyone please introduce yourself using your first name and last initial.",
+    "If you could have any superpower, what would it be and why?",
+    "If you could travel anywhere in the world, where would you go and why?",
+    "What is your favorite book or movie, and why do you love it?",
+    "If you could have dinner with any historical figure, who would it be and why?",
+    "What is your favorite childhood memory?",
+    "If you could instantly learn any skill, what would it be and why?",
+    "What is your dream job, and why?",
+    "If you could time travel to any period in history, when would it be and why?",
+    "What is your favorite hobby or pastime?",
+    "If you could meet any fictional character, who would it be and why?",
 ]
