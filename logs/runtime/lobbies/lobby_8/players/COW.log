@@ -1,0 +1,13 @@
+
+========================================
+New Log Session at 2025-04-03 14:24:29
+========================================
+[INFO] Game state initialized with players: SNAKE || 2025-04-03 14:24:30
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'Dan is initiating conversation and asking how everyone is doing, which is a good opportunity to engage and build rapport.'} || 2025-04-03 14:24:45
+[INFO] Generate Response JSON: {'response': "Hey Dan! I'm doing well, thanks for asking. Just excited to see how this game unfolds! How about you?", 'reasoning': 'Responding positively to engage with Dan and show interest in the game, which helps build trust.'} || 2025-04-03 14:24:46
+[INFO] Stylize Response JSON: {'output_text': "Hey Dan! I'm good, thanks for checking in. Super hyped to see how this game goes! What about you?"} || 2025-04-03 14:24:56
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is friendly and engages in conversation, which is typical human behavior.'} || 2025-04-03 14:25:06
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'Dan is initiating conversation and asking how everyone is doing, which is a good opportunity to engage and build rapport.'} || 2025-04-03 14:25:18
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'Dan is initiating conversation and asking how everyone is doing, which is a good opportunity to engage and build rapport.'} || 2025-04-03 14:25:18
+[INFO] Generate Response JSON: {'response': "Hey Dan! I'm doing well, thanks for asking. How about you?", 'reasoning': "Responding positively and engaging with Dan to build rapport and show I'm a real person."} || 2025-04-03 14:25:37
+[INFO] Stylize Response JSON: {'output_text': "Hey Dan! I'm good, appreciate you asking. What about you?"} || 2025-04-03 14:25:46

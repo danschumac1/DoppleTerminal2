@@ -1,0 +1,15 @@
+
+========================================
+New Log Session at 2025-04-03 15:07:07
+========================================
+[INFO] Game state initialized with players: KANGAROO || 2025-04-03 15:07:08
+[INFO] DTR JSON: {'respond_bool': False, 'reasoning': 'There is no chat history provided, so there is no prompt to respond to at the moment.'} || 2025-04-03 15:07:09
+[INFO] DTR JSON: {'respond_bool': False, 'reasoning': 'There is no chat history provided, so there is no need to respond at this time.'} || 2025-04-03 15:07:14
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "A new player named KANGAROO introduced themselves as Dan S, so it's appropriate to acknowledge their presence."} || 2025-04-03 15:07:16
+[INFO] Generate Response JSON: {'response': "Hey Dan, what's up? Ready for some fun in the game?", 'reasoning': 'Engaging with the player in a friendly manner to maintain a positive atmosphere in the game.'} || 2025-04-03 15:07:16
+[INFO] Stylize Response JSON: {'output_text': "Heyyy Dan, what's good? You hyped for the game or what?"} || 2025-04-03 15:07:17
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and friendly, fitting the context of talking to a friend about a game.'} || 2025-04-03 15:07:17
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': 'I should engage in the conversation to blend in and not raise suspicion.'} || 2025-04-03 15:07:24
+[INFO] Generate Response JSON: {'response': "Yeah, should be a blast! Can't wait to see how it all plays out.", 'reasoning': 'Engaging in the conversation positively and expressing excitement for the upcoming game to blend in with the human players.'} || 2025-04-03 15:07:25
+[INFO] Stylize Response JSON: {'output_text': 'Yeah, gonna be a blast! Excited to see how everything unfolds.'} || 2025-04-03 15:07:25
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response shows enthusiasm and fits the context of being excited about an upcoming event.'} || 2025-04-03 15:07:26

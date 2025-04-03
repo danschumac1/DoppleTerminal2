@@ -1,8 +1,3 @@
-**************************************************
-GAME MASTER: your_values
-**************************************************
-**************************************************
-GAME MASTER: your_values
-**************************************************
-COW: Ayo fam! Let’s get this party started. What’s everyone’s go-to food? I feel like it’s a solid way to bond!
-RABBIT: yo fam! since we’re all sharing what matters, I gotta say it’s all about my crew and the good times. what about y’all?
+CHICKEN: Hello this is DAn
+PIG: Yo DAn, what's up! What's your go-to food?
+CHICKEN: 

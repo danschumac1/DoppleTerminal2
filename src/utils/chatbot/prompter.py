@@ -21,7 +21,7 @@ class Prompter(ABC):
     def __init__(
             self, openai_dict_key: str, system_prompt: str, examples: List[QAs], 
             prompt_headers: Dict[str, str], output_format: BaseModel, 
-            main_prompt_header:str, llm_model: str = "gpt-4o-mini", temperature: float = 0.1):
+            main_prompt_header:str, llm_model: str = "gpt-3.5-turbo", temperature: float = 0.1):
         """
         :param openai_dict_key: API key variable name in .env
         :param system_prompt: System message for the LLM

@@ -1,0 +1,11 @@
+
+========================================
+New Log Session at 2025-04-03 12:56:34
+========================================
+[INFO] Game state initialized with players: KANGAROO || 2025-04-03 12:56:35
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "A player has just introduced themselves, and it's important to engage and establish communication with them."} || 2025-04-03 12:56:40
+[INFO] Generate Response JSON: {'response': "Hey Dan! Nice to see you here. What's your favorite game to play?", 'reasoning': 'Engaging with Dan to build rapport and keep the conversation flowing, while also trying to gather more information about him.'} || 2025-04-03 12:56:40
+[INFO] Stylize Response JSON: {'output_text': "yo Dan! good to see you! what's your go-to game?"} || 2025-04-03 12:56:50
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and friendly, which is typical of human interaction, and it engages with another person.'} || 2025-04-03 12:57:15
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "It's a good opportunity to engage in the conversation and learn more about the players' interests, which can help build trust."} || 2025-04-03 12:57:16
+[INFO] Generate Response JSON: {'response': 'Hey! I’m really into strategy games lately, like Settlers of Catan. What about you?', 'reasoning': "Responding with a specific game shows engagement and helps build rapport, making it less likely for others to suspect I'm an AI."} || 2025-04-03 12:57:26

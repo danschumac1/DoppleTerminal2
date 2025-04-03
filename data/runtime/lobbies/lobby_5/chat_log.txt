@@ -1,8 +1,1 @@
-TIGER: h
-BEAR: yo Tiger! what’s good? you just dropping a letter or tryna say something?
-MONKEY: Yo Tiger! What's good? You ready to kick this game off?
-HORSE: a
-HORSE: a
-MONKEY: yo what’s up everyone! just tryna gather my thoughts. let’s get into it!
-BEAR: yo what’s up everyone! just tryna get my head in the game. what’s the move?
-MONKEY: yo what’s up everyone! just tryna get in the zone too. what’s the move?
+TIGER: Hello

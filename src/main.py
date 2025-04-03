@@ -3,7 +3,7 @@ import inspect
 from utils.states import ScreenState
 from setup import collect_player_data
 from intro_screen import play_intro
-from game import play_game
+from game_MVP import play_game
 from score import score_screen
 import inspect
 from voting import voting_round
@@ -12,38 +12,6 @@ from voting import voting_round
 # Importing constants and logging
 from utils.constants import BLANK_GS, BLANK_PS
 from utils.logging_utils import MasterLogger
-
-# async def shutdown(signal, loop):
-#     print(f"\nReceived exit signal {signal.name}...")
-#     tasks = [t for t in asyncio.all_tasks() if t is not asyncio.current_task()]
-
-#     print(f"Cancelling {len(tasks)} outstanding tasks...")
-#     for task in tasks:
-#         task.cancel()
-
-#     try:
-#         await asyncio.gather(*tasks, return_exceptions=True)
-#     except asyncio.CancelledError:
-#         print("Tasks cancelled.")
-#     finally:
-#         print("Closing OpenAI client...")
-#         try:
-#             from utils.file_io import OpenAIClientManager
-#             OpenAIClientManager().close_client()
-#             print("OpenAI client closed successfully.")
-#         except Exception as e:
-#             print(f"Error closing OpenAI client: {e}")
-
-#         print("Shutting down gracefully.")
-#         loop.stop()
-#         print("Game Exited. Have a great day!")
-
-
-# def setup_signal_handlers(loop):
-#     # Use signal.signal for Windows compatibility
-#     signal.signal(signal.SIGINT, lambda s, f: asyncio.create_task(shutdown(s, loop)))
-#     signal.signal(signal.SIGTERM, lambda s, f: asyncio.create_task(shutdown(s, loop)))
-
 
 async def main():
     # loop = asyncio.get_running_loop()

@@ -1,0 +1,38 @@
+[
+  {
+    "lobby_id": 13,
+    "first_name": "Dan",
+    "last_initial": "S",
+    "code_name": "CAT",
+    "grade": 6,
+    "favorite_food": "adf",
+    "favorite_animal": "asdf",
+    "hobby": "asdf",
+    "extra_info": "asdf",
+    "is_human": true,
+    "color_name": "MAGENTA",
+    "starttime": "",
+    "voted": false,
+    "ai_doppleganger": null,
+    "written_to_file": false,
+    "timekeeper": false
+  },
+  {
+    "lobby_id": 13,
+    "first_name": "Dan",
+    "last_initial": "S",
+    "code_name": "FISH",
+    "grade": 6,
+    "favorite_food": "adf",
+    "favorite_animal": "asdf",
+    "hobby": "asdf",
+    "extra_info": "asdf",
+    "is_human": false,
+    "color_name": "CYAN",
+    "starttime": "",
+    "voted": false,
+    "ai_doppleganger": null,
+    "written_to_file": true,
+    "timekeeper": false
+  }
+]

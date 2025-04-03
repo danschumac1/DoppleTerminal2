@@ -1,3 +1,4 @@
+import asyncio
 from dataclasses import asdict
 import json
 from typing import List 
@@ -105,57 +106,101 @@ class AIPlayer:
 
 
     # @handle_errors()
-    def decide_to_respond(self, minutes: List[str]):
+    async def decide_to_respond(self, minutes: List[str], chat_log: str):
         """Decide whether the AI should respond."""
+        # print("Deciding to respond...")
         last_msg = minutes[-1] if minutes else None
         if last_msg and last_msg.startswith(f"{self.stolen_player_code_name}:"):
             self.humans_messages.append(last_msg.split(":", 1)[1].strip())
 
-        response_json = self.prompter_dict["decide_to_respond"].get_completion({
-            "minutes": "\n".join(minutes),
-            "game_state": json.dumps(self.game_state.to_dict())
-        })
+        try:
+            # Use asyncio.to_thread to make the blocking call asynchronous
+            response_json = await asyncio.to_thread(
+                self.prompter_dict["decide_to_respond"].get_completion,
+                {
+                    "minutes": "\n".join(minutes),
+                    "game_state": json.dumps(self.game_state.to_dict())
+                }
+            )
+        except Exception as e:
+            self.logger.error(f"Error during decision to respond: {e}")
+            return "Error during decision making."
+
         self.logger.info(f"DTR JSON: {response_json}")
         decision = DecideToRespondBM.model_validate_json(json.dumps(response_json))
 
         if decision.respond_bool:
-            return self.generate_response(minutes)
+            return await self.generate_response(minutes, chat_log)
         return "No response needed."
 
-    # @handle_errors()
-    def generate_response(self, minutes: List[str]):
-        """Generate a response based on the game state and chat."""
-        response_json = self.prompter_dict["generate_response"].get_completion({
-            "minutes": "\n".join(minutes),
-            "game_state": json.dumps(self.game_state.to_dict())
-        })
+    async def generate_response(self, minutes: List[str], chat_log: str):
+        # print("generate_response...")
+        try:
+            response_json = await asyncio.to_thread(
+                self.prompter_dict["generate_response"].get_completion,
+                {
+                    "minutes": "\n".join(minutes),
+                    "game_state": json.dumps(self.game_state.to_dict())
+                }
+            )
+        except Exception as e:
+            self.logger.error(f"Error during response generation: {e}")
+            return "Error during response generation."
+
         self.logger.info(f"Generate Response JSON: {response_json}")
         response = RespondBM.model_validate_json(json.dumps(response_json)).response
-        return self.stylize_response(response)
+        return await self.stylize_response(response, chat_log)
 
-    # @handle_errors()
-    def stylize_response(self, response: str):
-        """Stylize the response to match the player's speech style."""
-        response_json = self.prompter_dict["stylize_response"].get_completion({
-            "response": response,
-            "examples": "\n".join(self.humans_messages)
-        })
+
+    async def stylize_response(self, response: str, chat_log: str):
+        # print("stylize_response...")
+        try:
+            response_json = await asyncio.to_thread(
+                self.prompter_dict["stylize_response"].get_completion,
+                {
+                    "response": response,
+                    "examples": "\n".join(self.humans_messages)
+                }
+            )
+        except Exception as e:
+            self.logger.error(f"Error during stylizing response: {e}")
+            return "Error during stylizing response."
+
         self.logger.info(f"Stylize Response JSON: {response_json}")
         styled_response = StylizerBM.model_validate_json(json.dumps(response_json)).output_text
-        return self.validate_response(styled_response)
+        return await self.validate_response(styled_response, chat_log)
 
-    # @handle_errors()
-    def validate_response(self, styled_response: str):
-        """Validate the generated response to ensure it fits the context."""
-        response_json = self.prompter_dict["validate_response"].get_completion({
-            "response": styled_response
-        })
+
+    async def validate_response(self, styled_response: str, chat_log: str):
+        # print("validate_response...")
+        try:
+            response_json = await asyncio.to_thread(
+                self.prompter_dict["validate_response"].get_completion,
+                {
+                    "response": styled_response
+                }
+            )
+        except Exception as e:
+            self.logger.error(f"Error during response validation: {e}")
+            return "Error during response validation."
+
         self.logger.info(f"Validate Response JSON: {response_json}")
         validation = ValidateResponseBM.model_validate_json(json.dumps(response_json))
 
         if validation.valid:
-            return styled_response
+            ai_msg = f"{self.player_state.code_name}: {styled_response}\n"
+            try:
+                # with open(chat_log, "a", encoding="utf-8") as f:
+                #     f.write(ai_msg)
+                #     f.flush()
+                # self.logger.info(f"Written to chat log: {ai_msg.strip()}")
+                return styled_response
+            except IOError as e:
+                self.logger.error(f"Failed to write AI response to chat log: {e}")
+                return "Error writing to chat log."
         return f"Generated response deemed invalid: {validation.reasoning}"
+
+
 
     def _steal_player_state(self, player_state_to_steal: PlayerState) -> PlayerState:
         """Creates a new player state based on the given one."""

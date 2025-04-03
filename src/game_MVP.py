@@ -1,0 +1,139 @@
+import asyncio
+from prompt_toolkit.shortcuts import PromptSession
+from colorama import Fore, Style
+from utils.asthetics import format_gm_message
+from utils.file_io import load_players_from_lobby
+from utils.states import GameState, PlayerState, ScreenState
+from utils.constants import COLOR_DICT
+
+async def refresh_messages(chat_log, gs: GameState, ps: PlayerState, delay=0.5):
+    """Prints only new messages from the chat log."""
+    num_lines = 0  
+    while True:
+        await asyncio.sleep(delay)
+        try:
+            with open(chat_log, "r", encoding="utf-8") as f:
+                messages = f.readlines()
+                
+                if len(messages) > num_lines:
+                    # Load players only if there are new messages
+                    if not gs.players:
+                        gs.players = load_players_from_lobby(gs)
+
+                    new_messages = messages[num_lines:]
+                    color_formatted_messages = []
+
+                    for msg in new_messages:
+                        try:
+                            if "GAME MASTER" in msg or "*****" in msg:
+                                colored_msg = Fore.YELLOW + msg.strip() + Style.RESET_ALL
+                            else:
+                                code_name = msg.split(":", 1)[0].strip()
+                                player = next((p for p in gs.players if p.code_name == code_name), None)
+
+                                if player:
+                                    colored_msg = f"{COLOR_DICT[player.color_name]}{msg.strip()}{Style.RESET_ALL}"
+                                else:
+                                    colored_msg = msg.strip()
+
+                            color_formatted_messages.append(colored_msg)
+                        except Exception as e:
+                            print(f"Error formatting message: {msg}, Error: {e}")
+                            continue
+
+                    print("\n".join(color_formatted_messages))
+                    num_lines = len(messages)
+
+        except FileNotFoundError:
+            print("Chat log file not found. Please start a chat session.")
+            return
+        except IOError as e:
+            print(f"Error reading messages: {e}")
+
+ai_response_lock = asyncio.Lock()
+async def ai_response(chat_log, ps: PlayerState, delay=1.0):
+    """Triggers AI responses only if the last message is not from the AI."""
+    ai_name = ps.ai_doppleganger.player_state.code_name
+
+    while True:
+        await asyncio.sleep(delay)
+        try:
+            with open(chat_log, "r", encoding="utf-8") as f:
+                messages = f.readlines()
+
+            last_line = messages[-1].strip() if messages else ""
+            # Avoid self-reply and ensure the AI is not already responding
+            if not last_line.startswith(f"{ai_name}:"):
+                full_chat_list = [msg.strip() for msg in messages]
+
+                # Use the async lock to ensure only one response at a time
+                async with ai_response_lock:
+                    try:
+                        # print("Starting AI response generation...")
+
+                        # Run the blocking AI decision in a separate thread and await the result
+                        response = await asyncio.wait_for(
+                            asyncio.to_thread(
+                                ps.ai_doppleganger.decide_to_respond,
+                                full_chat_list,
+                                chat_log
+                            ),
+                            timeout=10
+                        )
+
+                        # Check if the response is a coroutine and await it if necessary
+                        if asyncio.iscoroutine(response):
+                            response = await response
+
+                        if response and response != "No response needed.":
+                            ai_msg = f"{ai_name}: {response}\n"
+                            # print(f"AI RESPONSE: {ai_msg.strip()}")
+                            with open(chat_log, "a", encoding="utf-8") as f:
+                                # print("AI WROTE TO FILE")
+                                f.write(ai_msg)
+                                f.flush()
+
+                    except asyncio.TimeoutError:
+                        print(f"AI response took too long, skipping...")
+                    except Exception as e:
+                        print(f"Error during AI response generation: {e}")
+
+        except IOError as e:
+            print(f"Error in AI response loop: {e}")
+
+
+async def user_input(chat_log, ps: PlayerState):
+    """Captures user input and writes it to the chat log."""
+    session = PromptSession()
+    while True:
+        try:
+            user_message = await session.prompt_async("")
+            formatted_message = f"{ps.code_name}: {user_message}\n"
+            with open(chat_log, "a", encoding="utf-8") as f:
+                f.write(formatted_message)
+            # Move the cursor up and clear the line to avoid "You: You:"
+            print("\033[A" + " " * len(formatted_message) + "\033[A")
+        except Exception as e:
+            print(f"Error getting user input: {e}")
+
+
+async def play_game(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[ScreenState, GameState, PlayerState]:
+    chat_log = gs.chat_log_path
+
+    with open(chat_log, "w", encoding="utf-8") as f:
+        f.write("")
+
+    print("Chat room started. Type your message below.")
+    try:
+        await asyncio.gather(
+            refresh_messages(chat_log, gs, ps),
+            ai_response(chat_log, ps),
+            user_input(chat_log, ps)
+        )
+    except asyncio.CancelledError:
+        print("\nChat room closed gracefully.")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+    finally:
+        print("Exiting the chat application.")
+        return ScreenState.SCORE, gs, ps

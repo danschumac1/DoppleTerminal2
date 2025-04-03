@@ -1,0 +1,6 @@
+
+========================================
+New Log Session at 2025-04-03 15:02:41
+========================================
+[INFO] Game state initialized with players: CHICKEN || 2025-04-03 15:02:42
+[ERROR] Error during decision to respond: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-mini in organization org-Gjpc6SSxHrIQ97tVOZjLg74x on requests per day (RPD): Limit 10000, Used 10000, Requested 1. Please try again in 8.64s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'requests', 'param': None, 'code': 'rate_limit_exceeded'}} || 2025-04-03 15:03:01

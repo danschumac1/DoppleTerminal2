@@ -1,6 +1,2 @@
-CAT: j'
-LION: No response needed.
-FISH: No response needed.
-LION: No response needed.
-FISH: No response needed.
-LION: No response needed.
+ELEPHANT: Hey this is Dan S
+LION: Yo Dan! Good to see you, man. What's your go-to food?

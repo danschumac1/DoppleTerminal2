@@ -1,8 +1,0 @@
-SNAKE: a
-RABBIT: No response needed.
-PANDA: 
-COW: wait, is that some kinda code? we gotta break it down more!
-RABBIT: No response needed.
-PANDA: a
-RABBIT: I mean, it’s probably just some random letter, but if we start decoding it, we might just overthink the whole thing, ya know?
-COW: idk, seems like just a random letter to me, but if we start decoding it, we might just overthink the whole thing!

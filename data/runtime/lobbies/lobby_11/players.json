@@ -1,0 +1,38 @@
+[
+  {
+    "lobby_id": 11,
+    "first_name": "Dan",
+    "last_initial": "S",
+    "code_name": "KANGAROO",
+    "grade": 6,
+    "favorite_food": "tacos",
+    "favorite_animal": "pizza",
+    "hobby": "asdf",
+    "extra_info": "asdf",
+    "is_human": true,
+    "color_name": "YELLOW",
+    "starttime": "",
+    "voted": false,
+    "ai_doppleganger": null,
+    "written_to_file": false,
+    "timekeeper": false
+  },
+  {
+    "lobby_id": 11,
+    "first_name": "Dan",
+    "last_initial": "S",
+    "code_name": "DOG",
+    "grade": 6,
+    "favorite_food": "tacos",
+    "favorite_animal": "pizza",
+    "hobby": "asdf",
+    "extra_info": "asdf",
+    "is_human": false,
+    "color_name": "BLUE",
+    "starttime": "",
+    "voted": false,
+    "ai_doppleganger": null,
+    "written_to_file": true,
+    "timekeeper": false
+  }
+]

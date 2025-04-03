@@ -1,0 +1,38 @@
+[
+  {
+    "lobby_id": 12,
+    "first_name": "Dan",
+    "last_initial": "S",
+    "code_name": "CHICKEN",
+    "grade": 6,
+    "favorite_food": "asdf",
+    "favorite_animal": "asdf",
+    "hobby": "asdf",
+    "extra_info": "sadf",
+    "is_human": true,
+    "color_name": "MAGENTA",
+    "starttime": "",
+    "voted": false,
+    "ai_doppleganger": null,
+    "written_to_file": false,
+    "timekeeper": false
+  },
+  {
+    "lobby_id": 12,
+    "first_name": "Dan",
+    "last_initial": "S",
+    "code_name": "PIG",
+    "grade": 6,
+    "favorite_food": "asdf",
+    "favorite_animal": "asdf",
+    "hobby": "asdf",
+    "extra_info": "sadf",
+    "is_human": false,
+    "color_name": "CYAN",
+    "starttime": "",
+    "voted": false,
+    "ai_doppleganger": null,
+    "written_to_file": true,
+    "timekeeper": false
+  }
+]

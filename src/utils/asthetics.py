@@ -1,4 +1,6 @@
 import os
+
+from colorama import Fore
 # from prompt_toolkit.formatted_text import ANSI
 # from prompt_toolkit.shortcuts import print_formatted_text
 # from utils.constants import COLOR_DICT
@@ -37,9 +39,9 @@ def format_gm_message(msg: str) -> str:
     # mid = print_color(f"GAME MASTER: {msg}", "YELLOW", print_or_return="return")
     # bot = print_color("*" * 50, "YELLOW", print_or_return="return")
     
-    top = "*" * 50
-    mid = f"GAME MASTER: {msg}"
-    bot = "*" * 50
+    top = Fore.YELLOW + "*" * 50 + Fore.RESET
+    mid = Fore.YELLOW + f"GAME MASTER: {msg}"+ Fore.RESET
+    bot = Fore.YELLOW +"*" * 50+ Fore.RESET
     return f"\n\n{top}\n{mid}\n{bot}"
 
 # def get_color_for_code_name(code_name: str, gs: GameState) -> str:

@@ -1,0 +1,9 @@
+
+========================================
+New Log Session at 2025-04-03 12:58:58
+========================================
+[INFO] Game state initialized with players: CAT || 2025-04-03 12:59:00
+[INFO] DTR JSON: {'respond_bool': True, 'reasoning': "DEER is trying to engage with the group, and it's a good opportunity to introduce myself or contribute to the conversation."} || 2025-04-03 12:59:01
+[INFO] Generate Response JSON: {'response': "Hey DEER! We're just getting started here. What do you think about the game so far?", 'reasoning': 'Engaging DEER in conversation to build rapport and keep the chat flowing, while also showing interest in their thoughts.'} || 2025-04-03 12:59:02
+[INFO] Stylize Response JSON: {'output_text': 'Yo DEER! We just getting into it! What you think about the game so far?'} || 2025-04-03 12:59:12
+[INFO] Validate Response JSON: {'valid': True, 'reasoning': 'The response is casual and engages with the group, which is typical human behavior in a social setting.'} || 2025-04-03 12:59:21
