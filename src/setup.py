@@ -6,7 +6,7 @@ from colorama import Fore, Style
 from utils.chatbot.ai import AIPlayer
 from utils.logging_utils import MasterLogger, StandAloneLogger
 from utils.states import GameState, ScreenState, PlayerState
-from utils.file_io import SequentialAssigner, init_game_file, load_players_from_lobby, save_player_to_lobby_file
+from utils.file_io import SequentialAssigner, init_game_file, load_players_from_lobby, save_player_to_lobby_file, synchronize_start_time
 from utils.constants import (
     COLORS_INDEX_PATH, COLORS_PATH, NAMES_PATH, NAMES_INDEX_PATH, 
     # COLORS_PATH, COLORS_INDEX_PATH, COLOR_DICT
@@ -89,6 +89,7 @@ class PlayerSetup:
         self.prompt_input("hobby", "What's your hobby? ")
         self.prompt_input("extra_info", "Tell us one more thing about you: ")
 
+        clear_screen()
         print(Fore.GREEN + "✅ Player setup complete." + Style.RESET_ALL)
 
         lobby_path = os.path.join(
@@ -136,6 +137,7 @@ def collect_player_data(
         gs: GameState,
         ps: PlayerState,
     ) -> Tuple[ScreenState, GameState, PlayerState]:
+    clear_screen()
 
     print_str = ''
     master_logger = MasterLogger.get_instance()
@@ -164,58 +166,32 @@ def collect_player_data(
     master_logger.log(f"Created AI doppelganger for {ps.first_name} {ps.last_initial}")
 
     # Check the number of human players and start the game if ready
-    while len(gs.players) < gs.number_of_human_players:
+    while len([p for p in gs.players if p.is_human]) < gs.number_of_human_players:
         # every 1 second check the file
         sleep(1)
         # Load the current players from the lobby file
         gs.players = load_players_from_lobby(gs)
 
         # Filter out AI doppelgangers to count human players only
-        human_players = [p for p in gs.players if not p.ai_doppleganger]
+        human_players = [p for p in gs.players if p.is_human]
         new_str = f"{len(human_players)}/{gs.number_of_human_players} players are ready."
         if print_str != new_str:
-            # print_color(new_str, "YELLOW")
             print(new_str)
             print_str = new_str
 
-    # All players are ready, continue to the next step
-    input(Fore.MAGENTA + "Press Enter to continue..." + Style.RESET_ALL)
-    # clear_screen() # TODO uncomment this line to clear the screen
+    clear_screen() 
 
     # Synchronize start time if this player is the timekeeper
-    if not os.path.exists(gs.start_time_path):
-        gs.players = load_players_from_lobby(gs)
-        # print("GS.PLAYERS: ", gs.players)
-        # Assign the current player as the timekeeper
-        ps.timekeeper = True
-        master_logger.log(f"Player {ps.code_name} is the timekeeper.")
-        # Create the start time file
-        init_game_file(gs.start_time_path)
-        # Write the start time to the file
-        ps.starttime = datetime.now().replace(tzinfo=None)
-        start_time_str = ps.starttime.strftime("%Y-%m-%d %H:%M:%S")
-        with open(gs.start_time_path, "w") as f:
-            f.write(start_time_str)
-        # Log the start time
-        master_logger.log(f"Initialized start time at {gs.start_time_path}")
-    else:
-        # If not the timekeeper, wait for the file to exist
-        while not os.path.exists(gs.start_time_path):
-            print("Waiting for the timekeeper to initialize the start time...")
-            sleep(1)
-
-        # Load the starting time
-        with open(gs.start_time_path, "r") as f:
-            start_time_str = f.read().strip()
-            ps.starttime = datetime.strptime(start_time_str, "%Y-%m-%d %H:%M:%S")
-            ps.starttime = ps.starttime.replace(tzinfo=None)  # Remove timezone info
-        master_logger.log(f"Loaded existing start time: {ps.starttime}")
+    synchronize_start_time(gs, ps)
 
     # Finally, initialize the game state for the AI doppelganger
-
     ps.ai_doppleganger.initialize_game_state(gs)
     all_players = load_players_from_lobby(gs)
     # Update the AI doppelganger's player code names
     ps.ai_doppleganger.players_code_names = [p.code_name for p in all_players]
+
+    print(Fore.GREEN + "All players are ready!" + Style.RESET_ALL)
+    input(Fore.MAGENTA + "Press Enter to continue to the chat phase..." + Style.RESET_ALL)
+    clear_screen()
 
     return ScreenState.CHAT, gs, ps

@@ -1,6 +1,0 @@
-DEER: Hello this is dan
-ZEBRA: Hey there, Dan! What's good today?
-ZEBRA: Hey there, Dan! What's good today?
-DEER: Not much whats good with you
-ZEBRA: Just chillin, you feel me? What's good with you, Dan?
-ZEBRA: Just chillin, you feel me? What's good with you, Dan?

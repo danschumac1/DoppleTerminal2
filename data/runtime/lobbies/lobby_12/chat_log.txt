@@ -1,2 +1,0 @@
-CHICKEN: Trying this again
-CHICKEN: what is up

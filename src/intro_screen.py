@@ -1,5 +1,6 @@
 import time
 from colorama import Fore, Style, init
+from utils.asthetics import clear_screen
 from utils.logging_utils import MasterLogger
 from utils.states import ScreenState, PlayerState, GameState
 
@@ -23,7 +24,7 @@ Today, you're all playing a social deduction game — but there's a twist...""")
         (Fore.YELLOW, """
 Your job? Figure out who's real and who's not before it's too late."""),
 
-        (Fore.MAGENTA, """
+        (Fore.BLUE, """
 ====================================================================
 🧠 THE BASICS
 ====================================================================
@@ -31,7 +32,7 @@ Your job? Figure out who's real and who's not before it's too late."""),
 - 3 other players are AI pretending to be humans.
 - Chat, observe, and vote to eliminate the AIs."""),
 
-        (Fore.BLUE, """
+        (Fore.GREEN, """
 ====================================================================
 🔁 GAME FLOW
 ====================================================================
@@ -40,14 +41,14 @@ Your job? Figure out who's real and who's not before it's too late."""),
 3. At the end of the round, you vote someone out.
 4. The game lasts 3 rounds. Win or lose, that’s it."""),
 
-        (Fore.GREEN, """
+        (Fore.CYAN, """
 ====================================================================
 🎯 HOW TO WIN
 ====================================================================
 - HUMANS win by identifying and voting out all the AIs.
 - AIs win if they outnumber the humans by the end."""),
 
-        (Fore.RED, """
+        (Fore.YELLOW, """
 ====================================================================
 ⚠️ REMEMBER
 ====================================================================
@@ -57,12 +58,15 @@ Your job? Figure out who's real and who's not before it's too late."""),
 - You only know your own identity.
 - Convince others that *you* are real, and stay sharp."""),
 
-        (Fore.CYAN, "Ready to enter the game? Let's get your profile set up.\n")
+        (Fore.GREEN, "Ready to enter the game? Let's get your profile set up.\n" + Style.RESET_ALL)
     ]
 
     for color, section in intro_sections:
+        clear_screen()
         print(color + section)  # Print the section in the specified color
-        input("\n(Press Enter to continue...)\n")
+        print("\n\n")
+        print(Fore.GREEN + "Intro section complete! Let's Play!")
+        input(Fore.MAGENTA + "Press Enter to continue...")
         time.sleep(0.1)
-
+        clear_screen()
     return ScreenState.SETUP, gs, ps

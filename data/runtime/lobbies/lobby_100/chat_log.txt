@@ -1,8 +1,0 @@
-CAT: Hello this is Dan
-FISH: Hey there Dan, good to finally meet you! How's your day treating you?
-CAT: My dan is okay. what is your name Fish?
-FISH: Hey Dan, nice to meet you as well! My day's going pretty good too, just chilling. What's up with you, Dan?
-CAT: haha
-FISH: Hey y'all, just poppin' in for the fun! How's everyone's day goin'?
-CAT: life is weird ain't it
-FISH: Hey everyone, just droppin' in for the fun! How's everyone's day goin'? Life's a trip, ain't it?

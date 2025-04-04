@@ -1,7 +1,0 @@
-COW: <coroutine object AIPlayer.decide_to_respond at 0x000002A3E5D6EEA0>
-SNAKE: hellhello this is dan
-COW: <coroutine object AIPlayer.decide_to_respond at 0x000002A3E5D6E490>
-SNAKE: what is happening?
-COW: <coroutine object AIPlayer.decide_to_respond at 0x000002A3E5D6F5A0>
-SNAKE: clear
-COW: <coroutine object AIPlayer.decide_to_respond at 0x000002A3E5D6CC10>

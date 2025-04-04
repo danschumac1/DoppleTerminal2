@@ -32,6 +32,7 @@ class PlayerState:
     ai_doppleganger: Optional[AIPlayer] = None # type: ignore
     written_to_file: bool = False # Flag to indicate if the player has been written to a file
     timekeeper: bool = False # Flag to indicate if the player is a timekeeper
+    still_in_game: bool = True # Flag to indicate if the player is still in the game
 
     def to_dict(self) -> dict:
         return {

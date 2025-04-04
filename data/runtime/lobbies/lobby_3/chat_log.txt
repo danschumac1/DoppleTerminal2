@@ -1,3 +1,0 @@
-KANGAROO: hello this is Dan S
-DOG: yo Dan! good to see you! what's your go-to game?
-KANGAROO: 

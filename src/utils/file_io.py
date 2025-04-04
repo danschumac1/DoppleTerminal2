@@ -1,4 +1,5 @@
 from dataclasses import asdict
+from datetime import datetime
 import json
 import os
 from typing import List, Tuple
@@ -6,6 +7,41 @@ from time import sleep
 import inspect
 
 from utils.states import GameState, PlayerState
+
+def synchronize_start_time(gs: GameState, ps: PlayerState) -> None:
+    """
+    Synchronizes the start time between players, assigning the current player as the timekeeper
+    if the start time file does not exist.
+    """
+    # Check if the start time file already exists
+    if not os.path.exists(gs.start_time_path):
+        # Load players to ensure the list is up to date
+        gs.players = load_players_from_lobby(gs)
+        
+        # Assign the current player as the timekeeper
+        ps.timekeeper = True
+
+        # Create the start time file
+        init_game_file(gs.start_time_path)
+
+        # Write the start time to the file
+        ps.starttime = datetime.now().replace(tzinfo=None)
+        start_time_str = ps.starttime.strftime("%Y-%m-%d %H:%M:%S")
+        with open(gs.start_time_path, "w") as f:
+            f.write(start_time_str)
+
+    else:
+        # If not the timekeeper, wait for the file to exist
+        while not os.path.exists(gs.start_time_path):
+            print("Waiting for the timekeeper to initialize the start time...")
+            sleep(1)
+
+        # Load the starting time from the file
+        with open(gs.start_time_path, "r") as f:
+            start_time_str = f.read().strip()
+            ps.starttime = datetime.strptime(start_time_str, "%Y-%m-%d %H:%M:%S")
+            ps.starttime = ps.starttime.replace(tzinfo=None)  # Remove timezone info
+
 
 def init_game_file(path: str):
     os.makedirs(os.path.dirname(path), exist_ok=True)

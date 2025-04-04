@@ -1,2 +1,0 @@
-CHICKEN: Hey this is Dan.
-PIG: Error during decision making.

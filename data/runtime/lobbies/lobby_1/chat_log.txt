@@ -1,3 +1,0 @@
-CHICKEN: Hello this is DAn
-PIG: Yo DAn, what's up! What's your go-to food?
-CHICKEN: 

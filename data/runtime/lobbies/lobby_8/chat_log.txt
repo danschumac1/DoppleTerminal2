@@ -1,2 +1,0 @@
-SNAKE: Hello this is Dan
-SNAKE: How is everyone today?
