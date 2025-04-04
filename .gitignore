@@ -1,3 +1,9 @@
+# Environment files
 .env
-.log
-./data/runtime/lobbies
+
+# Log files
+*.log
+
+# Ignoring directories
+data/runtime/lobbies/
+logs/runtime/lobbies/
