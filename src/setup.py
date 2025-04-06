@@ -73,11 +73,6 @@ class PlayerSetup:
 
     def run(self, gs:GameState) -> Tuple[ScreenState, GameState, PlayerState]:
         """Run the player setup process."""
-        # picked_color_name = self.assign_color()
-        # self.data["color_name"] = picked_color_name
-        # self.data["color_asci"] = COLOR_DICT[picked_color_name]
-        
-        # print_color("=== Player Setup ===", "CYAN")
         print(Fore.YELLOW + "\n=== Player Setup ===" + Style.RESET_ALL)
         self.prompt_number(1, 10000, "Enter your lobby number", "lobby")
         self.prompt_number(1, 5, "How many people are you playing with?", "number_of_human_players") # TODO change back to 3,5
@@ -132,71 +127,6 @@ class PlayerSetup:
         )
         return ps, gs, ps
 
-# def collect_player_data(
-#         ss: ScreenState,
-#         gs: GameState,
-#         ps: PlayerState,
-#     ) -> Tuple[ScreenState, GameState, PlayerState]:
-#     # clear_screen()
-
-#     print_str = ''
-#     master_logger = MasterLogger.get_instance()
-
-#     # Setup player data if not already written
-#     if not any(p == ps.code_name for p in gs.players):
-#         master_logger.log("Starting Setup screen...")
-#         ps.written_to_file = True
-#         player_setup = PlayerSetup()
-#         ps, gs, ps = player_setup.run(gs)  # Corrected the call to run method
-#         gs.players.append(ps)
-#         gs.players.append(ps.ai_doppleganger.player_state)
-#         save_player_to_lobby_file(ps.ai_doppleganger.player_state)
-
-#     # Initialize chat file if not present
-#     if not os.path.exists(gs.chat_log_path):
-#         init_game_file(gs.chat_log_path)
-#         master_logger.log(f"Initialized chat log at {gs.chat_log_path}")
-#     # Initialize voting file if not present
-#     if not os.path.exists(gs.voting_path):
-#         init_game_file(gs.voting_path)
-#         master_logger.log(f"Initialized voting file at {gs.voting_path}")
-
-#     # master_logger.log(
-#     #     f"Color selected for AI Player {ps.ai_doppleganger.player_state.code_name}: {ps.ai_doppleganger.player_state.color_name}")
-#     master_logger.log(f"Created AI doppelganger for {ps.first_name} {ps.last_initial}")
-
-#     # Check the number of human players and start the game if ready
-#     while len([p for p in gs.players if p.is_human]) < gs.number_of_human_players:
-#         # every 1 second check the file
-#         sleep(1)
-#         # Load the current players from the lobby file
-#         gs.players = load_players_from_lobby(gs)
-
-#         # Filter out AI doppelgangers to count human players only
-#         human_players = [p for p in gs.players if p.is_human]
-#         new_str = f"{len(human_players)}/{gs.number_of_human_players} players are ready."
-#         if print_str != new_str:
-#             print(new_str)
-#             print_str = new_str
-
-#     # clear_screen() 
-
-#     # Synchronize start time if this player is the timekeeper
-#     synchronize_start_time(gs, ps)
-
-#     # Finally, initialize the game state for the AI doppelganger
-#     ps.ai_doppleganger.initialize_game_state(gs)
-#     all_players = load_players_from_lobby(gs)
-#     gs.players = all_players
-#     # Update the AI doppelganger's player code names
-#     ps.ai_doppleganger.players_code_names = [p.code_name for p in all_players]
-
-#     print(Fore.GREEN + "All players are ready!" + Style.RESET_ALL)
-#     input(Fore.MAGENTA + "Press Enter to continue to the chat phase..." + Style.RESET_ALL)
-#     # clear_screen()
-
-#     return ScreenState.CHAT, gs, ps
-
 def collect_player_data(ss: ScreenState, gs: GameState, ps: PlayerState) -> Tuple[ScreenState, GameState, PlayerState]:
     print_str = ''
     master_logger = MasterLogger.get_instance()
@@ -224,10 +154,12 @@ def collect_player_data(ss: ScreenState, gs: GameState, ps: PlayerState) -> Tupl
         if print_str != new_str:
             print(new_str)
             print_str = new_str
-
+            
+    synchronize_start_time(gs, ps)
     # Ensure consistent player list before continuing
     print(Fore.GREEN + "All players are ready!" + Style.RESET_ALL)
     input(Fore.MAGENTA + "Press Enter to continue to the chat phase..." + Style.RESET_ALL)
+    ps.ai_doppleganger.initialize_game_state(gs)
     gs.players = load_players_from_lobby(gs)
     gs.players = sorted(gs.players, key=lambda p: p.code_name)
 

@@ -12,7 +12,7 @@ from time import sleep
 from typing import Tuple
 from utils.states import GameState, ScreenState, PlayerState
 from utils.asthetics import dramatic_print, format_gm_message, clear_screen
-from utils.file_io import load_players_from_lobby, synchronize_start_time
+from utils.file_io import synchronize_start_time
 from colorama import Fore, Style
 
 # Load or initialize voting data
@@ -25,7 +25,7 @@ def get_voting_dict(gs:GameState) -> dict:
     else:
         # Initialize voting data if file doesn't exist
         vote_dict = {
-            'votes_r1': {p.code_name: 0 for p in gs.players}
+            'votes_r0': {p.code_name: 0 for p in gs.players}
         }
         # Save the initialized voting data to the file
         with open(gs.voting_path, 'w') as f:
@@ -113,11 +113,13 @@ def process_voting_result(
 
     if voted_out_player:
         # Mark the voted-out player as no longer in the game in the global state
+        # print("THERE IS A VOTE OUT!")
+        # print(f"{voted_out_code_name} has been voted out!")
+
         voted_out_player.still_in_game = False
-        gs.players.remove(voted_out_player)
+        gs.players = [p for p in gs.players if p.code_name != voted_out_code_name]
         gs.players_voted_off.append(voted_out_player)
         gs.last_vote_outcome = f'{voted_out_code_name} has been voted out.'
-        
         
         # Update the specific player state if the current player is the one voted out
         if ps.code_name == voted_out_code_name:
@@ -157,16 +159,9 @@ def should_transition_to_score(gs: GameState) -> bool:
         return True
     return False
 
-
 # Main voting round function
 def voting_round(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[ScreenState, GameState, PlayerState]:
     print(format_gm_message('Waiting for players to be ready to vote...'))
-    print_str = ''
-    original_players = load_players_from_lobby(gs)
-    current_players = [p for p in original_players if p.still_in_game]
-    gs.players = current_players
-    # Initialize the voting data
-
     # Collect the current player's vote if still in the game
     if ps.still_in_game:
         who_player_voted_for = collect_vote(gs, ps)
@@ -185,6 +180,7 @@ def voting_round(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[Scree
 
 
     print('Waiting for all players to vote...')
+    print_str = ''
     while True:
         # Refresh the vote data
         vote_dict = get_voting_dict(gs)
@@ -229,9 +225,7 @@ def voting_round(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[Scree
     # Check if we should transition to the score screen
     if should_transition_to_score(gs):
         # clear_screen()
+        gs.players = [p for p in gs.players if p.still_in_game]
         return ScreenState.SCORE, gs, ps
     else:
-        original_players = load_players_from_lobby(gs)
-        current_players = [p for p in original_players if p.still_in_game]
-        gs.players = current_players
         return ScreenState.CHAT, gs, ps
