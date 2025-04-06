@@ -16,28 +16,19 @@ def ask_icebreaker(gs, chat_log):
         f.write(intro_msg)
         f.flush()
 
-async def countdown_timer(
-        duration: int, gs: GameState, ps: PlayerState, chat_log: str) -> ScreenState:
+async def countdown_timer(duration: int, gs: GameState, ps: PlayerState, chat_log: str):
     elapsed = (datetime.now() - ps.starttime).total_seconds()
     remaining = max(0, duration - int(elapsed))
 
     if remaining > 0:
         await asyncio.sleep(remaining)
 
-    # Safeguard against double marking the round as complete
-    if not gs.round_complete:
-        gs.round_complete = True
+    gs.round_complete = True
 
-        if ps.timekeeper:
-            with open(chat_log, "a", encoding="utf-8") as f:
-                f.write(format_gm_message("Time's up! Moving to the next round.\n"))
-                f.flush()
-
-        # Return the next screen state after the timer ends
-        return ScreenState.VOTE
-
-    # In case the timer finishes but the round is already complete
-    return ScreenState.CHAT
+    if ps.timekeeper:
+        with open(chat_log, "a", encoding="utf-8") as f:
+            f.write(format_gm_message("Time's up! Moving to the next round."))
+            f.flush()
 
 
 async def refresh_messages(chat_log, gs: GameState, ps: PlayerState, delay=0.5):
@@ -158,31 +149,36 @@ async def play_game(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[Sc
         # Create the file
         with open(chat_log, "w") as f:
             f.write("")
+
     # Ask the icebreaker if you are the timekeeper (to avoid duplicate prints)
     if ps.timekeeper and gs.ice_asked <= gs.round_number:
         ask_icebreaker(gs, chat_log)
 
     try:
-        # Run the countdown timer separately to capture its returned state
-        timer_task = asyncio.create_task(countdown_timer(ROUND_DURATION, gs, ps, chat_log))
+        # Start the countdown timer without awaiting it
+        asyncio.create_task(countdown_timer(ROUND_DURATION, gs, ps, chat_log))
 
-        # Run the other tasks in parallel
-        await asyncio.gather(
-            refresh_messages(chat_log, gs, ps),
-            ai_response(chat_log, ps),
-            user_input(chat_log, ps),
-        )
+        # Create independent tasks for each asynchronous function
+        message_task = asyncio.create_task(refresh_messages(chat_log, gs, ps))
+        ai_task = asyncio.create_task(ai_response(chat_log, ps))
+        user_input_task = asyncio.create_task(user_input(chat_log, ps))
 
-        # Wait for the timer task to complete and get the result
-        new_screen_state = await timer_task
+        # Continuously check if the round is complete
+        while not gs.round_complete:
+            await asyncio.sleep(0.1)  # Small delay to prevent busy-waiting
 
-        print(f"Timer ended, changing screen state to: {new_screen_state}")
-        return new_screen_state, gs, ps
+        # Cancel the ongoing tasks since the round is over
+        for task in [message_task, ai_task, user_input_task]:
+            task.cancel()
+            try:
+                await task  # Wait for the cancellation to complete
+            except asyncio.CancelledError:
+                print(f"Task {task} successfully cancelled.")
+
+        print("Timer ended, moving to the next round.")
+        return ScreenState.VOTE, gs, ps
 
     except asyncio.CancelledError:
         print("\nChat room closed gracefully.")
     except Exception as e:
         print(f"Unexpected error: {e}")
-    finally:
-        print("Exiting the chat application.")
-        return ScreenState.SCORE, gs, ps

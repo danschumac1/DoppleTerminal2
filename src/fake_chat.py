@@ -9,7 +9,7 @@ def play_game(ss: ScreenState, gs: GameState, ps: PlayerState
     print(f"YOU ARE PLAYING AS {ps.code_name}.\n")
     print(f"REMAINING PLAYERS:")
     for player in gs.players:
-        print(f"{player.code_name} (Human?: {'yes' if player.is_human else 'no'})")
+        print(f"{player.code_name} (Human?: {'yes' if player.is_human else 'no'} - {'in' if player.still_in_game else 'out'})")
     print("\n------------------------------\n")
 
     # Wait for user input to proceed to the voting phase

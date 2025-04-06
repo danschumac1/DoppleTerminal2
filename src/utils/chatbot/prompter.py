@@ -21,7 +21,7 @@ class Prompter(ABC):
     def __init__(
             self, openai_dict_key: str, system_prompt: str, examples: List[QAs], 
             prompt_headers: Dict[str, str], output_format: BaseModel, 
-            main_prompt_header:str, llm_model: str = "gpt-3.5-turbo", temperature: float = 0.1):
+            main_prompt_header:str, llm_model: str = "gpt-4o-mini", temperature: float = 0.1):
         """
         :param openai_dict_key: API key variable name in .env
         :param system_prompt: System message for the LLM
@@ -155,19 +155,8 @@ class OpenAIPrompter(Prompter):
             print("="*60 + "\n")
 
         return final_resp
-
-    #     finally:
-    #         if client:
-    #             try:
-    #                 client.close()
-    #             except Exception as e:
-    #                 print(f"Error closing client: {e}")
-    # def __del__(self):
-    #     try:
-    #         if hasattr(self, 'client'):
-    #             self.client.close()
-    #             print("OpenAI client closed.")
-    #     except Exception as e:
-    #         print(f"Error during client cleanup: {e}")
-
-
+    
+    def fetch_prompt(self, input_texts: Dict[str, str]) -> str:
+        """Fetch the prompt without sending it to the LLM."""
+        input_text_str = self._build_messages(input_texts)
+        return json.dumps(input_text_str, indent=4)

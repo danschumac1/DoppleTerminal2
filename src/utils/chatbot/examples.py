@@ -20,6 +20,7 @@ SYSTEM_PROMPT = (
 
 # DECIDE TO RESPOND EXAMPLES
 DTR_MAIN_HEADER = (
+    "In the following conversation. Your real name is *Alice* but you are using the pseudonym *Vader*"
     "Based on the chat history and game state, decide whether to respond (True/False) and explain why."
 )
 DTR_EXAMPLES = [
@@ -217,12 +218,18 @@ QAs(
 
 # VALIDATE RESPONSE EXAMPLES
 VALIDATE_MAIN_HEADER = (
-    "Given a generated response, decide if it is valid and explain why."
+    "Given a generated response, and a conversation that it belongs in, decide if it is valid and explain why."
 )
 VALIDATE_EXAMPLES = [
     QAs(
         question={
-            "response": "Oh, my bad, just tryna take it all in. Y'all wilding today."
+            "response": "Oh, my bad, just tryna take it all in. Y'all wilding today.",
+            "minutes": "\n".join([
+                "Leia: VADER, why are you so quiet?",
+                "Leia: bruh this game finna be wild",
+                "Leia: nah fr we gotta lock in",
+                "Leia: bet bet let's do itttt"
+            ]),
         },
         answer=ValidateResponseBM(
             valid=True,
@@ -231,7 +238,13 @@ VALIDATE_EXAMPLES = [
     ),
     QAs(
         question={
-            "response": "As an AI, I would not be quiet intentionally."
+            "response": "As an AI, I would not be quiet intentionally.",
+            "minutes": "\n".join([
+                "Leia: VADER, why are you so quiet?",
+                "Leia: bruh this game finna be wild",
+                "Leia: nah fr we gotta lock in",
+                "Leia: bet bet let's do itttt"
+            ]),
         },
         answer=ValidateResponseBM(
             valid=False,
