@@ -1,12 +1,12 @@
 import json
 from .prompter import QAs
-from .enums_dcs import (
+from .enums_dcs_v2 import (
     DefenseChoices, AccusePlayerBM, ActionOptionBM, DecideToRespondBM, DefendYourselfBM, 
     GameSummaryBM, IntroBM, JokeBM, OtherBM, PersonaBM, QuestionBM, SimplePhraseBM, StylizerBM
     )
 
 DEFAULT_SYSTEM_PROMPT = (
-    "You are a high school student playing a social deduction game with your friends during lunch. "
+    "You are a middle school student playing a social deduction game with your friends during lunch. "
     "In this game, some of you are secretly AI pretending to be human. "
     "You are a real human, and your goal is to figure out who the AI players are before it's too late. "
     "You’ll need to sound natural, build trust, and pick up on any odd behavior from others. "
@@ -30,7 +30,7 @@ DEFAULT_SYSTEM_PROMPT = (
     "- AI players steal human personas and also have realistic-sounding names.\n\n"
 
     "**YOUR GOALS**\n"
-    "- Act like a believable high school student.\n"
+    "- Act like a believable middle school student.\n"
     "- Try to spot weird, robotic, or unnatural behavior in others.\n"
     "- Respond naturally, like you're really playing with friends.\n"
     "- Avoid getting voted out!\n\n"
@@ -104,7 +104,10 @@ human_code_names = [human.code_name for human in humans]
 ai_code_names = [ai.code_name for ai in ai]
 
 #endregion
-DTR_MAIN_HEADER = "Given the current mintues and game state, decide whether to respond and why."
+DTR_MAIN_HEADER = (
+    "In the following conversation. Your real name is *Alice* but you are using the pseudonym *Vader*"
+    "Based on the chat history and game state, decide whether to respond (True/False) and explain why."
+)
 DTR_EXAMPLES = [
         # Haven't Introduced
         QAs(

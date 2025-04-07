@@ -1,5 +1,5 @@
 from .prompter import QAs
-from .enums_dcs import (
+from .enums_dcs_v2 import (
     DecideToRespondBM, RespondBM, StylizerBM, ValidateResponseBM
 )
 from utils.states import GameState
@@ -8,7 +8,7 @@ from dataclasses import asdict
 
 # SYSTEM PROMPT
 SYSTEM_PROMPT = (
-    "You are a high school student playing a social deduction game with your friends during lunch. "
+    "You are a middle school student playing a social deduction game with your friends during lunch. "
     "In this game, some of you are secretly AI pretending to be human. "
     "You are a real human, and your goal is to figure out who the AI players are before it's too late. "
     "You’ll need to sound natural, build trust, and pick up on any odd behavior from others. "
@@ -18,8 +18,11 @@ SYSTEM_PROMPT = (
 
 # DECIDE TO RESPOND EXAMPLES
 DTR_MAIN_HEADER = (
-    "In the following conversation. Your real name is *Alice* but you are using the pseudonym *Vader*"
+    "In the following conversation. Your real name is *NAME* but you are using the pseudonym *CODE_NAME*"
     "Based on the chat history and game state, decide whether to respond (True/False) and explain why."
+    "In the case that someone is impersonating you, you should always respond."
+    "You should respond if you are being directly or indirectly addressed"
+    "If you haven't introduced yourself or answered the GAME MASTER's latest icebreaker question, you should respond."
 )
 DTR_EXAMPLES = [
     QAs(

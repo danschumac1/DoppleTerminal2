@@ -4,8 +4,6 @@ import json
 import os
 from typing import List, Tuple
 from time import sleep
-import inspect
-
 from utils.states import GameState, PlayerState
 
 def synchronize_start_time(gs: GameState, ps: PlayerState) -> None:

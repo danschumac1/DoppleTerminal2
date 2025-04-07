@@ -55,7 +55,6 @@ def display_voting_prompt(gs) -> str:
     voting_options = [f'{idx + 1}: {p.code_name}' for idx, p in enumerate(eligible_players)]
     return f'Select a player to vote out by number:\n' + '\n'.join(voting_options) + '\n> '
 
-
 # Collect the player's vote
 def collect_vote(gs, ps) -> str:
     eligible_players = sorted(gs.players, key=lambda x: x.code_name)
@@ -63,7 +62,7 @@ def collect_vote(gs, ps) -> str:
 
     while True: 
         try:
-            # clear_screen()
+            clear_screen()
             print(format_gm_message(
                 "All players present! It's time to vote! Choose the player you most believe is an AI."))
             print(Fore.GREEN + f"remember you are playing as {ps.code_name}".upper() + Style.RESET_ALL)
@@ -72,7 +71,7 @@ def collect_vote(gs, ps) -> str:
             if 1 <= vote <= len(eligible_players):
                 if eligible_players[vote - 1].code_name == ps.code_name:
                     print('You cannot vote for yourself. Please choose another player.')
-                    input('Press Enter to try again...')
+                    input(Fore.MAGENTA + 'Press Enter to try again...' + Style.RESET_ALL)
                     continue
                 return eligible_players[vote - 1].code_name
 
@@ -161,12 +160,10 @@ def should_transition_to_score(gs: GameState) -> bool:
 
 # Main voting round function
 def voting_round(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[ScreenState, GameState, PlayerState]:
-    print(format_gm_message('Waiting for players to be ready to vote...'))
+    # print(format_gm_message('Waiting for players to be ready to vote...'))
     # Collect the current player's vote if still in the game
     if ps.still_in_game:
         who_player_voted_for = collect_vote(gs, ps)
-        round_key = f'votes_r{gs.round_number}'
-
         # Increment the vote count for the chosen player
         vote_dict = update_voting_dict(gs, who_player_voted_for)
     else:
@@ -177,7 +174,6 @@ def voting_round(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[Scree
 
     # Update the list of human players actively in the game
     human_players = [p for p in gs.players if p.is_human and p.still_in_game]
-
 
     print('Waiting for all players to vote...')
     print_str = ''
@@ -220,11 +216,11 @@ def voting_round(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[Scree
     synchronize_start_time(gs, ps)
 
     input(Fore.MAGENTA + "Press Enter to continue to next phase..." + Style.RESET_ALL)
-    # clear_screen()
+    clear_screen()
 
     # Check if we should transition to the score screen
     if should_transition_to_score(gs):
-        # clear_screen()
+        clear_screen()
         gs.players = [p for p in gs.players if p.still_in_game]
         return ScreenState.SCORE, gs, ps
     else:

@@ -1,9 +1,7 @@
 from __future__ import annotations
-from dataclasses import asdict, dataclass, field
+from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
-import json
-import os
 from typing import List, Optional
 
 class ScreenState(Enum):
@@ -49,6 +47,17 @@ class PlayerState:
             # "color_asci": self.color_asci,
             "starttime": self.starttime.isoformat() if isinstance(self.starttime, datetime) else self.starttime,
             # "ai_doppleganger": self.ai_doppleganger if self.ai_doppleganger else None
+        }
+    def to_persona(self) -> dict:
+        return {
+            "first_name": self.first_name,
+            "last_initial": self.last_initial,
+            "code_name": self.code_name,
+            "grade": self.grade,
+            "favorite_food": self.favorite_food,
+            "favorite_animal": self.favorite_animal,
+            "hobby": self.hobby,
+            "extra_info": self.extra_info,
         }
 
 @dataclass

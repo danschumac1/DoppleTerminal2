@@ -119,12 +119,15 @@ async def ai_response(chat_log, ps: PlayerState, delay=1.0):
                                 f.flush()
 
                     except asyncio.TimeoutError:
-                        print(f"AI response took too long, skipping...")
+                        # print(f"AI response took too long, skipping...")
+                        pass
                     except Exception as e:
-                        print(f"Error during AI response generation: {e}")
+                        # print(f"Error during AI response generation: {e}")
+                        pass
 
         except IOError as e:
-            print(f"Error in AI response loop: {e}")
+            # print(f"Error in AI response loop: {e}")
+            pass
 
 async def user_input(chat_log, ps: PlayerState):
     """Captures user input and writes it to the chat log."""
@@ -138,7 +141,8 @@ async def user_input(chat_log, ps: PlayerState):
             # Move the cursor up and clear the line to avoid "You: You:"
             print("\033[A" + " " * len(formatted_message) + "\033[A")
         except Exception as e:
-            print(f"Error getting user input: {e}")
+            pass
+            # print(f"Error getting user input: {e}")
 
 async def play_game(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[ScreenState, GameState, PlayerState]:
     chat_log = gs.chat_log_path
@@ -173,9 +177,10 @@ async def play_game(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[Sc
             try:
                 await task  # Wait for the cancellation to complete
             except asyncio.CancelledError:
-                print(f"Task {task} successfully cancelled.")
+                # print(f"Task {task} successfully cancelled.")
+                pass
 
-        print("Timer ended, moving to the next round.")
+        # print("Timer ended, moving to the next round.")
         return ScreenState.VOTE, gs, ps
 
     except asyncio.CancelledError:

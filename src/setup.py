@@ -3,7 +3,7 @@ import os
 from typing import Tuple
 
 from colorama import Fore, Style
-from utils.chatbot.ai import AIPlayer
+from utils.chatbot.ai_v3 import AIPlayer
 from utils.logging_utils import MasterLogger, StandAloneLogger
 from utils.states import GameState, ScreenState, PlayerState
 from utils.file_io import SequentialAssigner, init_game_file, load_players_from_lobby, save_player_to_lobby_file, synchronize_start_time

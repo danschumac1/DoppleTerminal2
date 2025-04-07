@@ -5,11 +5,11 @@ from typing import List
 from functools import wraps
 import inspect
 from .prompter import OpenAIPrompter
-from .examples import (
+from .examples_v2 import (
     DTR_EXAMPLES, DTR_MAIN_HEADER,RESP_EXAMPLES, RESP_MAIN_HEADER, STYLIZE_EXAMPLES, 
     STYLIZE_MAIN_HEADER, SYSTEM_PROMPT, VALIDATE_EXAMPLES, VALIDATE_MAIN_HEADER
 )
-from .enums_dcs import (
+from .enums_dcs_v2 import (
     RespondBM, StylizerBM, DecideToRespondBM, ValidateResponseBM, 
 )
 import sys

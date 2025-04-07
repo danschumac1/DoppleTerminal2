@@ -5,7 +5,7 @@ from functools import wraps
 import inspect
 from .prompter import OpenAIPrompter
 from utils.logging_utils import StandAloneLogger
-from .examples import (
+from .examples_v1 import (
     GENERIC_PROMPT_HEADERS, CHOOSE_ACTION_MAIN_HEADER, CHOSE_ACTION_EXAMPLES, 
     DEFEND_MAIN_HEADER, DEFEND_EXAMPLES, ACCUSE_MAIN_HEADER, ACCUSE_EXAMPLES, 
     DTR_EXAMPLES, DTR_MAIN_HEADER,GSU_HEADERS, INTRO_EXAMPLES, INTRO_MAIN_HEADER, JOKE_MAIN_HEADER,
@@ -13,7 +13,7 @@ from .examples import (
     SIMPLE_PHRASE_EXAMPLES, GSU_MAIN_HEADER, GSU_EXAMPLES, STYLIZER_EXAMPLES, STYLIZER_HEADERS, 
     STYLIZER_MAIN_HEADER, DEFAULT_SYSTEM_PROMPT
 )
-from .enums_dcs import (
+from .enums_dcs_v1 import (
     IntroBM, JokeBM, QuestionBM, SimplePhraseBM, StylizerBM, Team, ActionOptionBM, DecideToRespondBM, 
     DefendYourselfBM, AccusePlayerBM, GameSummaryBM
 )
