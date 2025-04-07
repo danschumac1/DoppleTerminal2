@@ -83,7 +83,7 @@ class PlayerSetup:
         self.prompt_input("hobby", "What's your hobby? ")
         self.prompt_input("extra_info", "Tell us one more thing about you: ")
 
-        # clear_screen()
+        clear_screen()
         print(Fore.GREEN + "✅ Player setup complete." + Style.RESET_ALL)
 
         lobby_path = os.path.join(
@@ -127,7 +127,7 @@ class PlayerSetup:
         return ps, gs, ps
 
 def collect_player_data(ss: ScreenState, gs: GameState, ps: PlayerState) -> Tuple[ScreenState, GameState, PlayerState]:
-    # clear_screen()
+    clear_screen()
     print(Fore.YELLOW + "\n=== Player Setup ===" + Style.RESET_ALL)
 
     print_str = ''

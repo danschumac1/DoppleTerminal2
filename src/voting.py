@@ -62,7 +62,7 @@ def collect_vote(gs, ps) -> str:
 
     while True: 
         try:
-            # clear_screen()
+            clear_screen()
             print(format_gm_message(
                 "All players present! It's time to vote! Choose the player you most believe is an AI."))
             print(Fore.GREEN + f"remember you are playing as {ps.code_name}".upper() + Style.RESET_ALL)
@@ -217,11 +217,11 @@ def voting_round(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[Scree
     input(Fore.MAGENTA + "Press Enter to continue to next phase..." + Style.RESET_ALL)
     synchronize_start_time(gs, ps)
     gs.round_complete = False
-    # clear_screen()
+    clear_screen()
 
     # Check if we should transition to the score screen
     if should_transition_to_score(gs):
-        # clear_screen()
+        clear_screen()
         return ScreenState.SCORE, gs, ps
     else:
         return ScreenState.CHAT, gs, ps
