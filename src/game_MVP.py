@@ -163,7 +163,7 @@ async def play_game(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[Sc
 
     # Ask the icebreaker if you are the timekeeper (to avoid duplicate prints)
     if gs.ice_asked <= gs.round_number: # just a safe guard. 
-        ask_icebreaker(gs, chat_log)
+        ask_icebreaker(gs, ps, chat_log)
 
     try:
         # Start the countdown timer without awaiting it
