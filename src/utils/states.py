@@ -48,6 +48,16 @@ class PlayerState:
             "starttime": self.starttime.isoformat() if isinstance(self.starttime, datetime) else self.starttime,
             # "ai_doppleganger": self.ai_doppleganger if self.ai_doppleganger else None
         }
+    def serialize_player(self, player):
+        """Convert a player object to a JSON-serializable dictionary."""
+        if isinstance(player, PlayerState):
+            return {
+                "code_name": player.code_name,
+                "is_human": player.is_human,
+                "still_in_game": player.still_in_game,
+                # Add other simple, serializable attributes here
+            }
+        return str(player) 
     def to_persona(self) -> dict:
         return {
             "first_name": self.first_name,

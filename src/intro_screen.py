@@ -62,10 +62,11 @@ Your job? Figure out who's real and who's not before it's too late."""),
     ]
 
     for color, section in intro_sections:
-        clear_screen()
         print(color + section)  # Print the section in the specified color
         print("\n\n")
         print(Fore.GREEN + "Intro section complete! Let's Play!")
         input(Fore.MAGENTA + "Press Enter to continue...")
         time.sleep(0.1)
+
+    clear_screen()
     return ScreenState.SETUP, gs, ps

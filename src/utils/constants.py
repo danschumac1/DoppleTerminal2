@@ -2,7 +2,7 @@ from colorama import Fore, init
 
 from utils.states import GameState, PlayerState
 
-ROUND_DURATION = 30  # seconds
+ROUND_DURATION = 15  # seconds
 
 COLOR_DICT = {
     "RED": Fore.RED,

@@ -6,40 +6,89 @@ from typing import List, Tuple
 from time import sleep
 from utils.states import GameState, PlayerState
 
+def init_start_time_file(start_time_path: str) -> None:
+    """Ensure the start time file exists, initializing if necessary."""
+    if not os.path.exists(start_time_path):
+        with open(start_time_path, "w") as f:
+            json.dump({}, f)
+        print(f"Initialized start time file at {start_time_path}.")
+
+def load_start_times(start_time_path: str) -> dict:
+    """Load start times from the file."""
+    try:
+        with open(start_time_path, "r") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, FileNotFoundError):
+        print(f"Corrupted or missing start time file, reinitializing...")
+        return {}
+
+def save_start_times(start_time_path: str, start_times: dict) -> None:
+    """Save start times to the file."""
+    with open(start_time_path, "w") as f:
+        json.dump(start_times, f, indent=4)
+
+def assign_timekeeper(ps: PlayerState) -> None:
+    """Assign the current player as the timekeeper."""
+    ps.timekeeper = True
+    print(f"{ps.code_name} has been assigned as the timekeeper.")
+
+def set_round_start_time(current_round: str, start_times: dict, start_time_path: str) -> str:
+    """Set the start time for the current round."""
+    start_time = datetime.now().replace(tzinfo=None).strftime("%Y-%m-%d %H:%M:%S")
+    start_times[current_round] = start_time
+    save_start_times(start_time_path, start_times)
+    print(f"Set start time for round {current_round}: {start_time}")
+    return start_time
+
+def wait_for_start_time(current_round: str, start_time_path: str) -> str:
+    """Wait for the timekeeper to set the start time for the current round."""
+    while True:
+        start_times = load_start_times(start_time_path)
+        if current_round in start_times:
+            start_time = start_times[current_round]
+            print(f"Loaded start time for round {current_round}: {start_time}")
+            return start_time
+        print(f"Waiting for round {current_round} start time to be set...")
+        sleep(1)
+
 def synchronize_start_time(gs: GameState, ps: PlayerState) -> None:
     """
-    Synchronizes the start time between players, assigning the current player as the timekeeper
-    if the start time file does not exist.
+    Synchronizes the start time between players, updating the file only if the player is the timekeeper.
+    Other players wait until the new round time is set.
     """
-    # Check if the start time file already exists
+    # Ensure the start time file exists and set timekeeper if needed
     if not os.path.exists(gs.start_time_path):
-        # Load players to ensure the list is up to date
-        gs.players = load_players_from_lobby(gs)
-        
-        # Assign the current player as the timekeeper
-        ps.timekeeper = True
+        init_start_time_file(gs.start_time_path)
+        assign_timekeeper(ps)
 
-        # Create the start time file
-        init_game_file(gs.start_time_path)
+    # Read the current round number
+    current_round = str(gs.round_number)
 
-        # Write the start time to the file
-        ps.starttime = datetime.now().replace(tzinfo=None)
-        start_time_str = ps.starttime.strftime("%Y-%m-%d %H:%M:%S")
-        with open(gs.start_time_path, "w") as f:
-            f.write(start_time_str)
+    # Load existing start times
+    start_times = load_start_times(gs.start_time_path)
 
-    else:
-        # If not the timekeeper, wait for the file to exist
-        while not os.path.exists(gs.start_time_path):
-            print("Waiting for the timekeeper to initialize the start time...")
-            sleep(1)
+    # If the file was just created, the player who created it is the timekeeper
+    if ps.timekeeper and not start_times:
+        print(f"No start times found. Setting initial time for round {current_round}...")
+        start_time_str = set_round_start_time(current_round, start_times, gs.start_time_path)
+        ps.starttime = datetime.strptime(start_time_str, "%Y-%m-%d %H:%M:%S")
+        return
 
-        # Load the starting time from the file
-        with open(gs.start_time_path, "r") as f:
-            start_time_str = f.read().strip()
+    # Check if the current round time is already set
+    if current_round not in start_times:
+        if ps.timekeeper:
+            # Set the start time if the player is the timekeeper
+            start_time_str = set_round_start_time(current_round, start_times, gs.start_time_path)
             ps.starttime = datetime.strptime(start_time_str, "%Y-%m-%d %H:%M:%S")
-            ps.starttime = ps.starttime.replace(tzinfo=None)  # Remove timezone info
-
+        else:
+            # Wait for the timekeeper to set the start time
+            start_time_str = wait_for_start_time(current_round, gs.start_time_path)
+            ps.starttime = datetime.strptime(start_time_str, "%Y-%m-%d %H:%M:%S")
+    else:
+        # If the round time is already set, just load it
+        start_time_str = start_times[current_round]
+        ps.starttime = datetime.strptime(start_time_str, "%Y-%m-%d %H:%M:%S")
+        print(f"Start time for round {current_round} already exists: {start_time_str}")
 
 def init_game_file(path: str):
     os.makedirs(os.path.dirname(path), exist_ok=True)

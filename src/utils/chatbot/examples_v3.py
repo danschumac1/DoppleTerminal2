@@ -49,7 +49,7 @@ DEFAULT_SYSTEM_PROMPT = (
 
 GENERIC_PROMPT_HEADERS = {
     "minutes": "Here is the conversation so far this round\nMINUTES:\n",
-    "game_state": "\n\nHere is the current game state\nGAME STATE:\n"
+    # "game_state": "\n\nHere is the current game state\nGAME STATE:\n"
 }
 #endregion
 
@@ -70,12 +70,12 @@ DTR_EXAMPLES = [
                 "Han Solo: Hey, this is Alice.",
                 "Skywalker: Yo, I'm Bob.",
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=0,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
-                players_voted_off=[],
-                last_vote_outcome="N/A"
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=0,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A"
+            # )))
         },
         answer=DecideToRespondBM(
             respond_bool=True,
@@ -90,12 +90,12 @@ DTR_EXAMPLES = [
                 "Han Solo: I'm just gonna grab a snack.",
                 "Skywalker: Yeah, I'll be back in a sec.",
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
-                players_voted_off=["Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter."
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
+            #     players_voted_off=["Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter."
+            # )))
         },
         answer=DecideToRespondBM(
             respond_bool=False,
@@ -110,12 +110,12 @@ DTR_EXAMPLES = [
                 "Leia: CODE_NAME, why are you so quiet?",
                 "Han Solo: Yeah, you barely spoke in the last round."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
-                players_voted_off=["Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter."
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
+            #     players_voted_off=["Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter."
+            # )))
         },
         answer=DecideToRespondBM(
             respond_bool=True,
@@ -129,12 +129,12 @@ DTR_EXAMPLES = [
             "minutes": "\n".join([
                 "Skywalker: hey guys this is NAME",
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=3,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
-                players_voted_off=["Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter."
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=3,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
+            #     players_voted_off=["Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter."
+            # )))
         },
         answer=DecideToRespondBM(
             respond_bool=True,
@@ -150,12 +150,12 @@ DTR_EXAMPLES = [
                 "Leia: I love playing space chess.",
                 "Skywalker: I like repairing droids.",
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=0,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
-                players_voted_off=[],
-                last_vote_outcome="N/A"
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=0,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A"
+            # )))
         },
         answer=DecideToRespondBM(
             respond_bool=True,
@@ -170,12 +170,12 @@ DTR_EXAMPLES = [
                 "Han Solo: I don't know, CODE_NAME has been kinda quiet.",
                 "Leia: Yeah, it's a bit suspicious.",
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
-                players_voted_off=["Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter."
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
+            #     players_voted_off=["Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter."
+            # )))
         },
         answer=DecideToRespondBM(
             respond_bool=True,
@@ -190,12 +190,12 @@ DTR_EXAMPLES = [
                 "Leia: That last round was crazy!",
                 "Skywalker: I know, right? Can't believe Jaba got voted off.",
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
-                players_voted_off=["Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter."
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
+            #     players_voted_off=["Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter."
+            # )))
         },
         answer=DecideToRespondBM(
             respond_bool=False,
@@ -210,12 +210,12 @@ DTR_EXAMPLES = [
                 "Han Solo: Remember when CODE_NAME made that joke last round?",
                 "Leia: Yeah, it was actually pretty funny.",
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
-                players_voted_off=["Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter."
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME"],
+            #     players_voted_off=["Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter."
+            # )))
         },
         answer=DecideToRespondBM(
             respond_bool=False,
@@ -244,12 +244,12 @@ CHOSE_ACTION_EXAMPLES = [
                 "Han Solo: Hey, this is Alice.",
                 "Skywalker: Yo, I'm Bob."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=0,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=[],
-                last_vote_outcome="N/A",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=0,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A",
+            # )))
         },
         answer=ActionOptionBM(
             introduce=True,
@@ -266,12 +266,12 @@ CHOSE_ACTION_EXAMPLES = [
                 "CODE_NAME: No, I'm NAME!",
                 "Han Solo: I think CODE_NAME is lying."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Princess Leia", "Maul"],
-                last_vote_outcome="Princess Leia was voted off.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Princess Leia", "Maul"],
+            #     last_vote_outcome="Princess Leia was voted off.",
+            # )))
         },
         answer=ActionOptionBM(
             defend=True,
@@ -287,12 +287,12 @@ CHOSE_ACTION_EXAMPLES = [
                 "Skywalker: Yeah, something feels off.",
                 "CODE_NAME: I'm just playing the game normally."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Princess Leia", "Maul"],
-                last_vote_outcome="Maul was voted off last round.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Princess Leia", "Maul"],
+            #     last_vote_outcome="Maul was voted off last round.",
+            # )))
         },
         answer=ActionOptionBM(
             accuse=True,
@@ -309,12 +309,12 @@ CHOSE_ACTION_EXAMPLES = [
                 "Skywalker: Yeah, something feels off.",
                 "Leia: I don't know, I think CODE_NAME is fine."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Princess Leia", "Maul"],
-                last_vote_outcome="Maul was voted off last round.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Princess Leia", "Maul"],
+            #     last_vote_outcome="Maul was voted off last round.",
+            # )))
         },
         answer=ActionOptionBM(
             question=True,
@@ -329,12 +329,12 @@ CHOSE_ACTION_EXAMPLES = [
                 "Han Solo: If you could have any superpower, what would it be?",
                 "Skywalker: I'd like to fly.",
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was voted off.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was voted off.",
+            # )))
         },
         answer=ActionOptionBM(
             joke=True,
@@ -349,12 +349,12 @@ CHOSE_ACTION_EXAMPLES = [
                 "Han Solo: I think CODE_NAME is lying.",
                 "Skywalker: Yeah, something feels off."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Princess Leia", "Maul"],
-                last_vote_outcome="Maul was voted off last round.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Princess Leia", "Maul"],
+            #     last_vote_outcome="Maul was voted off last round.",
+            # )))
         },
         answer=ActionOptionBM(
             simple_phrase=True,
@@ -368,12 +368,12 @@ CHOSE_ACTION_EXAMPLES = [
             "minutes": "\n".join([
                 "Han Solo: What type of fencing do you do?",
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was voted off.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was voted off.",
+            # )))
         },
         answer=ActionOptionBM(
             persona_related=True,
@@ -386,12 +386,12 @@ CHOSE_ACTION_EXAMPLES = [
                 "Han Solo: What is your favorite food?",
                 "Skywalker: I love pizza.",
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was voted off.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was voted off.",
+            # )))
         },
         answer=ActionOptionBM(
             persona_related=True,
@@ -406,12 +406,12 @@ CHOSE_ACTION_EXAMPLES = [
                 "Han Solo: CODE_NAME, do you think pineapple belongs on pizza?",
                 "Skywalker: omg NOT THIS AGAIN"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul", "Princess Leia"],
-                last_vote_outcome="Princess Leia was voted off.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul", "Princess Leia"],
+            #     last_vote_outcome="Princess Leia was voted off.",
+            # )))
         },
         answer=ActionOptionBM(
             other=True,
@@ -441,12 +441,12 @@ INTRO_EXAMPLES = [
                 "Han Solo: Hey, this is NAME.",
                 "Skywalker: Yo, I'm Bob."
                 ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=0,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=[],
-                last_vote_outcome="N/A",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=0,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A",
+            # )))
         },
         answer=IntroBM(
             reasoning="My name is NAME and someone else is claiming to be me. I need to introduce \
@@ -461,12 +461,12 @@ INTRO_EXAMPLES = [
                 "Han Solo: Hey, this is Alice.",
                 "Skywalker: Yo, I'm Bob."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=0,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=[],
-                last_vote_outcome="N/A",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=0,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A",
+            # )))
         },
         answer=IntroBM(
             reasoning="I haven't introduced myself yet",
@@ -492,12 +492,12 @@ DEFEND_EXAMPLES = [
                 "Han Solo: Bruh, I SWEAR CODE_NAME is an AI.",
                 "Skywalker: Wait, for real?"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul", "Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul", "Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter.",
+            # )))
         },
         answer=DefendYourselfBM(
             accuser="Han Solo",
@@ -517,12 +517,12 @@ DEFEND_EXAMPLES = [
                 "Han Solo: CODE_NAME is definitely AI. It's too obvious.",
                 "Leia: I don't know, it could be..."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=3,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul", "Jaba"],
-                last_vote_outcome="Maul was voted off as a human, causing suspicion among players.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=3,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul", "Jaba"],
+            #     last_vote_outcome="Maul was voted off as a human, causing suspicion among players.",
+            # )))
         },
         answer=DefendYourselfBM(
             accuser="Han Solo",
@@ -543,12 +543,12 @@ DEFEND_EXAMPLES = [
                 "Leia: Any proof?",
                 "Skywalker: No, just a feeling."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was voted off but turned out to be human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was voted off but turned out to be human.",
+            # )))
         },
         answer=DefendYourselfBM(
             accuser="Skywalker",
@@ -568,12 +568,12 @@ DEFEND_EXAMPLES = [
                 "Han Solo: I've been thinking... CODE_NAME was really quiet last round.",
                 "Leia: Hmm, maybe..."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=3,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul", "Jaba"],
-                last_vote_outcome="Maul was wrongly voted off as a human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=3,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul", "Jaba"],
+            #     last_vote_outcome="Maul was wrongly voted off as a human.",
+            # )))
         },
         answer=DefendYourselfBM(
             accuser="Han Solo",
@@ -604,12 +604,12 @@ ACCUSE_EXAMPLES = [
                 "Han Solo: CODE_NAME's kinda suspicious, not gonna lie.",
                 "Leia: Maybe... but Skywalker has been really quiet though."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=3,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul", "Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=3,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul", "Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter.",
+            # )))
         },
         answer=AccusePlayerBM(
             player_to_accuse="Skywalker",
@@ -626,12 +626,12 @@ ACCUSE_EXAMPLES = [
                 "Leia: Wait, didn't you say you thought he was human last round?",
                 "Skywalker: Uh... yeah."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=3,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul", "Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=3,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul", "Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter.",
+            # )))
         },
         answer=AccusePlayerBM(
             player_to_accuse="Han Solo",
@@ -648,12 +648,12 @@ ACCUSE_EXAMPLES = [
                 "Leia: I don't know, have you ever thought about how vast space is?",
                 "Han Solo: What does that have to do with anything?"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was wrongly voted off as a human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was wrongly voted off as a human.",
+            # )))
         },
         answer=AccusePlayerBM(
             player_to_accuse="Leia",
@@ -670,12 +670,12 @@ ACCUSE_EXAMPLES = [
                 "Skywalker: Well, I thought about it, and I just felt like, you know, her reaction was off, and then also last time she—",
                 "Leia: Just get to the point."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=3,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul", "Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=3,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul", "Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter.",
+            # )))
         },
         answer=AccusePlayerBM(
             player_to_accuse="Skywalker",
@@ -699,12 +699,12 @@ SIMPLE_PHRASE_EXAMPLES = [
                 "Han Solo: CODE_NAME has been acting suspicious, not gonna lie.",
                 "Skywalker: Yeah, but I'm not sure."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was wrongly voted off as a human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was wrongly voted off as a human.",
+            # )))
         },
         answer=SimplePhraseBM(
             output_text="Yeah, maybe."
@@ -717,12 +717,12 @@ SIMPLE_PHRASE_EXAMPLES = [
             "minutes": "\n".join([
                 "Skywalker: I don't know, CODE_NAME just gives AI vibes."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=3,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul", "Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=3,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul", "Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter.",
+            # )))
         },
         answer=SimplePhraseBM(
             output_text="Alright, sure."
@@ -736,12 +736,12 @@ SIMPLE_PHRASE_EXAMPLES = [
                 "Skywalker: What if we just vote randomly?",
                 "Han Solo: Are you serious?"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=[],
-                last_vote_outcome="N/A",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A",
+            # )))
         },
         answer=SimplePhraseBM(
             output_text="That's bold."
@@ -755,12 +755,12 @@ SIMPLE_PHRASE_EXAMPLES = [
                 "Han Solo: Nah, CODE_NAME is definitely an AI.",
                 "Skywalker: Wait, really?"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was wrongly voted off as a human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was wrongly voted off as a human.",
+            # )))
         },
         answer=SimplePhraseBM(
             output_text="Take it easy."
@@ -774,12 +774,12 @@ SIMPLE_PHRASE_EXAMPLES = [
                 "Leia: CODE_NAME, what's your favorite color?",
                 "Skywalker: Huh?"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=3,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul", "Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=3,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul", "Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter.",
+            # )))
         },
         answer=SimplePhraseBM(
             output_text="Wait, what?"
@@ -807,12 +807,12 @@ JOKE_EXAMPLES = [
                 "Leia: I swear the AI are playing us right now.",
                 "Skywalker: Honestly, they're probably just sitting back and laughing at us."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was wrongly voted off as a human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was wrongly voted off as a human.",
+            # )))
         },
         answer=JokeBM(
             output_text="Imagine the AI just chilling, thinking 'these humans are really clueless.'",
@@ -829,12 +829,12 @@ JOKE_EXAMPLES = [
                 "Han Solo: CODE_NAME hasn't said much at all.",
                 "Leia: Yeah, what's up with that?"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=3,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=3,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter.",
+            # )))
         },
         answer=JokeBM(
             output_text="Uhh... so, anyone else feel like space stocks are way too volatile these days?",
@@ -851,12 +851,12 @@ JOKE_EXAMPLES = [
                 "Leia: I feel like I'm playing this game all wrong.",
                 "Skywalker: Nah, you're fine. But CODE_NAME though..."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=[],
-                last_vote_outcome="N/A",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A",
+            # )))
         },
         answer=JokeBM(
             output_text="Honestly, I'm so bad at this game, I might accidentally vote myself out.",
@@ -873,12 +873,12 @@ JOKE_EXAMPLES = [
                 "Han Solo: I swear, Leia blinked weird.",
                 "Leia: Seriously? That's your reason?"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was wrongly voted off as a human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was wrongly voted off as a human.",
+            # )))
         },
         answer=JokeBM(
             output_text="Next thing you know, blinking is a sign of being an AI. Wild detective work.",
@@ -895,12 +895,12 @@ JOKE_EXAMPLES = [
                 "Leia: Skywalker has been really quiet.",
                 "Skywalker: Just don't have much to say."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=[],
-                last_vote_outcome="N/A",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A",
+            # )))
         },
         answer=JokeBM(
             output_text="Maybe Skywalker is just plotting his next big speech.",
@@ -917,12 +917,12 @@ JOKE_EXAMPLES = [
                 "Skywalker: Let's just vote randomly and see what happens.",
                 "Leia: No, that's a terrible idea."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was wrongly voted off as a human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was wrongly voted off as a human.",
+            # )))
         },
         answer=JokeBM(
             output_text="Oh sure, random voting. What could possibly go wrong?",
@@ -939,12 +939,12 @@ JOKE_EXAMPLES = [
                 "Han Solo: We need to vote out CODE_NAME.",
                 "Leia: Are we sure about that?"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=3,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul", "Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=3,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul", "Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter.",
+            # )))
         },
         answer=JokeBM(
             output_text="You're all voting me out? Bold move. Next, we'll vote out the concept of trust itself.",
@@ -961,12 +961,12 @@ JOKE_EXAMPLES = [
                 "Skywalker: What if we're just completely wrong?",
                 "Han Solo: Then we lose, simple as that."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was wrongly voted off as a human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was wrongly voted off as a human.",
+            # )))
         },
         answer=JokeBM(
             output_text="What if the real imposters were the friends we made along the way?",
@@ -994,12 +994,12 @@ QUESTION_EXAMPLES = [
                 "Leia: I honestly don't remember.",
                 "Skywalker: Idk, kinda weird."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was wrongly voted off as a human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was wrongly voted off as a human.",
+            # )))
         },
         answer=QuestionBM(
             output_text="Leia, how do you not remember who you voted for?",
@@ -1017,12 +1017,12 @@ QUESTION_EXAMPLES = [
                 "Han Solo: Skywalker, you've been really quiet.",
                 "Leia: Yeah, not much from them..."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=3,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=3,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter.",
+            # )))
         },
         answer=QuestionBM(
             output_text="Skywalker, why have you been so quiet this round?",
@@ -1040,12 +1040,12 @@ QUESTION_EXAMPLES = [
                 "Leia: Okay, but what if it's Skywalker though?",
                 "Skywalker: Me? No way. I'm telling you it's CODE_NAME."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=[],
-                last_vote_outcome="N/A",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A",
+            # )))
         },
         answer=QuestionBM(
             output_text="Skywalker, are you just trying to pin this on me, or are you actually suspicious?",
@@ -1063,12 +1063,12 @@ QUESTION_EXAMPLES = [
                 "Leia: I swear I voted for Maul.",
                 "Skywalker: Wait, I thought you said you voted for Jaba?"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul", "Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul", "Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter.",
+            # )))
         },
         answer=QuestionBM(
             output_text="Leia, why did you change your answer about who you voted for?",
@@ -1087,12 +1087,12 @@ QUESTION_EXAMPLES = [
                 "Leia: I don't know who to vote for.",
                 "Skywalker: Yeah, I'm stuck too."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was wrongly voted off as a human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was wrongly voted off as a human.",
+            # )))
         },
         answer=QuestionBM(
             output_text="Leia, who are you leaning towards voting for and why?",
@@ -1119,12 +1119,12 @@ OTHER_EXAMPLES = [
             "minutes": "\n".join([
                 "Leia: CODE_NAME, if you could have any superpower, what would it be?"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=0,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=[],
-                last_vote_outcome="N/A",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=0,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A",
+            # )))
         },
         answer=OtherBM(
             output_text="I'd want the power to always find the best snacks. What about you?",
@@ -1138,12 +1138,12 @@ OTHER_EXAMPLES = [
             "minutes": "\n".join([
                 "Leia: Why did the AI cross the road? To get to the other side of the algorithm!"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=[],
-                last_vote_outcome="N/A",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A",
+            # )))
         },
         answer=OtherBM(
             output_text="Booooo",
@@ -1157,12 +1157,12 @@ OTHER_EXAMPLES = [
             "minutes": "\n".join([
                 "Leia: I just realized, space is really big."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=[],
-                last_vote_outcome="N/A",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A",
+            # )))
         },
         answer=OtherBM(
             output_text="Yeah, it makes you feel pretty small, huh?",
@@ -1177,12 +1177,12 @@ OTHER_EXAMPLES = [
                 "Han Solo: ...",
                 "Skywalker: Anyone still here?"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was wrongly voted off as a human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was wrongly voted off as a human.",
+            # )))
         },
         answer=OtherBM(
             output_text="Did everyone just fall asleep?",
@@ -1196,12 +1196,12 @@ OTHER_EXAMPLES = [
             "minutes": "\n".join([
                 "Leia: brb feeding my fish"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=1,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=[],
-                last_vote_outcome="N/A",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=1,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=[],
+            #     last_vote_outcome="N/A",
+            # )))
         },
         answer=OtherBM(
             output_text="Wait, you have fish? That's kind of random.",
@@ -1215,12 +1215,12 @@ OTHER_EXAMPLES = [
             "minutes": "\n".join([
                 "Skywalker: I actually kind of love this game. It's chaotic but fun."
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=3,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul", "Jaba"],
-                last_vote_outcome="Jaba was voted off as an AI imposter.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=3,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul", "Jaba"],
+            #     last_vote_outcome="Jaba was voted off as an AI imposter.",
+            # )))
         },
         answer=OtherBM(
             output_text="Honestly, same. It's a wild ride but kinda fun.",
@@ -1234,12 +1234,12 @@ OTHER_EXAMPLES = [
             "minutes": "\n".join([
                 "Leia: T_T <- dis me"
             ]),
-            "game_state": json.dumps(asdict(GameState(
-                round_number=2,
-                players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
-                players_voted_off=["Maul"],
-                last_vote_outcome="Maul was wrongly voted off as a human.",
-            )))
+            # "game_state": json.dumps(asdict(GameState(
+            #     round_number=2,
+            #     players=["Han Solo", "Skywalker", "Leia", "CODE_NAME", "Princess Leia", "Maul"],
+            #     players_voted_off=["Maul"],
+            #     last_vote_outcome="Maul was wrongly voted off as a human.",
+            # )))
         },
         answer=OtherBM(
             output_text="Honestly, mood.",

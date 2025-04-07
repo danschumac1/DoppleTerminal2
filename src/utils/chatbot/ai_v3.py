@@ -31,7 +31,6 @@ class AIPlayer:
         self.player_state = self._steal_player_state(player_to_steal)
         self.system_prompt = system_prompt + json.dumps(asdict(self.player_state))
 
-
         self.debug_bool = debug_bool
 
         # Initialize game state
@@ -185,7 +184,7 @@ class AIPlayer:
         prompter = self.prompter_dict["decide_to_respond"]
         input_texts = {
             "minutes": "\n".join(minutes),
-            "game_state": json.dumps(self.game_state.to_dict())
+            # "game_state": json.dumps(self.game_state.to_dict())
         }
         # self.logger.info(f"DTR PROMPT: {prompter.fetch_prompt(input_texts)}")
 
@@ -213,7 +212,7 @@ class AIPlayer:
         prompter = self.prompter_dict["choose_action"]
         input_texts = {
             "minutes": "\n".join(minutes),
-            "game_state": json.dumps(self.game_state.to_dict())
+            # "game_state": json.dumps(self.game_state.to_dict())
         }
         # self.logger.info(f"CHOOSE ACTION PROMPT: {prompter.fetch_prompt(input_texts)}")
 
@@ -247,7 +246,7 @@ class AIPlayer:
                 "simple_phrase", minutes, chat_log, dcs3.SimplePhraseBM)
         elif action.other:
             return await self.generate_action_response(
-                "other", minutes, chat_log, dcs3.SimplePhraseBM)
+                "other", minutes, chat_log, dcs3.OtherBM)
         else:
             self.logger.error("Unknown action type chosen.")
             return "Error: Unknown action type."
@@ -259,7 +258,7 @@ class AIPlayer:
         prompter = self.prompter_dict[action_type]
         input_texts = {
             "minutes": "\n".join(minutes),
-            "game_state": json.dumps(self.game_state.to_dict())
+            # "game_state": json.dumps(self.game_state.to_dict())
         }
         # print(f"{action_type.upper()} RESPONSE: {prompter.fetch_prompt(input_texts)}")
 

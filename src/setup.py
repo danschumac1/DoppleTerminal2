@@ -73,7 +73,6 @@ class PlayerSetup:
 
     def run(self, gs:GameState) -> Tuple[ScreenState, GameState, PlayerState]:
         """Run the player setup process."""
-        print(Fore.YELLOW + "\n=== Player Setup ===" + Style.RESET_ALL)
         self.prompt_number(1, 10000, "Enter your lobby number", "lobby")
         self.prompt_number(1, 5, "How many people are you playing with?", "number_of_human_players") # TODO change back to 3,5
         self.prompt_number(6, 8, "What grade are you in?", "grade")
@@ -128,6 +127,9 @@ class PlayerSetup:
         return ps, gs, ps
 
 def collect_player_data(ss: ScreenState, gs: GameState, ps: PlayerState) -> Tuple[ScreenState, GameState, PlayerState]:
+    # clear_screen()
+    print(Fore.YELLOW + "\n=== Player Setup ===" + Style.RESET_ALL)
+
     print_str = ''
     master_logger = MasterLogger.get_instance()
 
@@ -155,10 +157,10 @@ def collect_player_data(ss: ScreenState, gs: GameState, ps: PlayerState) -> Tupl
             print(new_str)
             print_str = new_str
             
-    synchronize_start_time(gs, ps)
     # Ensure consistent player list before continuing
     print(Fore.GREEN + "All players are ready!" + Style.RESET_ALL)
     input(Fore.MAGENTA + "Press Enter to continue to the chat phase..." + Style.RESET_ALL)
+    synchronize_start_time(gs, ps)
     ps.ai_doppleganger.initialize_game_state(gs)
     gs.players = load_players_from_lobby(gs)
     gs.players = sorted(gs.players, key=lambda p: p.code_name)

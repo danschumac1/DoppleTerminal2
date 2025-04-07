@@ -7,7 +7,7 @@ class DecideToRespondBM(BaseModel):
     reasoning: str # Explanation for why this action was chosen
 
 class ActionOptionBM(BaseModel):
-    reasoning: str = None # Explanation for why this action was chosen
+    reasoning: Optional[str] = None # Explanation for why this action was chosen
     introduce: Optional[bool] = None
     defend: Optional[bool] = None
     accuse: Optional[bool] = None

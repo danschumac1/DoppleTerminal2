@@ -15,6 +15,7 @@ def ask_icebreaker(gs, chat_log):
     with open(chat_log, "a", encoding="utf-8") as f:
         f.write(intro_msg)
         f.flush()
+    print(intro_msg.strip())
 
 async def countdown_timer(duration: int, gs: GameState, ps: PlayerState, chat_log: str):
     elapsed = (datetime.now() - ps.starttime).total_seconds()
@@ -30,10 +31,14 @@ async def countdown_timer(duration: int, gs: GameState, ps: PlayerState, chat_lo
             f.write(format_gm_message("Time's up! Moving to the next round."))
             f.flush()
 
-
 async def refresh_messages(chat_log, gs: GameState, ps: PlayerState, delay=0.5):
     """Prints only new messages from the chat log."""
-    num_lines = 0  
+    num_lines = 0
+    # Check if the file already exists
+    if os.path.isfile(chat_log):
+        # Get the number of lines in the file
+        with open(chat_log, "r", encoding="utf-8") as f:
+            num_lines = len(f.readlines())
     while True:
         await asyncio.sleep(delay)
         try:
@@ -41,10 +46,6 @@ async def refresh_messages(chat_log, gs: GameState, ps: PlayerState, delay=0.5):
                 messages = f.readlines()
                 
                 if len(messages) > num_lines:
-                    # Load players only if there are new messages
-                    if not gs.players:
-                        gs.players = load_players_from_lobby(gs)
-
                     new_messages = messages[num_lines:]
                     color_formatted_messages = []
 
@@ -79,7 +80,7 @@ ai_response_lock = asyncio.Lock()
 async def ai_response(chat_log, ps: PlayerState, delay=1.0):
     """Triggers AI responses only if the last message is not from the AI."""
     ai_name = ps.ai_doppleganger.player_state.code_name
-
+    ps.ai_doppleganger.logger.info(f"AI {ai_name} is inside async def ai_response")
     while True:
         await asyncio.sleep(delay)
         try:
@@ -89,11 +90,13 @@ async def ai_response(chat_log, ps: PlayerState, delay=1.0):
             last_line = messages[-1].strip() if messages else ""
             # Avoid self-reply and ensure the AI is not already responding
             if not last_line.startswith(f"{ai_name}:"):
+                ps.ai_doppleganger.logger.info(f"last_line.startswith(f'{ai_name}:') is False")
                 full_chat_list = [msg.strip() for msg in messages]
 
                 # Use the async lock to ensure only one response at a time
                 async with ai_response_lock:
                     try:
+                        ps.ai_doppleganger.logger.info("AI is inside async with ai_response_lock...")
                         # print("Starting AI response generation...")
 
                         # Run the blocking AI decision in a separate thread and await the result
@@ -114,15 +117,18 @@ async def ai_response(chat_log, ps: PlayerState, delay=1.0):
                             ai_msg = f"{ai_name}: {response}\n"
                             # print(f"AI RESPONSE: {ai_msg.strip()}")
                             with open(chat_log, "a", encoding="utf-8") as f:
+                                ps.ai_doppleganger.logger.info("dumping contents...")
                                 # print("AI WROTE TO FILE")
                                 f.write(ai_msg)
                                 f.flush()
 
                     except asyncio.TimeoutError:
                         # print(f"AI response took too long, skipping...")
+                        ps.ai_doppleganger.logger.info("AI response took too long, skipping...")
                         pass
                     except Exception as e:
                         # print(f"Error during AI response generation: {e}")
+                        ps.ai_doppleganger.logger.info(f"Error during AI response generation: {e}")
                         pass
 
         except IOError as e:
