@@ -11,6 +11,10 @@ def play_intro(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[ScreenS
     master_logger = MasterLogger.get_instance()
     master_logger.log("Starting intro screen...")
     
+    # Clear the screen
+    clear_screen()
+    
+
     intro_sections = [
         (Fore.CYAN, """
 ====================================================================
