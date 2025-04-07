@@ -8,13 +8,14 @@ from utils.file_io import load_players_from_lobby
 from utils.states import GameState, PlayerState, ScreenState
 from utils.constants import COLOR_DICT, ROUND_DURATION
 
-def ask_icebreaker(gs, chat_log):
+def ask_icebreaker(gs, ps, chat_log):
     intro_msg = format_gm_message(gs.icebreakers[0])
+    if ps.timekeeper:
+        with open(chat_log, "a", encoding="utf-8") as f:
+            f.write(intro_msg)
+            f.flush()
     gs.ice_asked += 1
     gs.icebreakers.pop(0)
-    with open(chat_log, "a", encoding="utf-8") as f:
-        f.write(intro_msg)
-        f.flush()
     print(intro_msg.strip())
 
 async def countdown_timer(duration: int, gs: GameState, ps: PlayerState, chat_log: str):
@@ -161,7 +162,7 @@ async def play_game(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[Sc
             f.write("")
 
     # Ask the icebreaker if you are the timekeeper (to avoid duplicate prints)
-    if ps.timekeeper and gs.ice_asked <= gs.round_number:
+    if gs.ice_asked <= gs.round_number: # just a safe guard. 
         ask_icebreaker(gs, chat_log)
 
     try:
