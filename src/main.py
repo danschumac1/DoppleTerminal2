@@ -6,7 +6,8 @@ from setup import collect_player_data
 from intro_screen import play_intro
 from game_MVP import play_game
 # from fake_chat import play_game # FOR DEBUGGING
-from score import score_screen
+# from score import score_screen
+from score_NEW import score_screen    # New score screen, replace other one if this works
 import inspect
 from voting import voting_round
 # import signal
@@ -36,7 +37,8 @@ async def main():
     }
 
     # Initialize the starting screen state and blank game/player states.
-    ss = ScreenState.INTRO  # Can also start with ScreenState.INTRO
+    ss = ScreenState.INTRO
+    # ss = ScreenState.SETUP    ## DEBUG: Skips INTRO and moves to player setup
     gs = BLANK_GS
     icebreakers = ICEBREAKERS[1:]
     first_breaker = ICEBREAKERS[0]

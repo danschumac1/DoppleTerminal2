@@ -1,3 +1,14 @@
+# Venv requirements:
 pip install prompt_toolkit
 pip install python-dotenv
 pip install openai==1.58.1
+
+
+# File breakdowns:
+    - main.py:
+        Runs the main game and handles screen transitioning
+    - game_MVP.py:
+    - voting.py:
+    - intro_screen.py:
+    - setup.py:
+    - score.py:
