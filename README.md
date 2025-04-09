@@ -15,6 +15,7 @@ Inspired by popular social deception games like Wherewolf and AmongUs, Dopple Bo
     * pip install prompt_toolkit
     * pip install python-dotenv
     * pip install openai==1.58.1
+    * pip install colorama
 - This project requires Python 3.10
 
 ### Usage:

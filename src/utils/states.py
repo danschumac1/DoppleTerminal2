@@ -73,9 +73,11 @@ class PlayerState:
 @dataclass
 class GameState:
     round_number: int
-    players: list                   # TODO determine typing of list
-    players_voted_off: List[str]    # List of players voted off
-    last_vote_outcome: str          # The outcome of the last vote
+    # players: list                   # TODO determine typing of list
+    players: List[PlayerState] = field(default_factory=list)
+    # players_voted_off: List[str]    # List of players voted off
+    players_voted_off: List[PlayerState] = field(default_factory=list)
+    last_vote_outcome: str = ""     # The outcome of the last vote
     chat_log_path: str = ""         # Path to the chat log file
     voting_path: str = ""           # Path to the voting file
     start_time_path: str = ""       # Path to the start time file
