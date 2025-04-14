@@ -84,6 +84,12 @@ async def ai_response(chat_log, ps: PlayerState, delay=1.0):
     ps.ai_doppleganger.logger.info(f"AI {ai_name} is inside async def ai_response")
     while True:
         await asyncio.sleep(delay)
+
+        # Exit early if AI has been voted out
+        if not ps.ai_doppleganger.player_state.still_in_game:
+            ps.ai_doppleganger.logger.info(f"{ai_name} is no longer in the game. Exiting response loop.")
+            return 
+        
         try:
             with open(chat_log, "r", encoding="utf-8") as f:
                 messages = f.readlines()

@@ -44,9 +44,7 @@ class PlayerState:
             "hobby": self.hobby,
             "extra_info": self.extra_info,
             "color_name": self.color_name,
-            # "color_asci": self.color_asci,
             "starttime": self.starttime.isoformat() if isinstance(self.starttime, datetime) else self.starttime,
-            # "ai_doppleganger": self.ai_doppleganger if self.ai_doppleganger else None
         }
     def serialize_player(self, player):
         """Convert a player object to a JSON-serializable dictionary."""
@@ -55,7 +53,6 @@ class PlayerState:
                 "code_name": player.code_name,
                 "is_human": player.is_human,
                 "still_in_game": player.still_in_game,
-                # Add other simple, serializable attributes here
             }
         return str(player) 
     def to_persona(self) -> dict:
@@ -73,9 +70,7 @@ class PlayerState:
 @dataclass
 class GameState:
     round_number: int
-    # players: list                   # TODO determine typing of list
     players: List[PlayerState] = field(default_factory=list)
-    # players_voted_off: List[str]    # List of players voted off
     players_voted_off: List[PlayerState] = field(default_factory=list)
     last_vote_outcome: str = ""     # The outcome of the last vote
     chat_log_path: str = ""         # Path to the chat log file

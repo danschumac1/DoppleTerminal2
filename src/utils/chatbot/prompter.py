@@ -135,6 +135,29 @@ class OpenAIPrompter(Prompter):
 
         return messages
 
+
+    def validate_and_format_message(self, message: str) -> str:
+        """Validates and formats messages to be short and simple."""
+        # Split into words and limit to 8
+        words = message.split()
+        if len(words) > 8:
+            words = words[:8]
+        
+        # Remove most punctuation except question marks
+        cleaned_words = []
+        for word in words:
+            word = "".join(c for c in word if c.isalnum() or c == '?')
+            cleaned_words.append(word)
+        
+        # Convert to lowercase
+        message = " ".join(cleaned_words).lower()
+        
+        # Remove slang words
+        slang_words = {'yo', 'bruh', 'lit', 'fam', 'yeet', 'sus'}
+        clean_words = [w for w in message.split() if w.lower() not in slang_words]
+        
+        return " ".join(clean_words)
+
     def get_completion(
             self, input_texts: Dict[str, str], parse=True, verbose=False) -> Union[dict, None]:
         """Calls OpenAI API with multiple formatted inputs"""
@@ -148,6 +171,10 @@ class OpenAIPrompter(Prompter):
 
         final_resp = self.parse_output(response) if parse else response
 
+        # Validate and format the message if it's in the expected format
+        if isinstance(final_resp, dict) and 'output_text' in final_resp:
+            final_resp['output_text'] = self.validate_and_format_message(final_resp['output_text'])
+
         if verbose:
             print("\n" + "="*60)
             print("OUTPUT FROM LLM:")
@@ -155,6 +182,27 @@ class OpenAIPrompter(Prompter):
             print("="*60 + "\n")
 
         return final_resp
+    
+    # def get_completion(
+    #         self, input_texts: Dict[str, str], parse=True, verbose=False) -> Union[dict, None]:
+    #     """Calls OpenAI API with multiple formatted inputs"""
+    #     input_text_str = self._build_messages(input_texts)
+    #     response = self.client.chat.completions.create(
+    #         model=self.llm_model,
+    #         messages=input_text_str,
+    #         temperature=self.temperature,
+    #         response_format={"type": "json_object"}
+    #     )
+
+    #     final_resp = self.parse_output(response) if parse else response
+
+    #     if verbose:
+    #         print("\n" + "="*60)
+    #         print("OUTPUT FROM LLM:")
+    #         print(json.dumps(final_resp, indent=4))
+    #         print("="*60 + "\n")
+
+    #     return final_resp
     
     def fetch_prompt(self, input_texts: Dict[str, str]) -> str:
         """Fetch the prompt without sending it to the LLM."""
