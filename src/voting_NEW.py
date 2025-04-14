@@ -249,8 +249,4 @@ def voting_round(ss: ScreenState, gs: GameState, ps: PlayerState) -> tuple[Scree
         #NEW: Show how many AI players the human team eliminated
         check_human_team_success(gs)
 
-        return ScreenState.SCORE, gs, ps
-
-
-
-        
+        return ScreenState.SCORE, gs, ps        
