@@ -71,7 +71,7 @@ Your job? Figure out who's real and who's not before it's too late."""),
         input(Fore.MAGENTA + "Press Enter to continue...")
         time.sleep(0.1)
 
-    print(Fore.GREEN + "Intro section complete! Let's Play!")
-    input(Fore.MAGENTA + "Press Enter to continue...")
+#     print(Fore.GREEN + "Intro section complete! Let's Play!")
+#     input(Fore.MAGENTA + "Press Enter to continue...")
     clear_screen()
     return ScreenState.SETUP, gs, ps

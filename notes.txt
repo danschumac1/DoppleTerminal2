@@ -3,6 +3,7 @@ pip install prompt_toolkit
 pip install python-dotenv
 pip install openai==1.58.1
 pip install colorama
+pip install windows-curses
 
 
 # File breakdowns:

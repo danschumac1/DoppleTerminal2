@@ -16,6 +16,7 @@ Inspired by popular social deception games like Wherewolf and AmongUs, Dopple Bo
     * pip install python-dotenv
     * pip install openai==1.58.1
     * pip install colorama
+    * pip install windows-curses
 - This project requires Python 3.10
 
 ### Usage:
